@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "skill": "Web Performance Optimization"
+  },
+  {
+    "id": 2,
+    "skill": "User Interface (UI) Design"
+  },
+  {
+    "id": 3,
+    "skill": "Website Design"
+  },
+  {
+    "id": 4,
+    "skill": "Custom Web Development"
+  },
+  {
+    "id": 5,
+    "skill": "E-commerce Excellence"
+  },
+  {
+    "id": 6,
+    "skill": "SEO Optimization"
+  },
+  {
+    "id": 7,
+    "skill": "Version Control/Git"
+  },
+  {
+    "id": 8,
+    "skill": "Web Performance Optimization"
+  },
+  {
+    "id": 9,
+    "skill": "Content Management Systems (CMS)"
+  },
+  {
+    "id": 10,
+    "skill": "Cross-Browser Compatibility"
+  },
+  {
+    "id": 11,
+    "skill": "Front-End Frameworks/Libraries"
+  },
+  {
+    "id": 12,
+    "skill": "Mobile App Development"
+  },
+  {
+    "id": 13,
+    "skill": "Continuous Learning"
+  }
+]

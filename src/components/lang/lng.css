@@ -1,0 +1,35 @@
+.lng_container {
+  padding: 50px 78px 100px 78px;
+  background-color: #070708;
+  height: auto;
+  width: 100%;
+ 
+}
+.marquee {
+  margin-top: 30px;
+background-color: #070708;
+}
+  
+
+
+.cr {
+    display: flex;
+    margin-top: 30px;
+    /* flex-wrap: nowrap; */
+    /* background-color: #000; */
+    width: 100px;
+    
+}
+
+.mea {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    object-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+    background-color: #070708;
+    position: relative;
+    
+}

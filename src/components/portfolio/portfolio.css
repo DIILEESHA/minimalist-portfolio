@@ -1,0 +1,267 @@
+.portfolio_container {
+  padding: 100px 78px 60px 78px;
+  background-color: #070708;
+  height: auto;
+  /* background-color: #000; */
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.portfolio_sm_card:hover .po {
+  filter: blur(5px) brightness(0.3); /* Adjust the blur strength */
+  transform: scale(1.05); /* Adjust the zoom level */
+  background-color: #000;
+}
+.customer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  background-color: red;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.prev-arrow,
+.next-arrow {
+  position: absolute;
+  bottom: -113px;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 10px solid #1c1c21;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.dk {
+  height: 1px;
+  width: 98%;
+  margin: 20px auto;
+  background-color: #1c1c21;
+}
+
+.slio {
+  /* border: 1px solid red; */
+}
+
+.slider-counter {
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.prev-arrow {
+  right: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-arrow {
+  left: 90;
+}
+
+.mm {
+  width: 70%;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.servicer11 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.servicer11 img {
+  width: 150px;
+}
+
+.mySwiper {
+  height: 70vh;
+  width: 1200px;
+  margin-top: 40px;
+}
+
+.swiper_card {
+  height: 70vh;
+  border-radius: 8px;
+}
+
+.imger {
+  width: 100%;
+  height: 100%;
+}
+
+.imger img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.portfolio_card_grid {
+  margin-top: 70px;
+}
+
+.cicler_imger {
+  position: absolute;
+  bottom: -92px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cicler_imger::after {
+  position: absolute;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 99px;
+  border: 1px dashed gray;
+  width: 50px;
+  animation: rotateAnimation 7s linear infinite;
+  margin: 0 auto;
+  height: 50px;
+  border-radius: 50%;
+}
+
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.cicler_imger .nima {
+  width: 250px;
+  height: 250px;
+}
+
+.portfolio_sm_card .card-title {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.portfolio_sm_card:hover .card-title {
+  display: flex;
+  flex-direction: column;
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.dater {
+  font-size: 14px;
+  text-shadow: 1px 2px black;
+  line-height: 150%;
+  /* margin-bottom: 5px; */
+  font-weight: bold;
+}
+.card-title1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 10px 0;
+  position: relative;
+}
+.card-title1::after {
+  content: "";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset: 0;
+  /* background-color: green; */
+  transform: rotate(-1.2deg);
+  opacity: 0.2;
+}
+
+.portfolio_sm_card {
+  height: 80vh;
+  border-radius: 8px;
+  border: 1px solid rgba(99, 99, 115, 1);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.portfolio_sm_card .po {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.5s ease-in-out;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.portfolio_sm_card:hover .po {
+  /* transform: translateY(-100%); */
+}
+
+.circle {
+  position: absolute;
+  bottom: -50px;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  background-color: black;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.sliders .slick-slide > div {
+  margin: 0 10px;
+}
+
+.web {
+  line-height: 150%;
+  font-weight: 400;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.sliders {
+}
+
+@media screen and (max-width: 600px) {
+  .mySwiper {
+    height: 70vh;
+    width: 700px;
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.imgur.com/yopDhsi.png",
+    "title": "Web Design Principles",
+    "para": "Proficiency in the fundamental principles of design, such as layout, color theory, typography, and visual hierarchy."
+  },
+  {
+    "id": 2,
+    "img": "https://i.imgur.com/C7pIing.png",
+    "title": "Website Design",
+    "para": "Ability to create visually appealing and intuitive user interfaces that enhance user experience and engagement."
+  },
+  {
+    "id": 3,
+    "img": "https://i.imgur.com/FOMnGyT.png",
+    "title": "User Experience (UX) Design",
+    "para": "Understanding of user behavior and psychology to design seamless and enjoyable enjoyable user experiences."
+  },
+  {
+    "id": 4,
+    "img": "https://i.imgur.com/Ladl3DW.png",
+    "title": "Wireframing and Prototyping",
+    "para": "Ability to create wireframes and interactive prototypes to visualize and test website layouts website layouts and functionality."
+  },
+  {
+    "id": 5,
+    "img": "https://i.imgur.com/N0yucmD.png",
+    "title": "Mobile-Friendly Optimization",
+    "para": "Knowledge of techniques to optimize websites for mobile devices, ensuring a smooth user experience on smaller screens."
+  },
+  {
+    "id": 6,
+    "img": "https://i.imgur.com/n0TDMC5.png",
+    "title": "Custom Development",
+    "para": "Knowledge of techniques to optimize websites for mobile devices, ensuring a smooth user experience on smaller screens."
+  }
+]

@@ -1,0 +1,22 @@
+.card_container {
+  width: 89.6%;
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #232329;
+  color: #fff;
+  background-color: #0e0e10;
+  /* z-index: 100; */
+  /* background: linear-gradient(to right, #18181B, #0e0e10, #18181B); */
+}
+
+.card_container h1 {
+  color: #797c86;
+  font-size: 14px;
+  font-weight: 500;
+}

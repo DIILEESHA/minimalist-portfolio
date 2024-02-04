@@ -1,0 +1,66 @@
+.tool_container {
+  padding: 100px 78px 40px 78px;
+  background-color: #070708;
+  height: auto;
+  /* background-color: #000; */
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  /* background-image: url("https://i.imgur.com/ZTmyYsa.png"); */
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.servicer1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.servicer1 img {
+  width: 100px;
+  object-fit: contain;
+}
+
+.tools_grid {
+  margin-top: 60px;
+  display: grid;
+  /* max-width: 1200px; */
+  width: 100%;
+  display: grid;
+  margin-top: 60px;
+
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  position: relative;
+}
+.tools_sub_grid {
+  background-image: url("https://i.imgur.com/UkqV1Ov.png");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  padding: 15px;
+  border: 1px solid rgba(28, 28, 33, 1);
+  border-radius: 8px;
+  background-repeat: no-repeat;
+}
+
+.tools_img img {
+  width: 50px;
+  object-fit: contain;
+}
+.tool_titles {
+  margin: 15px 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e4e4e6;
+}
+.tools_paragraph_section p {
+  font-size: 16px;
+  line-height: 150%;
+  color: #797c86;
+  font-weight: 500;
+}
