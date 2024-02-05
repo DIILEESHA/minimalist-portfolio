@@ -84,6 +84,7 @@
   height: 50px;
   font-size: 14px;
   line-height: 150%;
+  cursor:context-menu;
   font-weight: 500;
   font-family: "Manrope", sans-serif;
 }

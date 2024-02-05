@@ -27,6 +27,8 @@ export default function Skills() {
               activeOffset={0}
               shadow={false}
               highlight={true}
+              rotateYMax={0.00000001}
+              rotateXMax={0.00000000001}
               shadowScale={0}
               onEnter={() => console.log("Enter")}
               onLeave={() => console.log("Leave")}

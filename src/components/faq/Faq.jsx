@@ -1,7 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import "./faq.css";
-
+import "atropos/css";
+import Atropos from "atropos/react";
 export default function Faq() {
   const [one, setOne] = useState(true);
   const [two, setTwo] = useState(false);
@@ -51,26 +52,38 @@ export default function Faq() {
 
       <div className="faq_grid">
         <div className="faq_sub_grid maq">
-          <div className="left_card_faq">
-            <div className="shadower">
-              <img src="https://i.imgur.com/lE90YCX.png" alt="" />
-            </div>
+        <Atropos
+          activeOffset={0}
+          shadow={false}
+          highlight={true}
+          rotateYMax={0.00000001}
+          rotateXMax={0.00000000001}
+          shadowScale={0}
+          onEnter={() => console.log("Enter")}
+          onLeave={() => console.log("Leave")}
+          onRotate={(x, y) => console.log("Rotate", x, y)}
+        >
+            <div className="left_card_faq">
+              <div className="shadower">
+                <img src="https://i.imgur.com/lE90YCX.png" alt="" />
+              </div>
 
-            <div className="left_card_img">
-              <img src="https://i.imgur.com/sb9KlDX.png" alt="" />
-            </div>
-            <div className="card_details_faq">
-              <h1 className="faq_card_title">Ask A Question</h1>
-              <p className="faq_para">
-                Here's what some of my satisfied clients have to say about my
-                work
-              </p>
-              <div className="faq_btn_section">
-                <button className="faq_btn">Ask a Question</button>
+              <div className="left_card_img">
+                <img src="https://i.imgur.com/sb9KlDX.png" alt="" />
+              </div>
+              <div className="card_details_faq">
+                <h1 className="faq_card_title">Ask A Question</h1>
+                <p className="faq_para">
+                  Here's what some of my satisfied clients have to say about my
+                  work
+                </p>
+                <div className="faq_btn_section">
+                  <button className="faq_btn">Ask a Question</button>
+                </div>
               </div>
             </div>
+        </Atropos>
           </div>
-        </div>
         <div className="faq_sub_grid jkob">
           <div className="faq_list_card">
             <div className="list_card_top_title">
