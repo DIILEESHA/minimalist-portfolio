@@ -9,6 +9,8 @@ export default function Layout() {
       <div style={{ position: "relative", zIndex: "1" }}>
         <Nav />
       </div>
+
+      
       <div className="rounder_img">
         <img loading="lazy" src="https://i.imgur.com/tiHcu1S.png" alt="" />
       </div>

@@ -1,14 +1,17 @@
 .guest_container {
   background-color: #000;
   width: 100%;
-
+  overflow: auto;
   box-sizing: border-box;
   color: #fff;
-  background-image: url("https://i.imgur.com/ZTmyYsa.png");
   position: relative;
   overflow: hidden;
   background-size: cover;
   background-position: 50% 50%;
+}
+
+.mina {
+  background-image: url("https://i.imgur.com/ZTmyYsa.png");
 }
 
 .guest_book_details {
@@ -19,17 +22,32 @@
 }
 
 .guest_book_detail_title {
-  margin: 80px auto 0px auto;
+  margin: 10px auto 0px auto;
   font-size: 38px;
 }
 
 .guest_para {
   margin-top: 20px;
   font-size: 16px;
+  margin-bottom: 70px;
   color: #797c86;
   line-height: 150%;
   width: 50%;
   text-align: center;
+}
+
+.down_arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.down_arrow img {
+  width: 100px;
+  height: 100px;
+  animation: raiseHand 3s ease-in-out infinite;
+  cursor: pointer;
+  object-fit: contain;
 }
 
 .fgme {
@@ -41,59 +59,139 @@
   /* background-color: red; */
   /* background-color: #131316; */
   /* background-color: #070708; */
-
+  position: relative;
   /* height: 100vh; */
   margin-top: 70px;
   margin-bottom: 50px;
   /* padding: 100px 78px 40px 78px; */
   display: grid;
-  grid-template-columns: 5fr 2fr;
+  grid-template-columns: 4fr 2fr;
   gap: 2rem;
 }
 
-.google_container button {
-  border: none;
+.sign_google_btn {
   display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  padding: 8px 10px;
-  background-color: #131316;
-  border: 1px solid rgba(35, 35, 41, 1);
+  background-color: #1c1c21;
+  border: 1px solid #232329;
+  box-shadow: 4px 4px 17.4px 0 rgba(255, 255, 255, 0.06);
   border-radius: 8px;
+  width: fit-content;
+  color: #333;
+  align-items: center;
+  padding: 15px 5px;
+  /* padding-inline-end: 10px; */
+  position: relative;
+  cursor: pointer;
+}
+
+.go {
+  left: -12px;
+  position: absolute;
+}
+.go img {
+  width: 60px;
+  height: 60px;
+}
+
+.sign_google_btn h2 {
   font-size: 14px;
-  /* font-weight: bold; */
+  padding: 0 7px 0 30px;
+  font-weight: 500;
   color: #fff;
 }
 
-.google_container button img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+.sign_google_option {
+  margin-bottom: 40px;
+  position: relative;
 }
 
-.google_user_details {
+.btn_sec {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 10px;
+  bottom: 0;
+
   display: flex;
-  /* height: 10vh; */
-  flex-direction: column;
-  /* margin-bottom: 120px; */
-  margin-top: 50px;
-  gap: 5px;
-}
-.commeh {
-  display: flex;
-  gap: 5px;
-  margin-bottom: 10px;
-  /* margin-bottom: 50px; */
-  /* border: 1px solid red; */
-}
-.google_username {
-  font-size: 14px;
-  color: #797c86;
-  font-weight: 600;
+  align-items: center;
+  justify-content: center;
 }
 
-.google_user_comment {
-  /* width: 70%; */
-  font-size: 14px;
+.sign {
+  padding: 7px;
+  border-radius: 8px;
+  padding-inline: 10px;
+  background-color: transparent;
+  /* background-color: #d85040; */
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
   line-height: 150%;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  /* width: 100px; */
+  border: none;
+}
+.inputer_section {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.sign_out_option {
+  position: absolute;
+  top: 32px;
+  right: 0;
+}
+
+.so {
+  font-size: 14px;
+  font-weight: 500;
+  color: #797c86;
+  border-bottom: 1px solid #797c86;
+  cursor: pointer;
+}
+
+.inputer_section .input1 {
+  padding: 15px 10px;
+  width: 100%;
+  border-radius: 8px;
+  background-color: #0e0e10;
+  border: 1px solid #1c1c21;
+  color: #e4e4e6;
+  outline: none;
+}
+
+.input1::placeholder {
+  color: #797c86;
+  font: 15px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.fgl {
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+  gap: 5px;
+}
+
+.messager {
+  font-size: 15px;
+  line-height: 150%;
+}
+
+.jkob {
+  display: flex;
+}
+
+.guestbook_messages .kim {
+  color: #797c86;
+  font-size: 15px;
+  font-weight: 500;
 }
