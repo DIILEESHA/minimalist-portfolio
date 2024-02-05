@@ -3,11 +3,10 @@
 import React from "react";
 import "atropos/css";
 import "./header.css";
-import Card from "../navcard/Card.jsx";
-import Nav from "../nav/Nav.jsx";
 import CountUp, { useCountUp } from "react-countup";
 import skill from "./skill.json";
 import Marquee from "react-fast-marquee";
+import Layout from "../Layout.jsx";
 
 export default function Header() {
   useCountUp({
@@ -18,25 +17,16 @@ export default function Header() {
   });
   return (
     <div className="header_container">
-      <Card />
-      <Nav />
+      <Layout />
 
-      <div className="rounder_img">
-        <img loading="lazy" src="https://i.imgur.com/tiHcu1S.png" alt="" />
-      </div>
-    
-        <div className="welcome_card">
-          <div className="welcome_text">
-            <div className="welcome_img">
-              <img
-                loading="lazy"
-                src="https://i.imgur.com/qJzqbOj.png"
-                alt=""
-              />
-            </div>
-            <h2 className="welcome">Dileesha Lakshan Welcome’s You!</h2>
+      <div className="welcome_card">
+        <div className="welcome_text">
+          <div className="welcome_img">
+            <img loading="lazy" src="https://i.imgur.com/qJzqbOj.png" alt="" />
           </div>
+          <h2 className="welcome">Dileesha Lakshan Welcome’s You!</h2>
         </div>
+      </div>
       <div className="ok">
         <img src="https://i.imgur.com/lGIeGtN.png" alt="" />
       </div>
@@ -75,11 +65,11 @@ export default function Header() {
       <div className="skiller_main">
         <div className="skill_section">
           <Marquee
-            // autoFill={true}
-            // gradient={true}
-            // gradientColor={"#1c1c21"}
-            // gradientWidth={-1}
-            // play={true}
+          // autoFill={true}
+          // gradient={true}
+          // gradientColor={"#1c1c21"}
+          // gradientWidth={-1}
+          // play={true}
           >
             {skill.map((skiller, index) => (
               <div className="skiller" key={index}>

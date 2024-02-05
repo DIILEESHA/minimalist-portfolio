@@ -1,15 +1,15 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom";
 import App from "./App.jsx";
-import "./index.css";
 import { Analytics } from "@vercel/analytics/react";
-import { BrowserRouter as Router } from "react-router-dom";
+// eslint-disable-next-line no-unused-vars
+// import firebase from './firebase.js';
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Router>
+    {/* <Router> */}
       <App />
       <Analytics />
-    </Router>
+    {/* </Router> */}
   </React.StrictMode>
 );

@@ -17,6 +17,11 @@ export default function Nav() {
             </li>
             <li className="nav_li">about me</li>
             <li className="nav_li">portfolio</li>
+            <li className="nav_li">
+              <NavLink to="/guest-book" className="linka">
+                guestbook
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="nav_links2">
