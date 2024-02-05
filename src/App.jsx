@@ -6,6 +6,7 @@ import Skills from "./components/skills/Skills.jsx";
 import Testo from "./components/testomonials/Testo.jsx";
 import Tools from "./components/tools/Tools.jsx";
 import Faq from "./components/faq/Faq.jsx";
+import Footer from "./components/footer/Footer.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Languages />
       <Testo />
       <Faq />
+      <Footer />
     </>
   );
 }

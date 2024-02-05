@@ -6,7 +6,7 @@ export default function Nav() {
     <div className="nav_container">
       <div className="nav_grid">
         <div className="nav logo">
-          <img src="https://i.imgur.com/HDVAFWg.png" alt="" />
+          <img src="https://i.imgur.com/fYuFZ2C.png" alt="" />
         </div>
         <div className="nav_links">
           <ul className="nav_ul">
