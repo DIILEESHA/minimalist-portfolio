@@ -130,7 +130,7 @@ export default function Guestbook() {
         </div>
       </div>
 
-      <div className="guest_grid_container" id="guestMessages" >
+      <div className="guest_grid_container" id="guestMessages">
         <div className="guest_sub">
           <div className="sign_google_option">
             {!user ? (
@@ -167,15 +167,17 @@ export default function Guestbook() {
               </>
             )}
           </div>
-          <div className="guestbook_messages" >
-            {guestbookMessages.map((message, index) => (
-              <div className="fgl" key={index}>
-                {/* <div className="jkob"> */}
-                <h2 className="kim">{`${message.username}:`}</h2>
-                <p className="messager">{` ${message.message}`}</p>
-                {/* </div> */}
-              </div>
-            ))}
+          <div className="guestbook_messages">
+            {guestbookMessages.length === 0 ? (
+              <p>No messages yet. Be the first to leave a message!</p>
+            ) : (
+              guestbookMessages.map((message, index) => (
+                <div className="fgl" key={index}>
+                  <h2 className="kim">{`${message.username}:`}</h2>
+                  <p className="messager">{` ${message.message}`}</p>
+                </div>
+              ))
+            )}
           </div>
         </div>
 
