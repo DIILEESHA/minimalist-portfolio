@@ -184,12 +184,16 @@
   display: flex;
   margin: 10px 0;
   align-items: center;
+  background-color: #0e0e10;
+  border: 1px solid #1c1c21;
+  padding: 20px;
+  border-radius: 8px;
   gap: 5px;
 }
 
 .messager {
   font-size: 15px;
-  line-height: 150%;
+  /* line-height: 150%; */
 }
 
 .jkob {
@@ -332,7 +336,7 @@
   align-items: center;
   margin-bottom: 8px;
 }
-.leave_options{
+.leave_options {
   display: flex;
   margin-top: 10px;
   gap: 30px;
@@ -340,17 +344,17 @@
   align-items: center;
 }
 
-.text_leave{
+.text_leave {
   /* display: flex; */
   /* align-items: center; */
 }
 
-.mp{
+.mp {
   /* width: 40px; */
   /* height: 16px; */
 }
 
-.i{
+.i {
   color: #d85040;
   font-size: 15px;
   /* line-height: 150%; */
@@ -378,8 +382,6 @@
   }
 }
 
-
-.arrowme{
+.arrowme {
   animation: animate 5s ease-in-out infinite;
-
 }
