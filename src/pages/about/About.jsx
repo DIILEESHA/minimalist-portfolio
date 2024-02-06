@@ -12,7 +12,7 @@ export default function About() {
             <img loading="lazy" src="https://i.imgur.com/qJzqbOj.png" alt="" />
           </div>
           <h2 className="welcome">
-            Crafting digital experiences, one line of code at a time.
+            Crafting digital experiences.
           </h2>
         </div>
       </div>

@@ -8,6 +8,12 @@
   background-size: contain;
   background-position: 50% 50%;
 }
+
+
+.soi{
+  margin: 80px auto 20px auto;
+
+}
 .about_container::after {
   position: absolute;
   inset: 0;
