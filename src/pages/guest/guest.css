@@ -71,7 +71,7 @@
   justify-content: center;
   position: relative;
   z-index: 1;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .down_arrow img {
@@ -133,7 +133,7 @@
 }
 
 .sign_google_option {
-  margin-bottom: 40px;
+  margin-bottom: 35px;
   position: relative;
 }
 
@@ -176,6 +176,11 @@
 
 .sign_out_option {
   position: absolute;
+  background-color: #070708;
+  border: 1px solid #232329;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
   top: 32px;
   right: 0;
 }
@@ -184,7 +189,7 @@
   font-size: 14px;
   font-weight: 500;
   color: #797c86;
-  border-bottom: 1px solid #797c86;
+  /* border-bottom: 1px solid #797c86; */
   cursor: pointer;
 }
 

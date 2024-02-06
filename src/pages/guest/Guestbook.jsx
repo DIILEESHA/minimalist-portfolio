@@ -6,7 +6,8 @@ import { addDoc, collection, getDocs } from "firebase/firestore";
 // import { createRoot } from "react-dom/client";
 import Layout from "../../components/Layout";
 import { FaArrowRight } from "react-icons/fa6";
-
+import { HiDotsVertical } from "react-icons/hi";
+import { Hearts, ThreeDots } from "react-loader-spinner";
 import "./guest.css";
 import { GrSend } from "react-icons/gr";
 import { Link } from "react-router-dom";
@@ -15,6 +16,8 @@ export default function Guestbook() {
   const [user, setUser] = useState(null);
   const [guestMessage, setGuestMessage] = useState("");
   const [guestbookMessages, setGuestbookMessages] = useState([]);
+  const [showSignOutOption, setShowSignOutOption] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const guestGridRef = useRef(null);
 
@@ -54,15 +57,16 @@ export default function Guestbook() {
         console.log("Message written with ID: ", docRef.id);
         setGuestMessage("");
 
-        // Fetch the latest messages after successfully adding a new message
         const querySnapshot = await getDocs(collection(db, "guestbook"));
         const messages = [];
         querySnapshot.forEach((doc) => {
           messages.push(doc.data());
         });
         setGuestbookMessages(messages);
+        // setLoading(false);
       } catch (e) {
         console.error("Error adding document: ", e);
+        // setLoading(false);
       }
     }
   };
@@ -86,6 +90,8 @@ export default function Guestbook() {
         setGuestbookMessages(messages);
       } catch (error) {
         console.error("Error fetching guestbook messages:", error);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -164,27 +170,63 @@ export default function Guestbook() {
                   <button className="sign" onClick={handleSendGuestMessage}>
                     <GrSend />
                   </button>
-                </div>
-                <div className="sign_out_option" onClick={handleLogout}>
-                  <h3 className="so">sign out</h3>
+                  <div
+                    className="dots_vertical"
+                    onClick={() => setShowSignOutOption(!showSignOutOption)}
+                  >
+                    <HiDotsVertical
+                      style={{
+                        cursor: "pointer",
+                        display: "flex",
+                        alignItems: "center",
+                      }}
+                    />
+                  </div>
+                  {showSignOutOption && (
+                    <div className="sign_out_option" onClick={handleLogout}>
+                      <h3 className="so">Sign out</h3>
+                    </div>
+                  )}
                 </div>
               </>
             )}
           </div>
-          <div className="guestbook_messages">
-            {guestbookMessages.length === 0 ? (
-              <p className="messager">
-                No messages yet. Be the first to leave a message😁
-              </p>
-            ) : (
-              guestbookMessages.map((message, index) => (
-                <div className="fgl" key={index}>
-                  <h2 className="kim">{`${message.username}:`}</h2>
-                  <p className="messager">{` ${message.message}`}</p>
-                </div>
-              ))
-            )}
-          </div>
+
+          {loading ? (
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <ThreeDots
+                visible={true}
+                height="80"
+                width="80"
+                color="#fff"
+                radius="9"
+                ariaLabel="three-dots-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+              />
+            </div>
+          ) : (
+            <div className="guestbook_messages">
+              {guestbookMessages.length === 0 ? (
+                <p className="messager">
+                  No messages yet. Be the first to leave a message😁
+                </p>
+              ) : (
+                guestbookMessages.map((message, index) => (
+                  <div className="fgl" key={index}>
+                    <h2 className="kim">{`${message.username}:`}</h2>
+                    <p className="messager">{` ${message.message}`}</p>
+                  </div>
+                ))
+              )}
+            </div>
+          )}
         </div>
 
         <div className="guest_sub">
