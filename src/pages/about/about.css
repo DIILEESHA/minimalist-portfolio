@@ -2,23 +2,23 @@
   background-image: url("https://i.imgur.com/ZTmyYsa.png");
   background-color: #070708;
   height: auto;
-  height: 130vh;
+  height: 150vh;
   position: relative;
   overflow: hidden;
   background-size: contain;
   background-position: 50% 50%;
 }
 .about_container::after {
-    position: absolute;
-    inset: 0;
-    content: "";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    background-image: url("https://i.imgur.com/QRblH9k.png");
-  }
+  position: absolute;
+  inset: 0;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.imgur.com/QRblH9k.png");
+}
 
 .about_detail {
   padding: 0 80px;
@@ -55,39 +55,45 @@
 }
 
 .keo {
+  transform: rotate(1deg);
+  border-radius: 1000PX;
   width: 70px;
-  margin: 0px 10px;
-}
-.aligno{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    /* justify-content: center; */
+  margin: 0px 10px 0px 10px;
+  border: 2px solid #e4e4e6;
 }
 
-.mlpo{
-    height: 100%;
-    width: 100%;
-}
-
-.moi{
-    text-shadow: 1px 2px 1px #020263;
-/* transform: rotate(1deg); */
-
+.keo:hover{
+  transform: rotate(0deg);
 
 }
-.header_titles{
-    /* display: flex; */
-    /* position: relative; */
-    color: #fff;
-    font-size: 40px;
-text-shadow: 1px 2px 4px #e4e4e6;
-text-shadow: 1px 2px 1px #020263;
-/* font-style:unset; */
-transform: rotate(-3deg);
-    /* width: fit-content; */
+.aligno {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* justify-content: center; */
 }
-.moohas{
-    position: absolute;
-bottom: 0;
+
+.mlpo {
+  height: 100%;
+  width: 100%;
+}
+
+.moi {
+  /* text-shadow: 1px 2px 1px #020263; */
+  margin-top: 15px;
+  /* transform: rotate(1deg); */
+}
+.header_titles {
+  /* display: flex; */
+  /* position: relative; */
+  color: #fff;
+  font-size: 40px;
+  /* text-shadow: 1px 2px 1px #020263; */
+  /* font-style:unset; */
+  /* transform: rotate(-3deg); */
+  /* width: fit-content; */
+}
+.moohas {
+  position: absolute;
+  bottom: 0;
 }
