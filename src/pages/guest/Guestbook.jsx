@@ -9,6 +9,7 @@ import { FaArrowRight } from "react-icons/fa6";
 
 import "./guest.css";
 import { GrSend } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 export default function Guestbook() {
   const [user, setUser] = useState(null);
@@ -109,12 +110,12 @@ export default function Guestbook() {
           </div>
         </div>
 
-        {/* <div className="ok">
+        <div className="ok">
           <img src="https://i.imgur.com/lGIeGtN.png" alt="" />
         </div>
         <div className="ok2">
           <img src="https://i.imgur.com/xam90UC.png" alt="" />
-        </div> */}
+        </div>
         <div className="guest_book_details">
           <h1 className="guest_book_detail_title">
             Sign my
@@ -248,22 +249,40 @@ export default function Guestbook() {
                 <h2 className="thank">Thanks for visiting my site!</h2>
               </div>
               <h2 className="glad">Glad to have you here.</h2>
-              <div className="leave_option">
-                <div className="text_leave">
-                  <p className="mkov">Leave a message on my guestbook</p>
+
+              <Link to="/guest-book" className="linka">
+                <div className="leave_option">
+                  <div className="text_leave">
+                    <p className="mkov">Leave a message on my guestbook</p>
+                  </div>
+                  <div className="arrowme">
+                    <FaArrowRight />
+                  </div>
                 </div>
-                <div className="arrowme">
-                  <FaArrowRight />
-                </div>
-              </div>{" "}
+              </Link>
               <div className="leave_options">
                 <div className="text_leave">
-                  <p className="i">Send an email</p>
+                  <a
+                    className="linka"
+                    href="mailto:dileeshawork@gmail.com
+                  "
+                  >
+                    <p className="i">Send an email</p>
+                  </a>
                 </div>
                 <div className="arrowme">
-                  <FaArrowRight  className="mp"/>
+                  <FaArrowRight className="mp" />
                 </div>
               </div>
+            </div>
+
+            <div className="recommendations">
+              <h2 className="sub">Recommendations / Kind words</h2>
+              <p className="mkov">
+                <Link className="linka" to="/#recommend">
+                  See recommendations here.
+                </Link>
+              </p>
             </div>
           </div>
         </div>

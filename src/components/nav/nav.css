@@ -35,6 +35,16 @@
   border: 1px solid #232329;
   border-radius: 5px;
 }
+
+.nav_li_last{
+  background-color: #131316;
+  cursor: pointer;
+  width: fit-content;
+  padding-inline: 10px;
+  padding: 10px;
+  border: 1px solid #232329;
+  border-radius: 5px;
+}
 .nav_links {
   display: flex;
   align-items: center;

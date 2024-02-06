@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./testo.css";
 
-export default function Testo() {
+export default function Testo({ id }) {
   const [expandedParagraphs, setExpandedParagraphs] = useState([]);
 
   const toggleReadMore = (index) => {
@@ -30,7 +30,7 @@ export default function Testo() {
   ];
 
   return (
-    <div className="testo_container">
+    <div className="testo_container" >
       <div className="servicer11">
         <img loading="lazy" src="https://i.imgur.com/daKrFWE.png" alt="" />
       </div>
@@ -44,7 +44,7 @@ export default function Testo() {
         to say about their experiences working with us.
       </p>
 
-      <div className="testo_card_grid">
+      <div className="testo_card_grid" id={id}>
         {clients.map((client, index) => (
           <div className="testo_card" key={index}>
             <div className="testas">
