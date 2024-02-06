@@ -1,9 +1,12 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState, useEffect, useRef } from "react";
 import { auth, googleProvider, db } from "../../utils/firebase";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { addDoc, collection, getDocs } from "firebase/firestore";
-import { createRoot } from "react-dom/client";
+// import { createRoot } from "react-dom/client";
 import Layout from "../../components/Layout";
+import { FaArrowRight } from "react-icons/fa6";
+
 import "./guest.css";
 import { GrSend } from "react-icons/gr";
 
@@ -126,7 +129,7 @@ export default function Guestbook() {
         </div>
 
         <div className="down_arrow" onClick={scrollToGuestMessages}>
-          <img src="https://i.imgur.com/EzZ16Wn.png" alt="" />
+          <img loading="lazy" src="https://i.imgur.com/EzZ16Wn.png" alt="" />
         </div>
       </div>
 
@@ -169,7 +172,9 @@ export default function Guestbook() {
           </div>
           <div className="guestbook_messages">
             {guestbookMessages.length === 0 ? (
-              <p>No messages yet. Be the first to leave a message!</p>
+              <p className="messager">
+                No messages yet. Be the first to leave a message😁
+              </p>
             ) : (
               guestbookMessages.map((message, index) => (
                 <div className="fgl" key={index}>
@@ -181,7 +186,87 @@ export default function Guestbook() {
           </div>
         </div>
 
-        <div className="guest_sub">3</div>
+        <div className="guest_sub">
+          <div className="card_gap">
+            <div className="newsletter_card">
+              <div className="newsletter_img_section">
+                <img
+                  className="personas"
+                  src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt=""
+                />
+                <img
+                  className="personas"
+                  src="https://images.pexels.com/photos/719734/pexels-photo-719734.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt=""
+                />
+                <img
+                  className="personas"
+                  src="https://images.pexels.com/photos/1192609/pexels-photo-1192609.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt=""
+                />
+                <img
+                  className="personas"
+                  src="https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt=""
+                />
+                <img
+                  className="personas"
+                  src="https://images.pexels.com/photos/1036620/pexels-photo-1036620.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  alt=""
+                />
+              </div>
+
+              <h2 className="sub">Subscribe to my newsletter!</h2>
+              <p className="sub_para">
+                Follow my journey, I write about tech, my experiences and more.
+              </p>
+
+              <div className="email_section">
+                <input
+                  required
+                  placeholder="your email....."
+                  type="email"
+                  className="email_input"
+                />
+                <button className="email_btn">subscribe</button>
+              </div>
+            </div>
+
+            <div className="thanks_card">
+              <div className="thanks_flex">
+                <div
+                  style={{
+                    fontSize: "30px",
+                    margin: "-7px 0 0px 0",
+                    display: "flex",
+                    alignItems: "center",
+                  }}
+                >
+                  👋
+                </div>
+                <h2 className="thank">Thanks for visiting my site!</h2>
+              </div>
+              <h2 className="glad">Glad to have you here.</h2>
+              <div className="leave_option">
+                <div className="text_leave">
+                  <p className="mkov">Leave a message on my guestbook</p>
+                </div>
+                <div className="arrowme">
+                  <FaArrowRight />
+                </div>
+              </div>{" "}
+              <div className="leave_options">
+                <div className="text_leave">
+                  <p className="i">Send an email</p>
+                </div>
+                <div className="arrowme">
+                  <FaArrowRight  className="mp"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
