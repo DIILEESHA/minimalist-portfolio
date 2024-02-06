@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { auth, googleProvider, db } from "../../utils/firebase";
 import { signInWithPopup, signOut } from "firebase/auth";
 import { addDoc, collection, getDocs } from "firebase/firestore";
@@ -7,7 +7,7 @@ import { addDoc, collection, getDocs } from "firebase/firestore";
 import Layout from "../../components/Layout";
 import { FaArrowRight } from "react-icons/fa6";
 import { HiDotsVertical } from "react-icons/hi";
-import { Hearts, ThreeDots } from "react-loader-spinner";
+import {  ThreeDots } from "react-loader-spinner";
 import "./guest.css";
 import { GrSend } from "react-icons/gr";
 import { Link } from "react-router-dom";
@@ -19,13 +19,7 @@ export default function Guestbook() {
   const [showSignOutOption, setShowSignOutOption] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const guestGridRef = useRef(null);
 
-  const scrollToGuestGrid = () => {
-    if (guestGridRef.current) {
-      guestGridRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   const scrollToGuestMessages = () => {
     const guestMessagesElement = document.getElementById("guestMessages");
@@ -36,6 +30,7 @@ export default function Guestbook() {
 
   const signInWithGoogle = async () => {
     try {
+      // eslint-disable-next-line no-unused-vars
       const result = await signInWithPopup(auth, googleProvider);
     } catch (error) {
       console.error("Error signing in with Google:", error);

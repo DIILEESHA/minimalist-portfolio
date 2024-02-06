@@ -7,7 +7,7 @@
   color: #fff;
   position: relative;
   overflow: hidden;
-  background-size: cover;
+  background-size: contain;
   background-position: 50% 50%;
 }
 
@@ -21,13 +21,14 @@
   background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.49)
+      rgba(0, 0, 0, 0.19)
     ),
     url("https://i.imgur.com/ZTmyYsa.png");
 
   position: relative;
   overflow: hidden;
   background-size: cover;
+  
   background-position: 50% 50%;
 }
 

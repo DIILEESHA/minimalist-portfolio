@@ -69,7 +69,7 @@ export default function Footer() {
           <h1>Privacy Policy</h1>
         </div>
         <div className="conditioner">
-          <h1>© 2024 NathanCusick. All rights reserved.</h1>
+          <h1>© 2024 Dileesha. All rights reserved.</h1>
         </div>
       </div>
     </div>

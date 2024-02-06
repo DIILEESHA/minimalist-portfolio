@@ -1,0 +1,93 @@
+.about_container {
+  background-image: url("https://i.imgur.com/ZTmyYsa.png");
+  background-color: #070708;
+  height: auto;
+  height: 130vh;
+  position: relative;
+  overflow: hidden;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+.about_container::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://i.imgur.com/QRblH9k.png");
+  }
+
+.about_detail {
+  padding: 0 80px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suha {
+  margin: 0px 10px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+
+.about_para_top {
+  font-size: 38px;
+  /* font-weight: 500; */
+  margin-bottom: 10px;
+  line-height: 100%;
+  /* margin: 10px 0 25px 0; */
+  color: #e4e4e6;
+  font-weight: bold;
+  /* text-shadow: 2px 2px 8px #e4e4e6; */
+  /* width: 80%; */
+  text-align: center;
+}
+
+.video {
+  /* width: 10px; */
+}
+
+.keo {
+  width: 70px;
+  margin: 0px 10px;
+}
+.aligno{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* justify-content: center; */
+}
+
+.mlpo{
+    height: 100%;
+    width: 100%;
+}
+
+.moi{
+    text-shadow: 1px 2px 1px #020263;
+/* transform: rotate(1deg); */
+
+
+}
+.header_titles{
+    /* display: flex; */
+    /* position: relative; */
+    color: #fff;
+    font-size: 40px;
+text-shadow: 1px 2px 4px #e4e4e6;
+text-shadow: 1px 2px 1px #020263;
+/* font-style:unset; */
+transform: rotate(-3deg);
+    /* width: fit-content; */
+}
+.moohas{
+    position: absolute;
+bottom: 0;
+}
