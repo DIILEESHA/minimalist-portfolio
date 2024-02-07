@@ -15,7 +15,7 @@ export default function Languages() {
 
         const res = await Sanity.fetch(fetchQuery);
         setLanguage(res[0]);
-        console.log("skill data:", res);
+        // console.log("skill data:", res);
       } catch (error) {
         console.log(error);
       }
@@ -40,30 +40,27 @@ export default function Languages() {
       </p>
  
       <div className="mid">
-        <Marquee
-          autoFill={true}
-          gradient={true}
-          direction="left"
-          gradientWidth={-1}
-          // speed={10}
-          gradientColor="#070708"
-          backgroundColor="#070708"
-          play={true}
-          className="marquee"
-        >
-          {language?.skillimg?.map((lg, index) => (
-            <>
-              <div className="cr" key={index}>
-                <img
-                  className="mea"
-                  loading="lazy"
-                  src={lg?.asset?.url}
-                  alt=""
-                />
-              </div>
-            </>
-          ))}
-        </Marquee>
+      <Marquee
+  autoFill={true}
+  gradient={true}
+  direction="left"
+  gradientWidth={-1}
+  gradientColor="#070708"
+  backgroundColor="#070708"
+  play={true}
+  className="marquee"
+>
+  {language?.skillimg?.map((lg, index) => (
+    <div key={index} className="cr"> 
+      <img
+        className="mea"
+        loading="lazy"
+        src={lg?.asset?.url}
+        alt=""
+      />
+    </div>
+  ))}
+</Marquee>
       </div>
     </div>
   );

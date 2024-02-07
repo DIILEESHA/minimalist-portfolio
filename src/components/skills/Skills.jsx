@@ -21,11 +21,12 @@ export default function Skills() {
       </p>
 
       <div className="skill_grid">
-        {skill.map((skill) => (
-          <>
+        {skill.map((skill,index) => (
+          // <>
             <Atropos
               activeOffset={0}
               shadow={false}
+              key={index}
               highlight={true}
               rotateYMax={0.00000001}
               rotateXMax={0.00000000001}
@@ -34,7 +35,7 @@ export default function Skills() {
               onLeave={() => console.log("Leave")}
               onRotate={(x, y) => console.log("Rotate", x, y)}
             >
-              <div className="skill_sub_grid">
+              <div className="skill_sub_grid" >
                 <div className="skill_img">
                   <img loading="lazy" src={skill?.img} alt={skill?.title} />
                 </div>
@@ -47,7 +48,7 @@ export default function Skills() {
                 </div>
               </div>
             </Atropos>
-          </>
+          // </>
         ))}
       </div>
     </div>

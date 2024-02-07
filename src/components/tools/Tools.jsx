@@ -19,20 +19,20 @@ export default function Tools() {
       </p>
 
       <div className="tools_grid">
-        {tools.map((tool) => (
-          <>
-            <div className="tools_sub_grid">
-              <div className="tools_img">
-                <img src={tool.img} alt="" />
-              </div>
-              <div className="tools_details">
-                <h1 className="tool_titles">{tool.title}</h1>
-                <div className="tools_paragraph_section">
-                  <p>{tool.para}</p>
-                </div>
+        {tools.map((tool, index) => (
+          // <>
+          <div className="tools_sub_grid" key={index}>
+            <div className="tools_img">
+              <img src={tool.img} alt="" />
+            </div>
+            <div className="tools_details">
+              <h1 className="tool_titles">{tool.title}</h1>
+              <div className="tools_paragraph_section">
+                <p>{tool.para}</p>
               </div>
             </div>
-          </>
+          </div>
+          // </>
         ))}
       </div>
     </div>

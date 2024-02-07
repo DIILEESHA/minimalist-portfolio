@@ -29,7 +29,7 @@ const Portfolio = () => {
         const res = await sanity.fetch(fetchQuery);
 
         setPortfolio(res);
-        console.log("data:", res);
+        // console.log("data:", res);
       } catch (error) {
         console.log(error);
       }

@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 // eslint-disable-next-line no-unused-vars
-import React from "react";
+import React, { useEffect } from "react";
 import "atropos/css";
 import "./header.css";
 import CountUp, { useCountUp } from "react-countup";
@@ -9,12 +9,12 @@ import Marquee from "react-fast-marquee";
 import Layout from "../Layout.jsx";
 
 export default function Header() {
-  useCountUp({
-    ref: "counter",
-    end: 1234567,
-    enableScrollSpy: true,
-    scrollSpyDelay: 1000,
-  });
+  useEffect(() => {
+    const counter = document.getElementById("counter");
+    if (counter) {
+      counter.innerText = "1234567";
+    }
+  }, []);
   return (
     <div className="header_container">
       <Layout />
