@@ -5,9 +5,11 @@ import Template from "../../components/Template";
 import "./project.css";
 import { FaArrowRight } from "react-icons/fa";
 import Sanity from "../../sanity/Sanity";
+import { ThreeDots } from "react-loader-spinner";
 
 export default function Project() {
   const [fetch, setFetch] = useState([]);
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -26,6 +28,7 @@ export default function Project() {
         const res = await Sanity.fetch(fetchQuery);
         setFetch(res);
         console.log(res);
+        setLoader(false);
       } catch (error) {
         console.log(error);
       }
@@ -58,30 +61,53 @@ export default function Project() {
           </p>
         </div>
 
-        <div className="projectso_grid">
-          {fetch.map((datas, index) => (
-            <div key={index} className="projects_sub_grid">
-              <div className="maon">
-                <div className="circler_imger">
-                  <img
-                    loading="lazy"
-                    className="nimas"
-                    src={datas?.logoweb?.asset?.url}
-                    alt=""
-                  />
+        {loader ? (
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <ThreeDots
+              visible={true}
+              height="80"
+              width="80"
+              color="#fff"
+              radius="9"
+              ariaLabel="three-dots-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+            />
+          </div>
+        ) : (
+          <div className="projectso_grid">
+            {fetch.map((datas, index) => (
+              <div key={index} className="projects_sub_grid">
+                <div className="maon">
+                  <div className="circler_imger">
+                    <img
+                      loading="lazy"
+                      className="nimas"
+                      src={datas?.logoweb?.asset?.url}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <h2 className="project_titleone">{datas?.title}</h2>
+                <div className="project_description">
+                  <p className="project_description_para">
+                    {datas?.description}
+                  </p>
+                </div>
+
+                <div className="arrow_section">
+                  <FaArrowRight />
                 </div>
               </div>
-              <h2 className="project_titleone">{datas?.title}</h2>
-              <div className="project_description">
-                <p className="project_description_para">{datas?.description}</p>
-              </div>
-
-              <div className="arrow_section">
-                <FaArrowRight />
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </Template>
   );
