@@ -5,12 +5,14 @@ import Slider from "react-slick";
 import sanity from "../../sanity/Sanity.jsx";
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
+import { ThreeDots } from "react-loader-spinner";
 
 const Portfolio = () => {
   const [portfolio, setPortfolio] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,6 +31,7 @@ const Portfolio = () => {
         const res = await sanity.fetch(fetchQuery);
 
         setPortfolio(res);
+        setLoading(false);
         // console.log("data:", res);
       } catch (error) {
         console.log(error);
@@ -114,36 +117,58 @@ const Portfolio = () => {
         , showcasing the creative and functional solutions I provide. Each
         project represents a unique challenge and a successful outcome.
       </p>
-      <div className="portfolio_card_grid">
-        <Slider {...settings}>
-          {portfolio.map((port, index) => (
-            <div
-              className={`portfolio_sm_card ${
-                hoveredIndex === index ? "hovered" : ""
-              }`}
-              key={index}
-              onClick={() => handleCardClick(index)}
-            >
-              <img className="po" src={port?.mainimage?.asset.url} alt="" />
-              <div className="circle"></div>
-              <div className="cicler_imger">
-                <img className="nima" src={port?.logo.asset.url} alt="" />
-              </div>
-              <div className="card-title">
-                <p className="dater">
-                  {format(new Date(port?.publishDate), "MMMM , yyyy")}
-                </p>
-                <h2 className="card-title1 mooha">{port?.title}</h2>
-                <h3 className="web">{port?.type}</h3>
-              </div>
-              {/* <div>
+
+      {loading ? (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <ThreeDots
+            visible={true}
+            height="80"
+            width="80"
+            color="#fff"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
+      ) : (
+        <div className="portfolio_card_grid">
+          <Slider {...settings}>
+            {portfolio.map((port, index) => (
+              <div
+                className={`portfolio_sm_card ${
+                  hoveredIndex === index ? "hovered" : ""
+                }`}
+                key={index}
+                onClick={() => handleCardClick(index)}
+              >
+                <img className="po" src={port?.mainimage?.asset.url} alt="" />
+                <div className="circle"></div>
+                <div className="cicler_imger">
+                  <img className="nima" src={port?.logo.asset.url} alt="" />
+                </div>
+                <div className="card-title">
+                  <p className="dater">
+                    {format(new Date(port?.publishDate), "MMMM , yyyy")}
+                  </p>
+                  <h2 className="card-title1 mooha">{port?.title}</h2>
+                  <h3 className="web">{port?.type}</h3>
+                </div>
+                {/* <div>
 
               <h2 className="port_title">{port?.title}</h2>
             </div> */}
-            </div>
-          ))}
-        </Slider>
-      </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      )}
       <div className="dk"></div>
       <div className="slider_arrows">
         <div className="slio">

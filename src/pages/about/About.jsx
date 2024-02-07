@@ -6,6 +6,8 @@ import Faq from "../../components/faq/Faq";
 import { IoLogoGithub } from "react-icons/io";
 import { GiWorld } from "react-icons/gi";
 import { FaCalendarAlt } from "react-icons/fa";
+import { SiCodesignal } from "react-icons/si";
+import { BiWorld } from "react-icons/bi";
 
 // import ReactTyped from "react-typed";
 
@@ -63,6 +65,10 @@ export default function About() {
         className="about_second"
         style={{ position: "relative", zIndex: "1" }}
       >
+        <div className="template_img">
+          <img src="https://i.imgur.com/TirU4Is.png" alt="" />
+        </div>
+
         <h2 className="abo">about me</h2>
         <div className="about_control">
           {/* second */}
@@ -91,7 +97,7 @@ export default function About() {
           <div className="about_card_detail">
             <div className="fp">
               <h2 className="about_maina">
-                Product <GiWorld />
+                Product <BiWorld />
               </h2>
               <h2 className="about_maina">View Products</h2>
             </div>
@@ -111,7 +117,7 @@ export default function About() {
           <div className="about_card_detail">
             <div className="fp">
               <h2 className="about_maina">
-                Design <GiWorld />
+                Design <SiCodesignal />
               </h2>
               <h2 className="about_maina">View Design</h2>
             </div>
@@ -245,7 +251,31 @@ export default function About() {
             <p className="about_maina_para">We continue learning everyday.</p>
           </div>
         </div>
+        <h2 className="abo">Let's connect</h2>
 
+        <p className="about_maina_para mos">
+          I'm excited to connect with others via
+          {/* background-color: #; */}
+          <a
+            className="linka"
+            style={{
+              color: "#d85040",
+              textDecoration: "underline",
+              margin: "0px 5px",
+            }}
+            // color={#d85040}
+            href="
+          mailto:dileeshawork@gmail.com
+          "
+          >
+            email (dileeshawork@gmail.com)
+          </a>
+          or Twitter, I'm eager to chat about projects and ideas. Right now, I'm
+          diving into freelance work, so I'm totally open to hearing about any
+          potential opportunities you might have in mind. Let's discuss them
+          together and see if there's a chance for us to collaborate if it feels
+          like a good fit! Can't wait to hear from you.
+        </p>
         {/* <Languages/> */}
         <Faq />
       </div>

@@ -4,6 +4,7 @@
 }
 
 .footer_card {
+  z-index: 200;
   background-image: url("https://i.imgur.com/PB6cziB.png");
   background-position: center;
   background-size: cover;

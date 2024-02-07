@@ -6,7 +6,7 @@
   width: 100%;
   box-sizing: border-box;
   color: #fff;
-  position: relative;
+  /* position: relative; */
   overflow: hidden;
   background-size: cover;
   background-position: 50% 50%;

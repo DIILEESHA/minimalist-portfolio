@@ -20,7 +20,11 @@ export default function Nav() {
                 about me
               </NavLink>
             </li>
-            <li className="nav_li">portfolio</li>
+            <li className="nav_li">
+              <NavLink to="/portfolio" className="linka">
+                portfolio
+              </NavLink>
+            </li>
             <li className="nav_li">
               <NavLink to="/guest-book" className="linka">
                 guestbook

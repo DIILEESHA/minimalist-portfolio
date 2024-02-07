@@ -14,6 +14,7 @@ export default function Layout() {
       <div className="rounder_img">
         <img loading="lazy" src="https://i.imgur.com/tiHcu1S.png" alt="" />
       </div>
+      
     </div>
   )
 }
