@@ -234,7 +234,7 @@
   display: flex;
   margin: 0px 0;
   z-index: 10;
-  position: relative;
+  /* position: relative; */
   align-items: center;
   /* background-color: #0e0e10; */
   /* border: 1px solid #1c1c21; */
@@ -256,6 +256,7 @@
 .guestbook_messages .kim {
   color: #8e919d;
   font-size: 15px;
+  z-index: 1;
   font-weight: 500;
 }
 
@@ -263,6 +264,8 @@
   display: flex;
   flex-direction: column;
   background-color: #0e0e10;
+  background-image: url("https://i.imgur.com/lE90YCX.png");
+
   border: 1px solid #1c1c21;
   border-radius: 8px;
   padding: 20px;
@@ -282,6 +285,8 @@
   display: flex;
   flex-direction: column;
   background-color: #0e0e10;
+  background-image: url("https://i.imgur.com/lE90YCX.png");
+
   border: 1px solid #1c1c21;
   border-radius: 8px;
   padding: 20px;
@@ -294,6 +299,8 @@
 .recommendations {
   display: flex;
   flex-direction: column;
+  background-image: url("https://i.imgur.com/lE90YCX.png");
+
   background-color: #0e0e10;
   border: 1px solid #1c1c21;
   border-radius: 8px;

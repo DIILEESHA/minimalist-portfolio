@@ -6,6 +6,7 @@ import Guestbook from "./pages/guest/Guestbook.jsx";
 import About from "./pages/about/About.jsx";
 import Contactme from "./components/Contactme.jsx";
 import Project from "./pages/projects/Project.jsx";
+import Single from "./pages/single/Single.jsx";
 // import Nav from "./components/nav/Nav.jsx";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/portfolio" element={<Project />} />
         </Routes>
         <Footer />
+        {/* <Single /> */}
       </BrowserRouter>
     </div>
   );

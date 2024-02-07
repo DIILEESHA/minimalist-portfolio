@@ -3,8 +3,36 @@
 import React, { useState, useEffect } from "react";
 import Template from "../../components/Template";
 import "./project.css";
+import { FaArrowRight } from "react-icons/fa";
+import Sanity from "../../sanity/Sanity";
 
 export default function Project() {
+  const [fetch, setFetch] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const fetchQuery = `*[_type == "portfolio"]
+        {
+          title,
+          type,
+          slug,
+          description,
+          logoweb{asset->{_id,url}},
+          mainimage{asset->{_id,url}},
+          publishDate,
+        }`;
+
+        const res = await Sanity.fetch(fetchQuery);
+        setFetch(res);
+        console.log(res);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchProjects();
+  }, []);
+
   return (
     <Template
       // scrollToGuestMessages={scrollToGuestMessages}
@@ -17,8 +45,6 @@ export default function Project() {
       }}
     >
       <div className="template_container">
-
-
         <div className="template_img">
           <img src="https://i.imgur.com/6xeQSQS.png" alt="" />
         </div>
@@ -32,7 +58,30 @@ export default function Project() {
           </p>
         </div>
 
-        
+        <div className="projectso_grid">
+          {fetch.map((datas, index) => (
+            <div key={index} className="projects_sub_grid">
+              <div className="maon">
+                <div className="circler_imger">
+                  <img
+                    loading="lazy"
+                    className="nimas"
+                    src={datas?.logoweb?.asset?.url}
+                    alt=""
+                  />
+                </div>
+              </div>
+              <h2 className="project_titleone">{datas?.title}</h2>
+              <div className="project_description">
+                <p className="project_description_para">{datas?.description}</p>
+              </div>
+
+              <div className="arrow_section">
+                <FaArrowRight />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </Template>
   );

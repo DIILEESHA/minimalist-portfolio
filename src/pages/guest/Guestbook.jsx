@@ -10,6 +10,7 @@ import { HiDotsVertical } from "react-icons/hi";
 import { ThreeDots } from "react-loader-spinner";
 import "./guest.css";
 import Template from "../../components/Template";
+import Single from "../single/Single";
 
 export default function Guestbook() {
   const [user, setUser] = useState(null);
@@ -100,7 +101,7 @@ export default function Guestbook() {
       }}
     >
       <div className="guest_sub">
-      <div className="template_img">
+        <div className="template_img">
           <img src="https://i.imgur.com/wB5fIAB.png" alt="" />
         </div>
         <div className="sign_google_option">
