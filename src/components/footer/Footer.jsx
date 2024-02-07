@@ -1,4 +1,5 @@
 import "./footer.css";
+import Section from "../../components/velo/Section";
 
 export default function Footer() {
   return (
@@ -60,6 +61,7 @@ export default function Footer() {
         <div className="imgt">
           <img src="https://i.imgur.com/baykvWY.png" alt="" />
         </div>
+        <Section />
       </div>
 
       <div className="condition">

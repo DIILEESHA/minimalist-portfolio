@@ -1,18 +1,155 @@
 .about_container {
-  background-image: url("https://i.imgur.com/ZTmyYsa.png");
-  background-color: #070708;
-  height: auto;
-  height: 150vh;
+  background-color: #000;
+
+  width: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  color: #fff;
   position: relative;
   overflow: hidden;
   background-size: contain;
   background-position: 50% 50%;
 }
 
+.mina {
+  background-color: #000;
+  background-color: #070708;
 
-.soi{
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.19)
+    ),
+    url("https://i.imgur.com/ZTmyYsa.png");
+
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+
+  background-position: 50% 50%;
+}
+
+.about_second {
+  background-color: #070708;
+  /* margin-top: 50px; */
+  padding: 50px 0;
+}
+
+.fp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.about_control {
+  position: relative;
+  margin: 0px 99px;
+}
+
+.about_maina {
+  color: #e4e4e6;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.about_maina:nth-child(2) {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.about_maina_para {
+  font-size: 16px;
+  color: #797c86;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.about_control::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #797c86; /* Initial background color */
+  left: -20px;
+  top: 0;
+  animation: moveBackground 10s linear infinite alternate; /* Animation */
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: top;
+    background-color: red;
+  }
+  50% {
+    background-position: bottom;
+    background-color: blue;
+  }
+  100% {
+    background-position: top;
+    background-color: yellow;
+  }
+}
+
+@keyframes movebee {
+  0% {
+    background-position: top;
+    border: 1px solid red;
+  }
+  50% {
+    background-position: bottom;
+    border: 1px solid blue;
+  }
+  100% {
+    background-position: top;
+    border: 1px solid yellow;
+  }
+}
+
+.about_card_detail {
+  /* border: 1px solid #fff; */
+  /* padding: 10px; */
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.about_card_detail::before {
+  position: absolute;
+  border: 2px solid #797c86;
+  animation: movebee 10s linear infinite alternate; /* Animation */
+
+  background-color: #070708;
+  /* background-color: #e4e4e6; */
+  content: "";
+
+  left: -28px;
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50px;
+}
+
+.mina::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.imgur.com/QRblH9k.png");
+}
+
+.soi {
   margin: 80px auto 20px auto;
-
 }
 .about_container::after {
   position: absolute;
@@ -62,15 +199,14 @@
 
 .keo {
   transform: rotate(1deg);
-  border-radius: 1000PX;
+  border-radius: 1000px;
   width: 70px;
   margin: 0px 10px 0px 10px;
   border: 2px solid #e4e4e6;
 }
 
-.keo:hover{
+.keo:hover {
   transform: rotate(0deg);
-
 }
 .aligno {
   display: flex;
