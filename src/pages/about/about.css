@@ -45,6 +45,18 @@
   margin-bottom: 20px;
 }
 
+.abo {
+  margin: 30px 78px;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 150%;
+}
+
+.about_maina:hover {
+  text-decoration: underline;
+}
+
 .about_control {
   position: relative;
   margin: 0px 99px;
