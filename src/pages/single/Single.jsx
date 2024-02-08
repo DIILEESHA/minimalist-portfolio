@@ -17,7 +17,7 @@ export default function Single({ project, onclose }) {
     autoplay: true,
     speed: 2000,
     autoplaySpeed: 1000,
-    className: "slider1",
+    // className: "slider1",
     cssEase: "linear",
     fade: true,
   };
