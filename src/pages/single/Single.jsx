@@ -71,14 +71,14 @@ export default function Single({ project, onclose }) {
           </div>
 
           <a className="web_link" href="">
-            https://piggment.co
+            https://me.com
           </a>
           <div className="github">
             <FaGithub />
             <h2 className="single_about">Github</h2>
           </div>
           <a href="" className="web_link">
-            https://github.com/adenekan41/piggment
+            https://github.com/
           </a>
         </div>
         <div className="project_navigator">
