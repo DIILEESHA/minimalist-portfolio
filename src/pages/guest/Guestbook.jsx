@@ -100,10 +100,11 @@ export default function Guestbook() {
         message: "Join the Conversation! Your Thoughts Matter.",
       }}
     >
+
       <div className="guest_sub">
-        <div className="template_img">
+        {/* <div className="template_img vaka">
           <img src="https://i.imgur.com/wB5fIAB.png" alt="" />
-        </div>
+        </div> */}
         <div className="sign_google_option">
           {!user ? (
             <div

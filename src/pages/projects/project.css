@@ -15,8 +15,8 @@
 
 .template_img {
   position: fixed;
-  /* z-index: 0; */
   opacity: 0.5;
+  z-index: 0;
   transform: rotate(90deg);
   /* display: flex; */
   /* align-items: center; */
@@ -29,6 +29,23 @@
   justify-content: center;
   margin: 0 auto;
   /* right: 0; */
+}
+
+.vde {
+  position: absolute;
+  opacity: 0.5;
+  z-index: 0;
+  transform: rotate(90deg);
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  bottom: 0;
+  left: -200px;
+  top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 .template_img img {
@@ -125,6 +142,7 @@
   z-index: 1;
   position: relative;
   border: 1px solid #1c1c21;
+  cursor: pointer;
   padding: 15px;
   background-image: url("https://i.imgur.com/lE90YCX.png");
   background-color: #0e0e10;

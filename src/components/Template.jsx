@@ -17,7 +17,7 @@ export default function Template({
 
   return (
     <div className="guest_container">
-      <div className="mina">
+      <div className="minavam2">
         <Layout />
         <div className="welcome_card">
           <div className="welcome_text">
@@ -46,6 +46,7 @@ export default function Template({
         {/* <div className="down_arrow" onClick={scrollToGuestMessages}>
           <img loading="lazy" src={guestBookDetails?.arrowSrc} alt="" />
         </div> */}
+        {/* <Section/> */}
       </div>
 
       <div className="guest_grid_container" id="guestMessages">

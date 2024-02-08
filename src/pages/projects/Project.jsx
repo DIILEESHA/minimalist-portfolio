@@ -6,10 +6,14 @@ import "./project.css";
 import { FaArrowRight } from "react-icons/fa";
 import Sanity from "../../sanity/Sanity";
 import { ThreeDots } from "react-loader-spinner";
+import { Link } from "react-router-dom";
+import Single from "../single/Single";
 
 export default function Project() {
   const [fetch, setFetch] = useState([]);
   const [loader, setLoader] = useState(true);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [showSingle, setShowSingle] = useState(false);
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -21,8 +25,9 @@ export default function Project() {
           slug,
           description,
           logoweb{asset->{_id,url}},
-          mainimage{asset->{_id,url}},
+          mainimage[]{asset->{_id,url}},
           publishDate,
+          images[]{asset->{_id,url}}
         }`;
 
         const res = await Sanity.fetch(fetchQuery);
@@ -36,6 +41,15 @@ export default function Project() {
     fetchProjects();
   }, []);
 
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+    setShowSingle(true);
+  };
+
+  const handleclose = () => {
+    setShowSingle(false);
+  };
+
   return (
     <Template
       // scrollToGuestMessages={scrollToGuestMessages}
@@ -48,7 +62,7 @@ export default function Project() {
       }}
     >
       <div className="template_container">
-        <div className="template_img">
+        <div className="template_img vde">
           <img src="https://i.imgur.com/6xeQSQS.png" alt="" />
         </div>
         <h2 className="project_title">Nice stuff I've built</h2>
@@ -83,7 +97,12 @@ export default function Project() {
         ) : (
           <div className="projectso_grid">
             {fetch.map((datas, index) => (
-              <div key={index} className="projects_sub_grid">
+              <div
+                key={index}
+                className="projects_sub_grid"
+                onClick={() => handleProjectClick(datas)}
+              >
+                {/* <Link to={`/project/${datas.slug}`}> */}
                 <div className="maon">
                   <div className="circler_imger">
                     <img
@@ -104,9 +123,14 @@ export default function Project() {
                 <div className="arrow_section">
                   <FaArrowRight />
                 </div>
+                {/* </Link> */}
               </div>
             ))}
           </div>
+        )}
+        {/* <Single/> */}
+        {showSingle && (
+          <Single project={selectedProject} onclose={handleclose} />
         )}
       </div>
     </Template>

@@ -7,9 +7,12 @@ import About from "./pages/about/About.jsx";
 import Contactme from "./components/Contactme.jsx";
 import Project from "./pages/projects/Project.jsx";
 import Single from "./pages/single/Single.jsx";
+import All from "./pages/home/All.jsx";
+// import { useState } from "react";
 // import Nav from "./components/nav/Nav.jsx";
 
 function App() {
+  // const[pop,setPop] = useState(false)
   return (
     <div>
       <BrowserRouter>
@@ -20,9 +23,10 @@ function App() {
           <Route path="/guest-book" element={<Guestbook />} />
           <Route path="/about-me" element={<About />} />
           <Route path="/portfolio" element={<Project />} />
+          {/* <Route path="/project/:slug" element={<Single />} /> */}
         </Routes>
         <Footer />
-        {/* <Single /> */}
+        {/* <Single/> */}
       </BrowserRouter>
     </div>
   );

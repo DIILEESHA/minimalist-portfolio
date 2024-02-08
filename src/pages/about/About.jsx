@@ -4,17 +4,16 @@ import "./about.css";
 import Section from "../../components/velo/Section";
 import Faq from "../../components/faq/Faq";
 import { IoLogoGithub } from "react-icons/io";
-import { GiWorld } from "react-icons/gi";
+// import { GiWorld } from "react-icons/gi";
 import { FaCalendarAlt } from "react-icons/fa";
 import { SiCodesignal } from "react-icons/si";
 import { BiWorld } from "react-icons/bi";
 
-// import ReactTyped from "react-typed";
 
 export default function About() {
   return (
     <div className="about_container">
-      <div className="mina">
+      <div className="minavam">
         <Layout />
         <div className="welcome_card">
           <div className="welcome_text">

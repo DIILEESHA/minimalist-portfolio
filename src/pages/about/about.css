@@ -12,7 +12,7 @@
   background-position: 50% 50%;
 }
 
-.mina {
+.minavam {
   background-color: #000;
 
   width: 100%;
@@ -24,7 +24,7 @@
       rgba(0, 0, 0, 0.19)
     ),
     url("https://i.imgur.com/ZTmyYsa.png");
-
+z-index: 1000;
   position: relative;
   overflow: hidden;
   background-size: cover;

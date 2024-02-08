@@ -25,7 +25,7 @@ const Portfolio = () => {
             slug,
             description,
             logo{asset->{_id,url}},
-            mainimage{asset->{_id,url}},
+            mainimage[]{asset->{_id,url}},
             publishDate,
           }`;
 
