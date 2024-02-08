@@ -127,15 +127,18 @@
   margin-bottom: 20px;
 }
 
-.slider1 .slick-slide > div {
-  margin: 0 10px;
-}
+
 
 .web_link {
   display: flex;
   align-items: center;
   color: #afb0b6;
+  font-size: 14px;
   gap: 5px;
+}
+
+.underconstruction{
+  font-size: 14px;
 }
 
 .web_link {

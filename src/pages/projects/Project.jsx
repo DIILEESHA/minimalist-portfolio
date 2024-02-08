@@ -9,7 +9,7 @@ import { ThreeDots } from "react-loader-spinner";
 import { Link } from "react-router-dom";
 import Single from "../single/Single";
 
-export default function Project() {
+export default function Project({ setLoadings }) {
   const [fetch, setFetch] = useState([]);
   const [loader, setLoader] = useState(true);
   const [selectedProject, setSelectedProject] = useState(null);
@@ -35,8 +35,10 @@ export default function Project() {
 
         const res = await Sanity.fetch(fetchQuery);
         setFetch(res);
+
         console.log(res);
         setLoader(false);
+        setLoadings(false);
       } catch (error) {
         console.log(error);
       }

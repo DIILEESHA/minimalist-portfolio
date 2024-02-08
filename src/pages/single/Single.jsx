@@ -7,8 +7,21 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useState } from "react";
+import { useEffect } from "react";
+import { ThreeDots } from "react-loader-spinner";
 
 export default function Single({ project, onclose }) {
+  const [lo, setLo] = useState(true);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLo(false);
+    }, 1000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   var settings = {
     dots: false,
     infinite: true,
@@ -35,10 +48,31 @@ export default function Single({ project, onclose }) {
             {project.type}
           </h3> */}
           <h2 className="single_title">{project?.title}</h2>
-          {project?.images ? ( 
+
+          {lo ? (
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "10vh",
+              }}
+            >
+              <ThreeDots
+                visible={true}
+                height="80"
+                width="80"
+                color="#fff"
+                radius="9"
+                ariaLabel="three-dots-loading"
+                wrapperStyle={{}}
+                wrapperClass=""
+              />
+            </div>
+          ) : (
             <div className="image_section">
               <Slider {...settings}>
-                {project.images.map((image, index) => (
+                {project?.images?.map((image, index) => (
                   <img
                     loading="lazy"
                     key={index}
@@ -49,11 +83,8 @@ export default function Single({ project, onclose }) {
                 ))}
               </Slider>
             </div>
-          ) : (
-            <>
-              <h1>no image</h1>
-            </>
           )}
+
           <h2 className="single_about">about</h2>
           <p className="single_para">{project?.description}</p>
 
@@ -71,19 +102,33 @@ export default function Single({ project, onclose }) {
             <h2 className="single_about">Website</h2>
           </div>
 
-          <a
-            className="web_link"
-            href={project.websiteUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {project.websiteUrl}
-          </a>
+          {project?.websiteUrl ? (
+            <a
+              className="web_link"
+              href={project.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {project?.websiteUrl}
+            </a>
+          ) : (
+            <>
+              <h1 className="web_link">
+                These site is underconstruction. please wait❤️
+              </h1>
+            </>
+          )}
+
           <div className="github">
             <FaGithub />
             <h2 className="single_about">Github</h2>
           </div>
-          <a href={project?.gitUrl} className="web_link">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={project?.gitUrl}
+            className="web_link"
+          >
             {project?.gitUrl}
           </a>
         </div>

@@ -7,13 +7,25 @@ import sanity from "../../sanity/Sanity.jsx";
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
 import { ThreeDots } from "react-loader-spinner";
+import Single from "../../pages/single/Single.jsx";
 
 const Portfolio = () => {
   const [portfolio, setPortfolio] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [showSingle, setShowSingle] = useState(false);
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+    setShowSingle(true);
+  };
+
+  const handleclose = () => {
+    setShowSingle(false);
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -25,8 +37,11 @@ const Portfolio = () => {
             slug,
             description,
             logo{asset->{_id,url}},
-            mainimage[]{asset->{_id,url}},
+            mainimage{asset->{_id,url}},
             publishDate,
+            images[]{asset->{_id,url}},
+            websiteUrl,
+            gitUrl
           
           }`;
 
@@ -34,6 +49,7 @@ const Portfolio = () => {
 
         setPortfolio(res);
         setLoading(false);
+        // setLoader(false)
         // console.log("data:", res);
       } catch (error) {
         console.log(error);
@@ -148,12 +164,14 @@ const Portfolio = () => {
                   hoveredIndex === index ? "hovered" : ""
                 }`}
                 key={index}
-                onClick={() => handleCardClick(index)}
+          
+                  onClick={() => handleProjectClick(port)
+                }
               >
                 <img className="po" src={port?.mainimage?.asset.url} alt="" />
                 <div className="circle"></div>
                 <div className="cicler_imger">
-                  <img className="nima" src={port?.logo.asset.url} alt="" />
+                  <img className="nima" src={port?.logo?.asset.url} alt="" />
                 </div>
                 <div className="card-title">
                   <p className="dater">
@@ -171,6 +189,9 @@ const Portfolio = () => {
           </Slider>
         </div>
       )}
+       {showSingle && (
+          <Single project={selectedProject} onclose={handleclose} />
+        )}
       <div className="dk"></div>
       <div className="slider_arrows">
         <div className="slio">
