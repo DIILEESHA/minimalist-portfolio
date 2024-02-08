@@ -134,6 +134,7 @@
 .web_link {
   display: flex;
   align-items: center;
+  color: #afb0b6;
   gap: 5px;
 }
 

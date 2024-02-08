@@ -15,7 +15,7 @@ export default function Single({ project, onclose }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    speed: 2000,
+    speed: 3000,
     autoplaySpeed: 1000,
     // className: "slider1",
     cssEase: "linear",
@@ -35,15 +35,16 @@ export default function Single({ project, onclose }) {
             {project.type}
           </h3> */}
           <h2 className="single_title">{project?.title}</h2>
-          {project?.images ? ( // Check if mainimage exists
+          {project?.images ? ( 
             <div className="image_section">
               <Slider {...settings}>
                 {project.images.map((image, index) => (
                   <img
+                    loading="lazy"
                     key={index}
                     className="single_position_img"
                     src={image?.asset?.url}
-                    alt=""
+                    alt={project?.title}
                   />
                 ))}
               </Slider>
@@ -70,15 +71,20 @@ export default function Single({ project, onclose }) {
             <h2 className="single_about">Website</h2>
           </div>
 
-          <a className="web_link" href="">
-            https://me.com
+          <a
+            className="web_link"
+            href={project.websiteUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {project.websiteUrl}
           </a>
           <div className="github">
             <FaGithub />
             <h2 className="single_about">Github</h2>
           </div>
-          <a href="" className="web_link">
-            https://github.com/
+          <a href={project?.gitUrl} className="web_link">
+            {project?.gitUrl}
           </a>
         </div>
         <div className="project_navigator">

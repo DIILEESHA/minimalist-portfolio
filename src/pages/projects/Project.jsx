@@ -27,7 +27,10 @@ export default function Project() {
           logoweb{asset->{_id,url}},
           mainimage[]{asset->{_id,url}},
           publishDate,
-          images[]{asset->{_id,url}}
+          images[]{asset->{_id,url}},
+          websiteUrl,
+          gitUrl
+
         }`;
 
         const res = await Sanity.fetch(fetchQuery);

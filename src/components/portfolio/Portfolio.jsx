@@ -27,6 +27,7 @@ const Portfolio = () => {
             logo{asset->{_id,url}},
             mainimage[]{asset->{_id,url}},
             publishDate,
+          
           }`;
 
         const res = await sanity.fetch(fetchQuery);
