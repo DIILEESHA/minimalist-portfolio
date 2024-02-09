@@ -110,11 +110,17 @@
   .skill_img img {
     height: 40vh;
   }
+  .skill_grid {
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
 }
 
 @media screen and (max-width: 400px) {
   .skill_grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr;
     margin-top: 20px;
   }
 }
@@ -122,6 +128,8 @@
 @media screen and (max-width: 300px) {
   .skill_grid {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
+
     margin-top: 20px;
   }
 }
