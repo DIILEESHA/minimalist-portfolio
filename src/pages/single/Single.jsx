@@ -134,7 +134,14 @@ export default function Single({ project, onclose }) {
         </div>
         <div className="project_navigator">
           <div className="project_navigate_card">
-            <h1 className="navigator_title">open project</h1>
+            <a
+              href={project?.websiteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="navigator_title linka"
+            >
+              open project
+            </a>
             <FaExternalLinkAlt />
           </div>
         </div>
