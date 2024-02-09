@@ -40,6 +40,7 @@
   border-radius: 8px;
   border: 1px solid rgba(33, 33, 39, 1);
   background-image: url("https://i.imgur.com/rthPXIw.png");
+  
 }
 
 .card_details_faq {
@@ -140,4 +141,43 @@
   color: #afb0b6;
   line-height: 150%;
   font-weight: 500;
+}
+
+@media screen and (max-width: 900px) {
+  .faq_container {
+    padding: 100px 38px 40px 38px;
+  }
+}
+
+
+@media screen and (max-width:800px){
+  .faq_grid {
+    display: grid;
+    margin-top: 70px;
+    grid-template-columns: 1.5fr 2fr;
+    gap: 1rem;
+  }
+
+  .left_card_faq{
+    padding: 20px;
+  }
+}
+
+
+
+@media screen and (max-width: 707px) {
+  .faq_container {
+    padding: 60px 18px 40px 18px;
+  }
+
+
+}
+
+@media screen and (max-width:647px){
+  .faq_grid {
+    display: grid;
+    margin-top: 70px;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
 }

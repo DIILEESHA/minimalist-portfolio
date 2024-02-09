@@ -19,7 +19,7 @@ export default function Home() {
       <Portfolio />
       <Languages />
       <Testo id="recommend" />
-      {/* <Faq /> */}
+      <Faq />
     </div>
   );
 }
