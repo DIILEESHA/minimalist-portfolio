@@ -111,7 +111,6 @@
     justify-content: center;
     bottom: 0;
     position: fixed;
-    overflow: hidden;
   }
 
   .align_mobile {
@@ -121,7 +120,6 @@
     /* z-index: 9999; */
     background-color: #131316;
 
-    overflow: hidden;
     display: flex;
     /* align-items: center; */
     /* justify-content: space-around; */
