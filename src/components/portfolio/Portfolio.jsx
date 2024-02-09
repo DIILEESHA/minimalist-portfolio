@@ -42,7 +42,8 @@ const Portfolio = () => {
             publishDate,
             images[]{asset->{_id,url}},
             websiteUrl,
-            gitUrl
+            gitUrl,
+            technologies
           
           }`;
 
@@ -79,7 +80,6 @@ const Portfolio = () => {
       <img src="https://i.imgur.com/D91GDib.png" alt="" />
     </button>
   );
-
 
   const settings = {
     dots: false,

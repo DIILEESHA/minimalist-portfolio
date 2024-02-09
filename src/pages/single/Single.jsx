@@ -86,16 +86,23 @@ export default function Single({ project, onclose }) {
           )}
 
           <h2 className="single_about">about</h2>
-          <p className="single_para">{project?.description}</p>
+          {project && <p className="single_para">{project.description}</p>}
 
           <h2 className="single_about">technologies</h2>
           <div className="single_technology_card">
-            <div className="single_tech_card">
-              <h3 className="tech">react</h3>
-            </div>
-            <div className="single_tech_card">
-              <h3 className="tech">react</h3>
-            </div>
+            {project.technologies ? (
+              <>
+                {project?.technologies?.map((tech, index) => (
+                  <div key={index} className="single_tech_card">
+                    <h3 className="tech">{tech}</h3>
+                  </div>
+                ))}
+              </>
+            ) : (
+              <>
+                <h1 className="web_link">No Technologies mentioned</h1>
+              </>
+            )}
           </div>
           <div className="web_link">
             <BiWorld />

@@ -107,11 +107,12 @@
 .single_technology_card {
   display: flex;
   flex-wrap: wrap;
-  margin: 10px 0;
+  margin: 10px 0 5px 0;
   gap: 10px;
 }
 
 .single_technology_card {
+  /* margin: 0; */
   /* margin: 0 5px; */
 }
 
@@ -124,7 +125,7 @@
   border: 1px solid #1c1c21;
   border-radius: 8px;
   text-transform: capitalize;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 

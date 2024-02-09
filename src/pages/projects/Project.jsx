@@ -30,7 +30,8 @@ export default function Project({ setLoadings }) {
           publishDate,
           images[]{asset->{_id,url}},
           websiteUrl,
-          gitUrl
+          gitUrl,
+          technologies
 
         }`;
 
@@ -122,7 +123,7 @@ export default function Project({ setLoadings }) {
                 <h2 className="project_titleone">{datas?.title}</h2>
                 <div className="project_description">
                   <p className="project_description_para">
-                    {datas?.description}
+                    {`${datas.description.slice(0, 190)}...`}
                   </p>
                 </div>
 
