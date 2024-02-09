@@ -38,7 +38,7 @@ export default function Project({ setLoadings }) {
         const res = await Sanity.fetch(fetchQuery);
         setFetch(res);
 
-        console.log(res);
+        // console.log(res);
         setLoader(false);
         setLoadings(false);
       } catch (error) {
@@ -59,7 +59,6 @@ export default function Project({ setLoadings }) {
 
   return (
     <Template
-      // scrollToGuestMessages={scrollToGuestMessages}
       guestBookDetails={{
         title: "My Creative  ",
         subtitle: "Portfolios",
@@ -109,7 +108,6 @@ export default function Project({ setLoadings }) {
                 className="projects_sub_grid"
                 onClick={() => handleProjectClick(datas)}
               >
-                {/* <Link to={`/project/${datas.slug}`}> */}
                 <div className="maon">
                   <div className="circler_imger">
                     <img
@@ -130,12 +128,10 @@ export default function Project({ setLoadings }) {
                 <div className="arrow_section">
                   <FaArrowRight />
                 </div>
-                {/* </Link> */}
               </div>
             ))}
           </div>
         )}
-        {/* <Single/> */}
         {showSingle && (
           <Single project={selectedProject} onclose={handleclose} />
         )}

@@ -7,11 +7,14 @@ import About from "./pages/about/About.jsx";
 import Contactme from "./components/Contactme.jsx";
 import Project from "./pages/projects/Project.jsx";
 import Contact from "./pages/contact/Contact.jsx";
+import Nav from "./components/nav/Nav.jsx";
+import Layout from "./components/Layout.jsx";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
+        {/* <Layout /> */}
         <Contactme />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -20,7 +23,7 @@ function App() {
           <Route path="/portfolio" element={<Project />} />
           <Route path="/contact-me" element={<Contact />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   );

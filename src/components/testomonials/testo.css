@@ -23,7 +23,9 @@
 
 .testo_card {
   /* margin-top: 30px; */
+  background-image: url("https://i.imgur.com/PkIyBWk.png");
   background-image: url("https://i.imgur.com/vUHGzRV.png");
+
   background-position: center;
   background-size: cover;
   padding: 15px;

@@ -10,16 +10,16 @@ import './home.css'
 export default function Home() {
   return (
     <div className="homer">
-      <div className="template_img">
+      {/* <div className="template_img">
           <img src="https://i.imgur.com/Wg6uLJe.png" alt="" />
-        </div>
+        </div> */}
       <Header />
-      <Skills />
-      <Tools />
-      <Portfolio />
-      <Languages />
-      <Testo id="recommend" />
-      <Faq />
+      {/* <Skills /> */}
+      {/* <Tools /> */}
+      {/* <Portfolio /> */}
+      {/* <Languages /> */}
+      {/* <Testo id="recommend" /> */}
+      {/* <Faq /> */}
     </div>
   );
 }

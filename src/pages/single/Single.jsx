@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import { ThreeDots } from "react-loader-spinner";
 
 export default function Single({ project, onclose }) {
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   const [lo, setLo] = useState(true);
 
   useEffect(() => {
@@ -70,7 +71,9 @@ export default function Single({ project, onclose }) {
               />
             </div>
           ) : (
-            <div className="image_section">
+            <div
+              className="image_section"
+            >
               <Slider {...settings}>
                 {project?.images?.map((image, index) => (
                   <img

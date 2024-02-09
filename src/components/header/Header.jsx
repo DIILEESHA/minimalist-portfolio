@@ -5,8 +5,10 @@ import "atropos/css";
 import "./header.css";
 import CountUp, { useCountUp } from "react-countup";
 import skill from "./skill.json";
-import Marquee from "react-fast-marquee";
+// import Marquee from "react-fast-marquee";
 import Layout from "../Layout.jsx";
+import Marquee from "react-marquee-slider";
+import times from "lodash/times";
 
 export default function Header() {
   useEffect(() => {
@@ -28,10 +30,10 @@ export default function Header() {
         </div>
       </div>
       <div className="ok">
-        <img src="https://i.imgur.com/lGIeGtN.png" alt="" />
+        <img className="ok_img" src="https://i.imgur.com/lGIeGtN.png" alt="" />
       </div>
       <div className="ok2">
-        <img src="https://i.imgur.com/xam90UC.png" alt="" />
+        <img className="ok_img" src="https://i.imgur.com/xam90UC.png" alt="" />
       </div>
       <div className="ok2"></div>
 
@@ -39,10 +41,12 @@ export default function Header() {
         <div className="header_top_img">
           <img src="https://i.imgur.com/uzB2EiW.png" alt="" />
         </div>
-        <h1 className="header_title">
-          Revitalize Your Digital Impact through Boundless
+        <p className="header_title">
+          Revitalize Your Digital Impact through
+          <br className="linebreak-desktop" />
+           Boundless
           <span className="mooha">Creativity</span>
-        </h1>
+        </p>
 
         <p className="header_para">
           I am a passionate and experienced web designer, dedicated to creating
@@ -55,30 +59,19 @@ export default function Header() {
           </div>
 
           <div className="header_main_btn">
-            <button className="smr">let's work together</button>
+            <div className="smrona">let's work together</div>
           </div>
           <div className="header_sm_btn">
-            <button className="lmr">contact me</button>
+            <div className="lmrona">contact me</div>
           </div>
         </div>
       </div>
       <div className="skiller_main">
         <div className="skill_section">
-          <Marquee
-          // autoFill={true}
-          // gradient={true}
-          // gradientColor={"#1c1c21"}
-          // gradientWidth={-1}
-          // play={true}
-          >
+        <Marquee velocity={25} resetAfterTries={200} minScale={0.7}>
             {skill.map((skiller, index) => (
               <div className="skiller" key={index}>
                 <h1 className="skill_name">{skiller.skill}✨</h1>
-                {/* <img
-                  height={15}
-                  src="https://media.tenor.com/4BLFp8PpGCAAAAAj/gesture-hi.gif"
-                  alt=""
-                /> */}
               </div>
             ))}
           </Marquee>

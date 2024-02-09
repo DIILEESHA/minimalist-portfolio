@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import { format } from "date-fns";
 import { ThreeDots } from "react-loader-spinner";
 import Single from "../../pages/single/Single.jsx";
-
 const Portfolio = () => {
   const [portfolio, setPortfolio] = useState([]);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -67,7 +66,10 @@ const Portfolio = () => {
       onClick={onClick}
       disabled={currentSlide === 0}
     >
-      <img src="https://i.imgur.com/vcwnvm2.png" alt="" />
+      <img
+        src="https://i.imgur.com/vcwnvm2.png"
+        alt=""
+      />
     </button>
   );
 
@@ -105,7 +107,7 @@ const Portfolio = () => {
         breakpoint: 720,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },

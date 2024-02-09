@@ -8,6 +8,8 @@
   margin: 30px auto;
   height: 50px;
   border-radius: 8px;
+  position: relative;
+  /* z-index: 10000; */
   border: 1px solid #232329;
   color: #fff;
   background-color: #0e0e10;
@@ -19,4 +21,25 @@
   color: #797c86;
   font-size: 14px;
   font-weight: 500;
+}
+
+
+@media screen and (max-width:640px){
+  .card_container{
+    position: sticky;
+    top: 0;
+    /* width: 100%; */
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card_container h1 {
+    font-size: 13px;
+  }
+
+  .card_container{
+    margin: 10px auto;
+
+  }
+
 }
