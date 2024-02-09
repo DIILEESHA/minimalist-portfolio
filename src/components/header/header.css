@@ -412,23 +412,19 @@
 }
 
 @media screen and (max-width: 600px) {
-  .header_title,.done {
+  .header_title,
+  .done {
     font-size: 29px;
   }
   .header_para {
     width: 88%;
   }
-
-
 }
 
 @media screen and (max-width: 500px) {
   .header_title {
     width: 90%;
     line-height: normal;
-  }
-  .mooha {
-    display: none;
   }
 }
 
@@ -452,19 +448,19 @@
 
   .cir {
     left: -18px;
-  
+
     position: absolute;
     /* left: -2.9%; */
   }
   .cir2 {
     right: -18px;
-  
+
     position: absolute;
     /* left: -2.9%; */
   }
 
-  .project_sub_grid{
-border-radius: 10px;
+  .project_sub_grid {
+    border-radius: 10px;
   }
 
   .smrona,
@@ -474,6 +470,12 @@ border-radius: 10px;
     align-items: center;
     justify-content: center;
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .mooha {
+    display: none;
   }
 }
 

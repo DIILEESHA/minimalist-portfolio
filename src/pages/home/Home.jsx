@@ -14,7 +14,7 @@ export default function Home() {
           <img src="https://i.imgur.com/Wg6uLJe.png" alt="" />
         </div> */}
       <Header />
-      {/* <Skills /> */}
+      <Skills />
       {/* <Tools /> */}
       {/* <Portfolio /> */}
       {/* <Languages /> */}
