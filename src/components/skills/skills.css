@@ -108,7 +108,7 @@
   }
 
   .skill_img img {
-    height: 40vh;
+    height: 25vh;
   }
   .skill_grid {
     /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
