@@ -15,6 +15,7 @@ const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [showSingle, setShowSingle] = useState(false);
 
+  // eslint-disable-next-line no-unused-vars
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -79,9 +80,6 @@ const Portfolio = () => {
     </button>
   );
 
-  const handleCardClick = (index) => {
-    setHoveredIndex(index);
-  };
 
   const settings = {
     dots: false,
@@ -164,9 +162,7 @@ const Portfolio = () => {
                   hoveredIndex === index ? "hovered" : ""
                 }`}
                 key={index}
-          
-                  onClick={() => handleProjectClick(port)
-                }
+                onClick={() => handleProjectClick(port)}
               >
                 <img className="po" src={port?.mainimage?.asset.url} alt="" />
                 <div className="circle"></div>
@@ -189,9 +185,7 @@ const Portfolio = () => {
           </Slider>
         </div>
       )}
-       {showSingle && (
-          <Single project={selectedProject} onclose={handleclose} />
-        )}
+      {showSingle && <Single project={selectedProject} onclose={handleclose} />}
       <div className="dk"></div>
       <div className="slider_arrows">
         <div className="slio">

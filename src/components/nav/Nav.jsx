@@ -34,7 +34,11 @@ export default function Nav() {
         </div>
         <div className="nav_links2">
           <ul className="nav_ul_last">
-            <li className="nav_li_last">contact</li>
+            <li className="nav_li_last">
+              <NavLink className="linka" to="/contact-me">
+                contact
+              </NavLink>
+            </li>
           </ul>
         </div>
       </div>

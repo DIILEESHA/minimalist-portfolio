@@ -14,21 +14,18 @@
 
 .minavam {
   background-color: #000;
+  background-color: #070708;
 
   width: 100%;
   box-sizing: border-box;
   color: #fff;
-  background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.19)
-    ),
-    url("https://i.imgur.com/ZTmyYsa.png");
-z-index: 1000;
+  background-image: url("https://i.imgur.com/ZTmyYsa.png");
+
+  /* height: 100vh; */
+  z-index: 1000;
   position: relative;
   overflow: hidden;
-  background-size: cover;
-
+  background-size: contain;
   background-position: 50% 50%;
 }
 
