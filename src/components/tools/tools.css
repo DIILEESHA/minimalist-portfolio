@@ -64,3 +64,50 @@
   color: #797c86;
   font-weight: 500;
 }
+
+@media screen and (max-width: 900px) {
+  .tool_container {
+    padding: 100px 38px 40px 38px;
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .tool_container {
+    padding: 80px 18px 40px 18px;
+  }
+
+  .skill_grid {
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skill_title {
+    font-size: 25px;
+    width: 100%;
+  }
+
+
+  .tools_grid {
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tools_grid {
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .tools_grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
+
+    margin-top: 20px;
+  }
+}
+

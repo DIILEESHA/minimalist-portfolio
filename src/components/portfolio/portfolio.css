@@ -258,10 +258,70 @@
 .sliders {
 }
 
+@media screen and (max-width: 900px) {
+  .portfolio_container {
+    padding: 100px 38px 40px 38px;
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .portfolio_container {
+    padding: 60px 18px 40px 18px;
+  }
+
+  .skill_grid {
+  }
+  .mm {
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 600px) {
-  .mySwiper {
+  .skill_title {
+    font-size: 25px;
+    width: 100%;
+  }
+
+  .portfolio_card_grid {
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    /* grid-template-columns: 1fr; */
+    margin-top: 20px;
+  }
+
+  .portfolio_sm_card {
     height: 70vh;
-    width: 700px;
-    margin-top: 40px;
+  }
+  .customer img {
+    width: 40px;
+  }
+
+  .prev-arrow,
+  .next-arrow {
+    width: 40px;
+    height: 40px;
+    bottom: -93px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .mm {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .tools_grid {
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .tools_grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
+
+    margin-top: 20px;
   }
 }

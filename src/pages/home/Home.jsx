@@ -15,10 +15,10 @@ export default function Home() {
         </div> */}
       <Header />
       <Skills />
-      {/* <Tools /> */}
-      {/* <Portfolio /> */}
-      {/* <Languages /> */}
-      {/* <Testo id="recommend" /> */}
+      <Tools />
+      <Portfolio />
+      <Languages />
+      <Testo id="recommend" />
       {/* <Faq /> */}
     </div>
   );

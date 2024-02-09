@@ -33,3 +33,17 @@
     position: relative;
     
 }
+
+
+@media screen and (max-width: 900px) {
+  .lng_container {
+    padding: 100px 38px 40px 38px;
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .lng_container {
+    padding: 60px 18px 40px 18px;
+  }
+
+}

@@ -21,32 +21,21 @@ export default function Skills() {
       </p>
 
       <div className="skill_grid">
-        {skill.map((skill,index) => (
+        {skill.map((skill, index) => (
           // <>
-            <Atropos
-              activeOffset={0}
-              shadow={false}
-              key={index}
-              rotateYMax={1}
-              rotateXMax={1}
-              shadowScale={0}
-              onEnter={() => console.log("Enter")}
-              onLeave={() => console.log("Leave")}
-              onRotate={(x, y) => console.log("Rotate", x, y)}
-            >
-              <div className="skill_sub_grid" >
-                <div className="skill_img">
-                  <img loading="lazy" src={skill?.img} alt={skill?.title} />
-                </div>
 
-                <div className="skill_details">
-                  <h1 className="skill_titles">{skill.title}</h1>
-                  <div className="paragraph_section">
-                    <p>{skill?.para}</p>
-                  </div>
-                </div>
+          <div key={index} className="skill_sub_grid">
+            <div className="skill_img">
+              <img loading="lazy" src={skill?.img} alt={skill?.title} />
+            </div>
+
+            <div className="skill_details">
+              <h1 className="skill_titles">{skill.title}</h1>
+              <div className="paragraph_section">
+                <p>{skill?.para}</p>
               </div>
-            </Atropos>
+            </div>
+          </div>
           // </>
         ))}
       </div>
