@@ -405,12 +405,14 @@
 }
 
 @media screen and (max-width: 600px) {
-  .header_title {
+  .header_title,.done {
     font-size: 29px;
   }
   .header_para {
     width: 88%;
   }
+
+
 }
 
 @media screen and (max-width: 500px) {
@@ -418,7 +420,7 @@
     width: 90%;
     line-height: normal;
   }
-  .mooha{
+  .mooha {
     display: none;
   }
 }
@@ -430,22 +432,39 @@
     /* padding-inline: 20px; */
     gap: 1rem;
   }
-  .header_arrow{
+  .header_arrow {
+    display: none;
+  }
+  .skill_section {
+    width: 90%;
+  }
+  .projects_done {
+    width: 88%;
+    margin-top: 20px;
+  }
+
+  .cir2,
+  .cir {
     display: none;
   }
 
-  .smrona,.lmrona{
+  .smrona,
+  .lmrona {
     width: 290px;
-    display: flex;align-items: center;justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 10px;
   }
 }
 
-
-@media screen and (max-width:330px){
-  .smrona,.lmrona{
+@media screen and (max-width: 330px) {
+  .smrona,
+  .lmrona {
     width: 100%;
-    display: flex;align-items: center;justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 10px;
   }
 }
