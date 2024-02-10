@@ -281,7 +281,7 @@
   }
 
   .about_maina_para{
-    text-align: left;
+    /* text-align: left; */
   }
 
   .abo{
@@ -292,8 +292,12 @@
   .abo,
   .mos {
     margin: 20px 19px;
+    z-index: 100000;
+    position: relative;
     /* text-align: center; */
   }
+
+  .about_control::before{}
 }
 
 @media screen and (max-width: 500px) {
