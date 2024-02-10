@@ -7,7 +7,7 @@
 
 .testo_card_grid {
   display: grid;
-  z-index: 2;
+  /* z-index: 2; */
   position: relative;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;

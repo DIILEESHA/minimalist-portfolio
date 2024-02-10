@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./lng.css";
 import Sanity from "../../sanity/Sanity";
-import Marquee from "react-fast-marquee";
+import Marquee from "react-marquee-slider";
+import times from "lodash/times";
 
 export default function Languages() {
   const [language, setLanguage] = useState([]);
@@ -14,14 +15,18 @@ export default function Languages() {
         }`;
 
         const res = await Sanity.fetch(fetchQuery);
-        setLanguage(res[0]);
-        // console.log("skill data:", res);
+
+        setLanguage(res[0]?.skillimg || []);
       } catch (error) {
         console.log(error);
       }
     };
     fetchLng();
   }, []);
+
+  const numDuplicates = Math.ceil(100 / language.length);
+
+  const duplicatedImages = times(numDuplicates, () => language).flat();
 
   return (
     <div className="lng_container">
@@ -38,29 +43,15 @@ export default function Languages() {
         solutions, from front-end design to powerful back-end development and
         efficient data management
       </p>
- 
+
       <div className="mid">
-      <Marquee
-  autoFill={true}
-  gradient={true}
-  direction="left"
-  gradientWidth={-1}
-  gradientColor="#070708"
-  backgroundColor="#070708"
-  play={true}
-  className="marquee"
->
-  {language?.skillimg?.map((lg, index) => (
-    <div key={index} className="cr"> 
-      <img
-        className="mea"
-        loading="lazy"
-        src={lg?.asset?.url}
-        alt=""
-      />
-    </div>
-  ))}
-</Marquee>
+        <Marquee velocity={10} minScale={17} resetAfterTries={200}>
+          {duplicatedImages.map((lg, index) => (
+            <div key={index} className="cr">
+              <img className="mea" loading="lazy" src={lg?.asset?.url} alt="" />
+            </div>
+          ))}
+        </Marquee>
       </div>
     </div>
   );

@@ -96,7 +96,7 @@ export default function Nav() {
           <p className="meow_title">
             Thank you for visiting my portfolio! Explore my projects,
             technologies, and experiences.
-            <Link to="/guestbook" className="guestbook_link">
+            <Link to="/guest-book" className="guestbook_link">
               Leave a Message❤️
             </Link>
           </p>

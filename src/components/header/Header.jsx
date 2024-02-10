@@ -5,12 +5,10 @@ import "atropos/css";
 import 'animate.css';
 
 import "./header.css";
-import CountUp, { useCountUp } from "react-countup";
+import CountUp from "react-countup";
 import skill from "./skill.json";
-// import Marquee from "react-fast-marquee";
 import Layout from "../Layout.jsx";
 import Marquee from "react-marquee-slider";
-import times from "lodash/times";
 
 export default function Header() {
   useEffect(() => {
