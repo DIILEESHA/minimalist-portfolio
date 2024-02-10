@@ -1,12 +1,13 @@
 // import React from 'react'
 import Card from './navcard/Card'
 import Nav from './nav/Nav'
+import 'animate.css'
 
 export default function Layout() {
   return (
     <div>
       <Card/>
-      <div style={{ position: "relative", zIndex: "1" }}>
+      <div style={{ position: "relative", zIndex: "1" }} className=''>
         <Nav />
       </div>
 

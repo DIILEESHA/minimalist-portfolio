@@ -22,7 +22,7 @@ export default function Contact() {
               />
             </div>
             <h2 className="welcome">
-              Join the Conversation! Your Thoughts Matter.
+              Join the Conversation!
             </h2>
           </div>
         </div>
@@ -48,7 +48,7 @@ export default function Contact() {
         <Section />
       </div>
 
-      <div className="contact_form_section">
+      <div className="contact_form_section two">
         <div className="contact_grida">
           <div className="contact_sub_grida">
             <form action="" className="contact_form">

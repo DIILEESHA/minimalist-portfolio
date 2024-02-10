@@ -2,6 +2,8 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useEffect } from "react";
 import "atropos/css";
+import 'animate.css';
+
 import "./header.css";
 import CountUp, { useCountUp } from "react-countup";
 import skill from "./skill.json";
@@ -18,15 +20,15 @@ export default function Header() {
     }
   }, []);
   return (
-    <div className="header_container">
+    <div className="header_container ">
       <Layout />
 
-      <div className="welcome_card">
+      <div className="welcome_card animate__animated animate__fadeInDown">
         <div className="welcome_text">
           <div className="welcome_img">
             <img loading="lazy" src="https://i.imgur.com/qJzqbOj.png" alt="" />
           </div>
-          <h2 className="welcome">Dileesha Lakshan Welcome’s You!</h2>
+          <h2 className="welcome ">Dileesha Lakshan Welcome’s You!</h2>
         </div>
       </div>
       <div className="ok">
@@ -37,15 +39,14 @@ export default function Header() {
       </div>
       <div className="ok2"></div>
 
-      <div className="header_description">
+      <div className="header_description ">
         <div className="header_top_img">
           <img src="https://i.imgur.com/uzB2EiW.png" alt="" />
         </div>
         <p className="header_title">
-          Revitalize Your Digital Impact through
-          <br className="linebreak-desktop" />
-           Boundless
-          <span className="mooha">Creativity</span>
+          Revitalize Your Digital Impact through Boundless creativity
+          {/* <br className="linebreak-desktop" /> */}
+          {/* <span className="mooha">Creativity</span> */}
         </p>
 
         <p className="header_para">
@@ -68,7 +69,7 @@ export default function Header() {
       </div>
       <div className="skiller_main">
         <div className="skill_section">
-        <Marquee velocity={25} resetAfterTries={200} minScale={0.7}>
+          <Marquee velocity={25} resetAfterTries={200} minScale={0.7}>
             {skill.map((skiller, index) => (
               <div className="skiller" key={index}>
                 <h1 className="skill_name">{skiller.skill}✨</h1>

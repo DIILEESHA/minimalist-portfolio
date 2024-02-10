@@ -178,17 +178,17 @@
   padding: 10px;
 }
 
-.buha{
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
-    /* justify-content: center; */
+.buha {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
 }
 
 .sma_card {
   background-color: #0e0e10;
   border-radius: 8px;
-  padding:20px;
+  padding: 20px;
   /* display: flex; */
   /* justify-content: space-between; */
   /* width: 100%; */
@@ -220,4 +220,40 @@
   width: 44px;
   height: 44px;
   object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+  .contact_form_section {
+    padding: 30px 48px;
+  }
+  .contact_grida{
+    gap: 1rem;
+  }
+
+  .two{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .contact_form{
+    padding: 20px;
+  }
+}
+
+
+@media screen and (max-width:869px){
+  .contact_form{
+    display: flex;flex-direction: column;
+  }
+}
+@media screen and (max-width: 850px) {
+  .contact_form_section {
+    padding: 30px 18px;
+  }
+}
+
+@media screen and (max-width:685px){
+  .contact_grida{
+    display: flex;flex-direction: column;
+  }
 }
