@@ -277,15 +277,22 @@
 
   .about_control {
     position: relative;
-    margin: 0px 29px 0px 49px;
+    margin: 0px 29px 0px 39px;
   }
 
-  
-  .abo,.mos {
-    margin: 20px 29px;
+  .about_maina_para{
+    text-align: left;
   }
 
-  .skill_grid {
+  .abo{
+
+    font-size: 20px;
+  }
+
+  .abo,
+  .mos {
+    margin: 20px 19px;
+    /* text-align: center; */
   }
 }
 
