@@ -1,7 +1,6 @@
 .nav_container {
   /* width: 88.8%; */
   padding: 0px 78px;
-  
 }
 .nav_grid {
   height: auto;
@@ -124,6 +123,10 @@
 
     /* z-index: 9999; */
     background-color: #131316;
+    background-image: url("https://i.imgur.com/lE90YCX.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 
     display: flex;
     /* align-items: center; */
@@ -154,7 +157,7 @@
   }
 
   .koob {
-    margin: 10px 0;
+    margin: 20px 0;
     height: 1px;
     width: 100%;
     background-color: #afb0b6;
