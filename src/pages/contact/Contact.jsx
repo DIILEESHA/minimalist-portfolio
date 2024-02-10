@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect } from "react";
 import "./contact.css";
 import Faq from "../../components/faq/Faq";
 import Layout from "../../components/Layout";
@@ -8,6 +8,9 @@ import Layout from "../../components/Layout";
 import Section from "../../components/velo/Section";
 
 export default function Contact() {
+  useEffect(() => {
+    document.title = " Contact Me | Dileesha Nawarathna ";
+  }, []);
   return (
     <div className="contact_main">
       <div className="contact_container mainavm2">
@@ -21,9 +24,7 @@ export default function Contact() {
                 alt=""
               />
             </div>
-            <h2 className="welcome">
-              Join the Conversation!
-            </h2>
+            <h2 className="welcome">Join the Conversation!</h2>
           </div>
         </div>
         <div className="header_description">

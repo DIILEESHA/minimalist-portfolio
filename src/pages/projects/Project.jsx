@@ -8,6 +8,11 @@ import { Link } from "react-router-dom";
 import Single from "../single/Single";
 
 export default function Project({ setLoadings }) {
+
+
+  useEffect(() => {
+    document.title = " Projects | Dileesha Nawarathna ";
+  }, []);
   const [fetch, setFetch] = useState([]);
   const [loader, setLoader] = useState(true);
   const [selectedProject, setSelectedProject] = useState(null);

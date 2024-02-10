@@ -13,6 +13,10 @@ import Template from "../../components/Template";
 import Single from "../single/Single";
 
 export default function Guestbook() {
+  useEffect(() => {
+    document.title = " Guest-book | Dileesha Nawarathna ";
+  }, []);
+
   const [user, setUser] = useState(null);
   const [guestMessage, setGuestMessage] = useState("");
   const [guestbookMessages, setGuestbookMessages] = useState([]);

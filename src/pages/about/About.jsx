@@ -8,9 +8,14 @@ import { IoLogoGithub } from "react-icons/io";
 import { FaCalendarAlt } from "react-icons/fa";
 import { SiCodesignal } from "react-icons/si";
 import { BiWorld } from "react-icons/bi";
+import { useEffect } from "react";
 
 
 export default function About() {
+
+  useEffect(() => {
+    document.title = " About Me | Dileesha Nawarathna ";
+  }, []);
   return (
     <div className="about_container">
       <div className="minavam">
