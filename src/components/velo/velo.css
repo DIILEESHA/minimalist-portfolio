@@ -5,7 +5,7 @@
   background-color: transparent;
   width: 80%;
   margin: 0 auto;
-  z-index: 10;
+  /* z-index: 10; */
   position: relative;
   overflow-x: hidden;
   /* margin: 10px 0; */
