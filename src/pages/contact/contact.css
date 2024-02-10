@@ -253,6 +253,12 @@
 }
 
 @media screen and (max-width:685px){
+
+
+
+  .contact_container{
+    height: auto;
+  }
   .contact_grida{
     display: flex;flex-direction: column;
   }
