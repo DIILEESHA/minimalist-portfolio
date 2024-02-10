@@ -419,6 +419,10 @@
   .header_para {
     width: 88%;
   }
+  .header_container{
+  background-size: contain;
+
+  }
 }
 
 @media screen and (max-width: 500px) {

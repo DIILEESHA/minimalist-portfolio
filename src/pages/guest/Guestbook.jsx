@@ -100,7 +100,6 @@ export default function Guestbook() {
         message: "Join the Conversation!",
       }}
     >
-
       <div className="guest_sub">
         {/* <div className="template_img vaka">
           <img src="https://i.imgur.com/wB5fIAB.png" alt="" />
