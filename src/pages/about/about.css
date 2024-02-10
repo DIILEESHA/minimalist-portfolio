@@ -265,7 +265,7 @@
     margin: 30px 38px;
   }
 
-  .abo{
+  .abo {
     margin: 30px 39px;
   }
 }
@@ -273,6 +273,16 @@
 @media screen and (max-width: 707px) {
   .skill_container {
     padding: 80px 18px 40px 18px;
+  }
+
+  .about_control {
+    position: relative;
+    margin: 0px 29px 0px 49px;
+  }
+
+  
+  .abo,.mos {
+    margin: 20px 29px;
   }
 
   .skill_grid {
