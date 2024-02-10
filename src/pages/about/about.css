@@ -84,6 +84,7 @@
   color: #797c86;
   font-weight: 500;
   line-height: 150%;
+  text-align: justify;
 }
 
 .about_control::before {
@@ -253,4 +254,37 @@
 .moohas {
   position: absolute;
   bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .about_control {
+    position: relative;
+    margin: 0px 39px 0px 59px;
+  }
+  .mos {
+    margin: 30px 38px;
+  }
+
+  .abo{
+    margin: 30px 39px;
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .skill_container {
+    padding: 80px 18px 40px 18px;
+  }
+
+  .skill_grid {
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .fp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }
