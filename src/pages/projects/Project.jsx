@@ -1,15 +1,15 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import Template from "../../components/Template";
 import "./project.css";
 import { FaArrowRight } from "react-icons/fa";
 import Sanity from "../../sanity/Sanity";
 import { ThreeDots } from "react-loader-spinner";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import Single from "../single/Single";
 
-export default function Project({ setLoadings }) {
-
-
+export default function Project() {
   useEffect(() => {
     document.title = " Projects | Dileesha Nawarathna ";
   }, []);
@@ -40,7 +40,6 @@ export default function Project({ setLoadings }) {
         const res = await Sanity.fetch(fetchQuery);
         setFetch(res);
         setLoader(false);
-        setLoadings(false);
       } catch (error) {
         console.log(error);
       }
@@ -52,12 +51,11 @@ export default function Project({ setLoadings }) {
     const handleResize = () => {
       if (window.innerWidth <= 592) {
         setSliceLength(80);
-      } 
-      
-      if(window.innerWidth <= 492) {
+      }
+
+      if (window.innerWidth <= 492) {
         setSliceLength(160);
-      } 
-      else {
+      } else {
         setSliceLength(190);
       }
     };
@@ -84,7 +82,7 @@ export default function Project({ setLoadings }) {
     <Template
       guestBookDetails={{
         title: "My Creative  ",
-        subtitle: "Portfolios",
+        subtitle: "Portfolios🎯",
         description: "Explore a showcase of my diverse projects and creations",
         arrowSrc: "https://i.imgur.com/EzZ16Wn.png",
         message: "Step into My World of Creativity!",
@@ -155,6 +153,14 @@ export default function Project({ setLoadings }) {
         {showSingle && (
           <Single project={selectedProject} onclose={handleclose} />
         )}
+
+        <div className="resumes">
+          <h2 className="resume">
+            Lets Go To My
+            <span className="mooha">Resume</span>
+          </h2>
+          <FaArrowRight />
+        </div>
       </div>
     </Template>
   );

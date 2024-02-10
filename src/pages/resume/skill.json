@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "lng": "React",
+      "category": "skill"
+    },
+    {
+      "id": 2,
+      "lng": "UI/UX",
+      "category": "skill"
+    },
+    {
+      "id": 3,
+      "lng": "Javascript",
+      "category": "skill"
+    },
+    {
+      "id": 4,
+      "lng": "Vite",
+      "category": "skill"
+    },
+    {
+      "id": 5,
+      "lng": "React Native",
+      "category": "skill"
+    },
+    {
+      "id": 6,
+      "lng": "Sanity",
+      "category": "skill"
+    },
+    {
+      "id": 7,
+      "lng": "Java",
+      "category": "skill"
+    },
+    {
+      "id": 8,
+      "lng": "Product Design",
+      "category": "skill"
+    },
+    {
+      "id": 9,
+      "lng": "Git",
+      "category": "tool"
+    },
+    {
+      "id": 10,
+      "lng": "Github",
+      "category": "tool"
+    },
+    {
+      "id": 11,
+      "lng": "Figma",
+      "category": "tool"
+    },
+    {
+      "id": 12,
+      "lng": "VS Code",
+      "category": "tool"
+    },
+    {
+      "id": 13,
+      "lng": "Expo",
+      "category": "tool"
+    },
+    {
+      "id": 14,
+      "lng": "AWS",
+      "category": "tool"
+    }
+  ]
+  

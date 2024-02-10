@@ -97,7 +97,7 @@ export default function Guestbook() {
       scrollToGuestMessages={scrollToGuestMessages}
       guestBookDetails={{
         title: "Sign my ",
-        subtitle: "guestbook",
+        subtitle: "guestbook🤝",
         description:
           "Drop a line in my guestbook—your thoughts matter! Join the conversation at 'Speak Your Mind' and let's create a space for shared experiences. Can't wait to hear from you!",
         arrowSrc: "https://i.imgur.com/EzZ16Wn.png",

@@ -31,16 +31,16 @@ export default function Nav() {
   return (
     <div className="nav_container">
       <div className="nav_grid">
-        <div className="nav_logo">
-          <img src="https://i.imgur.com/fYuFZ2C.png" alt="" />
-        </div>
+        <NavLink to="/" className="linka">
+          <div className="nav_logo">
+            <img src="https://i.imgur.com/fYuFZ2C.png" alt="" />
+          </div>
+        </NavLink>
         <div className="nav_links">
           <ul className="nav_ul">
-            <li className="nav_li">
-              <NavLink to="/" className="linka">
+            {/* <li className="nav_li">
                 home
-              </NavLink>
-            </li>
+            </li> */}
             <li className="nav_li">
               <NavLink to="/about-me" className="linka">
                 about me
@@ -49,6 +49,11 @@ export default function Nav() {
             <li className="nav_li">
               <NavLink to="/portfolio" className="linka">
                 portfolio
+              </NavLink>
+            </li>
+            <li className="nav_li">
+              <NavLink to="/resume" className="linka">
+                Resume
               </NavLink>
             </li>
             <li className="nav_li">
@@ -126,6 +131,12 @@ export default function Nav() {
               <li className="nav_mobile_li">
                 <NavLink to="/portfolio" className="linka">
                   portfolio
+                </NavLink>
+              </li>
+              <li className="nav_mobile_li">
+                {" "}
+                <NavLink to="/resume" className="linka">
+                  resume
                 </NavLink>
               </li>
               <li className="nav_mobile_li">

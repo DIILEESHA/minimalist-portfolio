@@ -113,6 +113,7 @@
 .single_technology_card {
   /* margin: 0; */
   /* margin: 0 5px; */
+  margin-bottom: 20px;
 }
 
 .tech {
@@ -136,6 +137,7 @@
 }
 
 .underconstruction {
+  /* margin-top: 10px; */
   font-size: 14px;
 }
 
@@ -188,7 +190,7 @@
   .singa {
     width: 50%;
   }
-  .single_position_img{
+  .single_position_img {
     height: 30vh;
   }
 }
@@ -198,7 +200,7 @@
     width: 70%;
     padding: 20px;
   }
-  .single_position_img{
+  .single_position_img {
     height: 30vh;
   }
 }
@@ -206,7 +208,7 @@
   .singa {
     width: 80%;
   }
-  .single_position_img{
+  .single_position_img {
     height: 30vh;
   }
 }
@@ -216,7 +218,7 @@
     width: 95%;
     padding: 10px;
   }
-  .single_position_img{
+  .single_position_img {
     height: 38vh;
   }
 }

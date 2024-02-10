@@ -202,6 +202,22 @@
   margin-bottom: 10px;
 }
 
+.resumes {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* border-bottom: 1px solid #797c86; */
+  width: fit-content;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.resume {
+  font-size: 17px;
+  font-weight: 500;
+}
+
 .project_description_para {
   color: #797c86;
   line-height: 150%;
