@@ -233,4 +233,9 @@
     grid-column: 1/4;
     margin-top: 20px;
   }
+
+  .footer_card {
+    /* padding: 0; */
+    padding: 40px 20px 10px 20px;
+  }
 }
