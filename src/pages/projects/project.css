@@ -217,36 +217,26 @@
   cursor: pointer;
 }
 
-
-
 @media screen and (max-width: 896px) {
-
-
-  .projectso_grid{
+  .projectso_grid {
     grid-template-columns: 1fr;
   }
 
-  .guest_sub2{
-
+  .guest_sub2 {
   }
-
-  
 }
 
-
-@media screen and (max-width:678px){
-  .projectso_grid{
-  grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
-
+@media screen and (max-width: 678px) {
+  .projectso_grid {
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
   }
 
-  .project_title{
+  .project_title {
     font-size: 23px;
   }
 }
-@media screen and (max-width:548px){
-  .projectso_grid{
-  grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-
+@media screen and (max-width: 548px) {
+  .projectso_grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
   }
 }

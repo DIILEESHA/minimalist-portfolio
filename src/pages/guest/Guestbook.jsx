@@ -97,7 +97,7 @@ export default function Guestbook() {
         description:
           "Drop a line in my guestbook—your thoughts matter! Join the conversation at 'Speak Your Mind' and let's create a space for shared experiences. Can't wait to hear from you!",
         arrowSrc: "https://i.imgur.com/EzZ16Wn.png",
-        message: "Join the Conversation! Your Thoughts Matter.",
+        message: "Join the Conversation!",
       }}
     >
 

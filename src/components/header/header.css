@@ -475,7 +475,7 @@
 
 @media screen and (max-width: 430px) {
   .mooha {
-    display: none;
+    /* display: none; */
   }
 }
 

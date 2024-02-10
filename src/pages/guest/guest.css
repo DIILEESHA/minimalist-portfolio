@@ -461,6 +461,10 @@
   margin: 0px 2px 0 0;
 }
 
+.colab{
+  display: none;
+}
+
 @media screen and (max-width: 950px) {
   .guest_grid_container {
     padding: 0 39px;
@@ -483,10 +487,19 @@
     display: flex;
     flex-direction: column;
   }
+
+  .guest_book_detail_title{
+    text-align: center;
+    line-height: normal;
+  }
   .guest_para{
     width: 90%;
   }
   .guest_sub2 {
     display: block;
+  }
+
+  .colab{
+    display: flex;
   }
 }

@@ -39,6 +39,8 @@ export default function Template({
         <div className="guest_book_details">
           <h1 className="guest_book_detail_title">
             {guestBookDetails?.title}
+
+            <br className="colab" />
             <span className="mooha qq">{guestBookDetails?.subtitle}</span>
           </h1>
           <p className="guest_para">{guestBookDetails?.description}</p>
