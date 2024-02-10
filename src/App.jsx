@@ -23,7 +23,7 @@ function App() {
           <Route path="/portfolio" element={<Project />} />
           <Route path="/contact-me" element={<Contact />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </div>
   );
