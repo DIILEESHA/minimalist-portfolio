@@ -5,7 +5,6 @@ import { FaArrowRight } from "react-icons/fa6";
 import pdf from "../../pdf/Dileesha-Lakshan.pdf";
 
 export default function Resume() {
-
   useEffect(() => {
     document.title = " Resume | Dileesha Nawarathna ";
   }, []);
