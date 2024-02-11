@@ -55,6 +55,8 @@
   left: 0;
   height: 100%;
   width: 100%;
+  pointer-events: none; 
+  /* z-index: 1; */
   /* height: 200vh;  */
 }
 

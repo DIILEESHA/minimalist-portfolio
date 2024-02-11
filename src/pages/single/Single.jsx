@@ -34,125 +34,133 @@ export default function Single({ project, onclose }) {
     // className: "slider1",
     cssEase: "linear",
     fade: true,
+    arrows:false
   };
   return (
     <div className="singlea_container">
       <div className="singa">
-        <div className="nav_single">
-          <div className="single_close_popup">
-            <IoCloseSharp onClick={onclose} />
+        <div className="singo">
+
+          {/* 1 */}
+          <div className="nav_single">
+            <div className="single_close_popup">
+              <IoCloseSharp onClick={onclose} />
+            </div>
+            <div className="single_line"></div>
           </div>
-          <div className="single_line"></div>
-        </div>
-        <div className="single_content_selector">
-          {/* <h3 className="single_type">
-            {project.type}
-          </h3> */}
-          <h2 className="single_title">{project?.title}</h2>
 
-          {lo ? (
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "10vh",
-              }}
-            >
-              <ThreeDots
-                visible={true}
-                height="80"
-                width="80"
-                color="#fff"
-                radius="9"
-                ariaLabel="three-dots-loading"
-                wrapperStyle={{}}
-                wrapperClass=""
-              />
+
+          {/* 2 */}
+          <div className="single_content_selector">
+       
+            <h2 className="single_title">{project?.title}</h2>
+
+            {lo ? (
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  height: "10vh",
+                }}
+              >
+                <ThreeDots
+                  visible={true}
+                  height="80"
+                  width="80"
+                  color="#fff"
+                  radius="9"
+                  ariaLabel="three-dots-loading"
+                  wrapperStyle={{}}
+                  wrapperClass=""
+                />
+              </div>
+            ) : (
+              <div className="image_section">
+                <Slider {...settings}>
+                  {project?.images?.map((image, index) => (
+                    <img
+                      loading="lazy"
+                      key={index}
+                      className="single_position_img"
+                      src={image?.asset?.url}
+                      alt={project?.title}
+                    />
+                  ))}
+                </Slider>
+              </div>
+            )}
+
+            <h2 className="single_about">about</h2>
+            {project && <p className="single_para">{project.description}</p>}
+
+            <h2 className="single_about">technologies</h2>
+            <div className="single_technology_card">
+              {project.technologies ? (
+                <>
+                  {project?.technologies?.map((tech, index) => (
+                    <div key={index} className="single_tech_card">
+                      <h3 className="tech">{tech}</h3>
+                    </div>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <h1 className="web_link">No Technologies mentioned</h1>
+                </>
+              )}
             </div>
-          ) : (
-            <div
-              className="image_section"
-            >
-              <Slider {...settings}>
-                {project?.images?.map((image, index) => (
-                  <img
-                    loading="lazy"
-                    key={index}
-                    className="single_position_img"
-                    src={image?.asset?.url}
-                    alt={project?.title}
-                  />
-                ))}
-              </Slider>
+            <div className="web_link">
+              <BiWorld />
+              <h2 className="single_about">Website</h2>
             </div>
-          )}
 
-          <h2 className="single_about">about</h2>
-          {project && <p className="single_para">{project.description}</p>}
-
-          <h2 className="single_about">technologies</h2>
-          <div className="single_technology_card">
-            {project.technologies ? (
-              <>
-                {project?.technologies?.map((tech, index) => (
-                  <div key={index} className="single_tech_card">
-                    <h3 className="tech">{tech}</h3>
-                  </div>
-                ))}
-              </>
+            {project?.websiteUrl ? (
+              <a
+                className="web_link"
+                href={project.websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {project?.websiteUrl}
+              </a>
             ) : (
               <>
-                <h1 className="web_link">No Technologies mentioned</h1>
+                <h1 className="web_link">
+                  These site is underconstruction. please wait❤️
+                </h1>
               </>
             )}
-          </div>
-          <div className="web_link">
-            <BiWorld />
-            <h2 className="single_about">Website</h2>
-          </div>
 
-          {project?.websiteUrl ? (
+            <div className="github">
+              <FaGithub />
+              <h2 className="single_about">Github</h2>
+            </div>
             <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={project?.gitUrl}
               className="web_link"
-              href={project.websiteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
             >
-              {project?.websiteUrl}
+              {project?.gitUrl}
             </a>
-          ) : (
-            <>
-              <h1 className="web_link">
-                These site is underconstruction. please wait❤️
-              </h1>
-            </>
-          )}
-
-          <div className="github">
-            <FaGithub />
-            <h2 className="single_about">Github</h2>
           </div>
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={project?.gitUrl}
-            className="web_link"
-          >
-            {project?.gitUrl}
-          </a>
-        </div>
-        <div className="project_navigator">
-          <div className="project_navigate_card">
-            <a
-              href={project?.websiteUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="navigator_title linka"
-            >
-              open project
-            </a>
-            <FaExternalLinkAlt />
+
+
+
+          {/* 3 */}
+          <div className="project_navigator">
+            <div className="project_navigate_card">
+              <a
+                href={project?.websiteUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="navigator_title linka"
+              >
+                open project
+              </a>
+              <FaExternalLinkAlt />
+            </div>
           </div>
         </div>
       </div>
