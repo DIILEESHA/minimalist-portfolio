@@ -21,6 +21,7 @@
   display: grid;
   margin-top: 70px;
   grid-template-columns: 1fr 2fr;
+  position: relative;
   gap: 2rem;
 }
 
@@ -65,6 +66,10 @@
   margin-bottom: 10px;
 }
 
+.faq_btn_section {
+  position: relative;
+}
+
 .faq_para {
   color: #797c86;
   font-size: 16px;
@@ -84,7 +89,7 @@
   height: 50px;
   font-size: 14px;
   line-height: 150%;
-  cursor: context-menu;
+  cursor: pointer;
   font-weight: 500;
   font-family: "Manrope", sans-serif;
 }
@@ -104,7 +109,7 @@
 .faq_list_card {
   border-radius: 12px;
   background-color: #0e0e10;
-  
+
   padding: 15px 20px;
   /* height: 70px; */
   border: 1px solid #1c1c21;

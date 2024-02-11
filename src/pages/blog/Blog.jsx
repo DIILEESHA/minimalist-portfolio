@@ -5,6 +5,7 @@ import Template from "../../components/Template";
 import Sanity from "../../sanity/Sanity";
 import { ThreeDots } from "react-loader-spinner";
 import { FaArrowRight } from "react-icons/fa6";
+import { PortableText } from "@portabletext/react";
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("latest");
@@ -24,7 +25,8 @@ export default function Blog() {
         const res = await Sanity.fetch(fetchQuery);
 
         setBlog(res);
-        setLoad(!false);
+        console.log(res)
+        setLoad(false);
       } catch (error) {
         console.log("Error:", error);
       }
@@ -143,16 +145,10 @@ export default function Blog() {
                     <h3 className="blog__create__date">3 min read</h3>
                   </div>
 
-                  <h1 className="blogger__title">
-                    Backend is dead. Server components killed it.
-                    {article?.title}
-                  </h1>
+                  <h1 className="blogger__title">{article?.title}</h1>
 
                   <p className="blog_short__para">
-                    After the advent of RSCs (React server components) and
-                    NextJS 14 with App router, we are in the middle of a huge
-                    paradigm shift in how code is written. Backend is no longer
-                    a necessity in modern web development.
+                    <PortableText value={article?.body} />
                   </p>
                 </section>
 
