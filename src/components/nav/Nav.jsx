@@ -154,6 +154,13 @@ export default function Nav() {
                   guestbook
                 </NavLink>
               </li>
+
+              <li className="nav_mobile_li">
+                {" "}
+                <NavLink className="linka" to="/blog">
+                  Blog
+                </NavLink>
+              </li>
               <li className="nav_mobile_li">
                 {" "}
                 <NavLink className="linka" to="/contact-me">

@@ -9,7 +9,7 @@ import { FaArrowRight } from "react-icons/fa6";
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("latest");
   const [blog, setBlog] = useState([]);
-  const [load, setLoad] = useState(true);
+  const [load, setLoad] = useState(false);
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -24,7 +24,7 @@ export default function Blog() {
         const res = await Sanity.fetch(fetchQuery);
 
         setBlog(res);
-        setLoad(false);
+        setLoad(!false);
       } catch (error) {
         console.log("Error:", error);
       }
@@ -108,7 +108,7 @@ export default function Blog() {
               justifyContent: "center",
             }}
           >
-            <ThreeDots
+            {/* <ThreeDots
               visible={true}
               height="80"
               width="80"
@@ -117,7 +117,13 @@ export default function Blog() {
               ariaLabel="three-dots-loading"
               wrapperStyle={{}}
               wrapperClass=""
-            />
+            /> */}
+
+            <div style={{ height: "40vh", margin: "50px 0" }}>
+              <h1 style={{ fontSize: "22px", fontWeight: "500" }}>
+                Stay tuned for insightful articles❤️
+              </h1>
+            </div>
           </div>
         ) : (
           <div className="bloger_card_section">
