@@ -22,7 +22,7 @@ export default function Resume() {
       }}
     >
       <div className="resumer">
-          <div className="template_img">
+        <div className="template_img">
           <img src="https://i.imgur.com/iATj14h.png" alt="" />
         </div>
         <h2 className="project_title">My Journey</h2>
@@ -32,7 +32,7 @@ export default function Resume() {
             adaptable solutions.
           </p>
         </div>
-        <br />
+        {/* <br /> */}
         <h2 className="project_title koha">education</h2>
 
         <div className="education_container">
@@ -125,7 +125,7 @@ export default function Resume() {
 
         <div className="resumes">
           <a className="linka" href={pdf} download>
-            <h2 className="resume">
+            <h2 style={{ position: "relative" }} className="resume">
               Download My
               <span className="mooha">Resume</span>
               <FaArrowRight />

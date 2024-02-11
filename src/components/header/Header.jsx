@@ -67,7 +67,7 @@ export default function Header() {
       </div>
       <div className="skiller_main">
         <div className="skill_section">
-          <Marquee velocity={25} resetAfterTries={200} minScale={0.7}>
+          <Marquee velocity={9} resetAfterTries={200} minScale={0.7}>
             {skill.map((skiller, index) => (
               <div className="skiller" key={index}>
                 <h1 className="skill_name">{skiller.skill}✨</h1>

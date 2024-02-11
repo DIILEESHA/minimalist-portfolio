@@ -45,7 +45,7 @@ export default function Languages() {
       </p>
 
       <div className="mid">
-        <Marquee velocity={10} minScale={17} resetAfterTries={200}>
+        <Marquee velocity={3} minScale={17} resetAfterTries={200}>
           {duplicatedImages.map((lg, index) => (
             <div key={index} className="cr">
               <img className="mea" loading="lazy" src={lg?.asset?.url} alt="" />

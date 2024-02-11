@@ -65,6 +65,11 @@ export default function Nav() {
                 guestbook
               </NavLink>
             </li>
+            <li className="nav_li">
+              <NavLink to="/blog" className="linka">
+                Blog
+              </NavLink>
+            </li>
           </ul>
         </div>
         <div className="nav_links2">

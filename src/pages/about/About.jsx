@@ -10,6 +10,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 import { SiCodesignal } from "react-icons/si";
 import { BiWorld } from "react-icons/bi";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   useEffect(() => {
@@ -97,7 +98,16 @@ export default function About() {
               <h2 className="about_maina">
                 Engineering <IoLogoGithub />
               </h2>
-              <h2 className="about_maina">View Github</h2>
+              <h2 className="about_maina">
+                <a
+                  className="linka"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/DIILEESHA"
+                >
+                  View Github
+                </a>
+              </h2>
             </div>
 
             <p className="about_maina_para">
@@ -119,7 +129,11 @@ export default function About() {
               <h2 className="about_maina">
                 Product <BiWorld />
               </h2>
-              <h2 className="about_maina">View Products</h2>
+              <h2 className="about_maina">
+                <Link className="linka" to="/portfolio">
+                  View Products
+                </Link>
+              </h2>
             </div>
 
             <p className="about_maina_para">
@@ -156,21 +170,7 @@ export default function About() {
         <h2 className="abo">my reads</h2>
         <div className="about_control">
           {/* second */}
-          <div className="about_card_detail">
-            <div className="fp">
-              <h2 className="about_maina">Human Centered Design 101. Acumen</h2>
-              <h2 className="about_maina">View Github</h2>
-            </div>
-
-            <p className="about_maina_para">
-              This is an intensive, hands-on learning experience that will
-              challenge you to get out of your chair and out into the real world
-              to talk to people and test your ideas. You’ll leave this
-              experience equipped and energized to apply the human-centered
-              design process to challenges across industries, sectors, and
-              geographies to generate breakthrough ideas.
-            </p>
-          </div>
+      
           <div className="about_card_detail">
             <div className="fp">
               <h2 className="about_maina">
@@ -181,7 +181,7 @@ export default function About() {
                   Mastering Responsive Web Design |
                 </a>
                 <img
-                  style={{ width: "20px", height: "20px", borderRadius: "50%" }}
+                  style={{ width: "10px", height: "10px", borderRadius: "50%" }}
                   src="https://media.licdn.com/dms/image/C4D0BAQHER-dvTqh2tA/company-logo_100_100/0/1630576160230/sololearn_inc__logo?e=1715212800&v=beta&t=4Ts2SLp-p2dKsMfS0HBC8mTiiZCQIdSQNylZuJxjQyw"
                   alt=""
                 />
@@ -212,7 +212,8 @@ export default function About() {
                 </a>
                 <img
                   loading="lazy"
-                  style={{ width: "20px", height: "20px", borderRadius: "50%" }}
+                  style={{ width: "10px", height: "10px", borderRadius: "50%" }}
+
                   src="https://media.licdn.com/dms/image/C4E0BAQFdNatYGiBelg/company-logo_100_100/0/1636138754252/facebook_logo?e=1715212800&v=beta&t=UsUc9a5pH31MIdp-Y7WPp-3UzJMCl7vpGiZB-UntC_8"
                   alt=""
                 />
@@ -242,7 +243,8 @@ export default function About() {
                 </a>
                 <img
                   loading="lazy"
-                  style={{ width: "20px", height: "20px", borderRadius: "50%" }}
+                  style={{ width: "10px", height: "10px", borderRadius: "50%" }}
+
                   src="https://media.licdn.com/dms/image/C510BAQEvNU0EYy6wUw/company-logo_100_100/0/1631319527790?e=1715212800&v=beta&t=CgeYCVjWiAZqe6FCl7HnEMNDrn0btkK_q0ieVE6jqTs"
                   alt=""
                 />
@@ -260,6 +262,23 @@ export default function About() {
               dynamic and efficient web applications
             </p>
           </div>{" "}
+
+
+          <div className="about_card_detail">
+            <div className="fp">
+              <h2 className="about_maina">Human Centered Design with Human interact</h2>
+              <h2 className="about_maina">View Github</h2>
+            </div>
+
+            <p className="about_maina_para">
+              This is an intensive, hands-on learning experience that will
+              challenge you to get out of your chair and out into the real world
+              to talk to people and test your ideas. You’ll leave this
+              experience equipped and energized to apply the human-centered
+              design process to challenges across industries, sectors, and
+              geographies to generate breakthrough ideas.
+            </p>
+          </div>
           <div className="about_card_detail">
             <div className="fp">
               <h2 className="about_maina">Learning Something Great 😉</h2>
