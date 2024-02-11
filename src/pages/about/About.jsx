@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import Layout from "../../components/Layout";
+import { Helmet } from "react-helmet";
 import "./about.css";
 import Section from "../../components/velo/Section";
 import Faq from "../../components/faq/Faq";
@@ -10,14 +11,29 @@ import { SiCodesignal } from "react-icons/si";
 import { BiWorld } from "react-icons/bi";
 import { useEffect } from "react";
 
-
 export default function About() {
-
   useEffect(() => {
     document.title = " About Me | Dileesha Nawarathna ";
   }, []);
   return (
     <div className="about_container">
+      <Helmet>
+        <title>About Me | Dileesha Nawarathna</title>
+        <meta
+          name="description"
+          content="Explore the skills and experiences of Dileesha Lakshan, a collaborative web developer."
+        />
+        <meta property="og:title" content="About Me | Dileesha Nawarathna" />
+        <meta
+          property="og:description"
+          content="Explore the skills and experiences of Dileesha Lakshan, a collaborative web developer."
+        />
+        <meta
+          property="og:url"
+          content="https://www.dileeshanawarathna.me/about-me"
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="minavam">
         <Layout />
         <div className="welcome_card">

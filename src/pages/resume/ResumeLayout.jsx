@@ -5,6 +5,7 @@ import Layout from "../../components/Layout";
 import "../guest/guest.css";
 import skillsData from "./skill.json";
 import "./resume.css";
+import { Helmet } from "react-helmet";
 
 export default function Template({
   children,
@@ -20,6 +21,28 @@ export default function Template({
 
   return (
     <div className="guest_container">
+      <Helmet>
+        <title>Resume | Dileesha Nawarathna</title>
+        <meta
+          name="description"
+          content="Check out Dileesha Nawarathna's resume and technical skills."
+        />
+        <meta property="og:title" content="Resume | Dileesha Nawarathna" />
+        <meta
+          property="og:description"
+          content="Check out Dileesha Nawarathna's resume and technical skills."
+        />
+        <meta
+          property="og:image"
+          content=""
+        />
+        <meta
+          property="og:url"
+          content="https://www.dileeshanawarathna.me/resume"
+        />
+        <meta property="og:type" content="website" />
+      </Helmet>
+
       <div className="minavam">
         <Layout />
         <div className="welcome_card">

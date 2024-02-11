@@ -53,6 +53,7 @@
   position: absolute;
   background-color: #797c86;
   width: 1px;
+  animation: moveBackground 5s linear infinite alternate;
   height:100%;
   left: -45px;
 }

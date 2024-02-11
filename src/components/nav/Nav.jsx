@@ -71,7 +71,7 @@ export default function Nav() {
           <ul className="nav_ul_last">
             <li className="nav_li_last">
               <NavLink className="linka" to="/contact-me">
-                contact
+                contact Me
               </NavLink>
             </li>
             <div className="nav_lis" onClick={() => setOpen(!open)}>

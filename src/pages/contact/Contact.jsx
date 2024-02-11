@@ -6,13 +6,23 @@ import Faq from "../../components/faq/Faq";
 import Layout from "../../components/Layout";
 
 import Section from "../../components/velo/Section";
+import { Helmet } from "react-helmet";
 
 export default function Contact() {
   useEffect(() => {
     document.title = " Contact Me | Dileesha Nawarathna ";
   }, []);
   return (
-    <div className="contact_main">
+    <div>
+        <Helmet>
+        <title>Contact Me | Dileesha Nawarathna</title>
+        <meta name="description" content="Ready to connect and collaborate? Drop me a line and let's turn ideas into reality!" />
+        <meta property="og:title" content="Contact Me | Dileesha Nawarathna" />
+        <meta property="og:description" content="Ready to connect and collaborate? Drop me a line and let's turn ideas into reality!" />
+        {/* <meta property="og:image" content="https://example.com/your-image.jpg" /> */}
+        <meta property="og:url" content="https://www.dileeshanawarathna.me/contact-me" /> 
+        <meta property="og:type" content="website" />
+      </Helmet>
       <div className="template_img">
         <img src="https://i.imgur.com/Wg6uLJe.png" alt="" />
       </div>

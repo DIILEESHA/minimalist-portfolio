@@ -103,8 +103,17 @@ export default function Guestbook() {
         arrowSrc: "https://i.imgur.com/EzZ16Wn.png",
         message: "Join the Conversation!",
       }}
+
+
+
+      
     >
+
+      
       <div className="guest_sub">
+
+
+        
         <div className="template_img jkobr">
           <img src="https://i.imgur.com/wB5fIAB.png" alt="" />
         </div>
