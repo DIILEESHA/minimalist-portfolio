@@ -20,7 +20,7 @@ export default function Template({
 
   return (
     <div className="guest_container">
-      <div className="minavam2">
+      <div className="minavam">
         <Layout />
         <div className="welcome_card">
           <div className="welcome_text">
@@ -58,7 +58,7 @@ export default function Template({
                 </p>
               ))}
             </div>
-            <div className="recommendations">
+            <div className="recommendations maha">
               <h2 className="sub">Tools I know</h2>
               {tools.map((tool, index) => (
                 <p key={index} className="mkov makov">

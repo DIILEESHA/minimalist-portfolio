@@ -105,9 +105,9 @@ export default function Guestbook() {
       }}
     >
       <div className="guest_sub">
-        {/* <div className="template_img vaka">
+        <div className="template_img jkobr">
           <img src="https://i.imgur.com/wB5fIAB.png" alt="" />
-        </div> */}
+        </div>
         <div className="sign_google_option">
           {!user ? (
             <div

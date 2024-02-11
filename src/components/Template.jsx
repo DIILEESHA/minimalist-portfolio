@@ -17,7 +17,7 @@ export default function Template({
 
   return (
     <div className="guest_container">
-      <div className="minavam2">
+      <div className="minavam">
         <Layout />
         <div className="welcome_card">
           <div className="welcome_text">
@@ -138,7 +138,7 @@ export default function Template({
               </div>
             </div>
 
-            <div className="recommendations">
+            <div className="recommendations maha">
               <h2 className="sub">Recommendations / Kind words</h2>
               <p className="mkov">
                 <Link className="linka" to="/#recommend">

@@ -13,6 +13,10 @@ export default function Contact() {
   }, []);
   return (
     <div className="contact_main">
+      <div className="template_img">
+        <img src="https://i.imgur.com/Wg6uLJe.png" alt="" />
+      </div>
+
       <div className="contact_container mainavm2">
         <Layout />
         <div className="welcome_card">

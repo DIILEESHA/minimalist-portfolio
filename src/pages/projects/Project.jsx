@@ -89,9 +89,10 @@ export default function Project() {
       }}
     >
       <div className="template_container">
-        <div className="template_img vde">
+        <div className="template_img">
           <img src="https://i.imgur.com/6xeQSQS.png" alt="" />
         </div>
+
         <h2 className="project_title">Nice stuff I've built</h2>
         <div className="project_top_area">
           <p className="fear">

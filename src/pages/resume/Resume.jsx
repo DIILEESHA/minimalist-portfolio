@@ -21,6 +21,9 @@ export default function Resume() {
       }}
     >
       <div className="resumer">
+          <div className="template_img">
+          <img src="https://i.imgur.com/iATj14h.png" alt="" />
+        </div>
         <h2 className="project_title">My Journey</h2>
         <div className="project_top_area">
           <p className="fear">

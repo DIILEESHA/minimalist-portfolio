@@ -5,6 +5,11 @@
   scroll-behavior: smooth;
 }
 
+.app{
+  /* position: relative; */
+  /* z-index: -1; */
+}
+
 body {
   /* background-color: #070708; */
   font-family: "Manrope", sans-serif;

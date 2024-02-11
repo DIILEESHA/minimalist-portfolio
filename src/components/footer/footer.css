@@ -1,11 +1,18 @@
+.footer_maina {
+  /* position: relative; */
+  z-index: 1;
+}
+
 .footer_container {
   position: relative;
+
   background-color: #070708;
+  z-index: 1;
 }
 
 .footer_card {
   position: relative;
-
+/* z-index: 100; */
   /* z-index: 200; */
   background-image: url("https://i.imgur.com/PB6cziB.png");
   background-position: center;
@@ -14,8 +21,10 @@
   width: 95%;
   margin: 0 auto;
   border: 1px solid rgba(33, 33, 39, 1);
+  background-color: #070708;
   border-radius: 16px;
   /* z-index: 200; */
+  /* z-index: 100; */
   padding: 70px 50px 30px 50px;
   /* height: 100vh; */
   overflow: hidden;
@@ -44,6 +53,7 @@
 }
 .footer_grid {
   display: grid;
+  position: relative;
   grid-template-columns: 2fr 1.3fr 1.3fr 1.4fr;
 }
 
@@ -104,6 +114,8 @@
 .footer_ul {
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
   gap: 10px;
 }
 .footer_li {

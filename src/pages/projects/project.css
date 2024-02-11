@@ -15,37 +15,25 @@
 
 .template_img {
   position: fixed;
-  opacity: 0.5;
+  opacity: 0.3;
   /* z-index: 0; */
   transform: rotate(90deg);
   /* display: flex; */
   /* align-items: center; */
   /* justify-content: center; */
   bottom: 0;
-  left: -200px;
+  left: -280px;
   top: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  overflow: hidden;
   /* right: 0; */
 }
 
 .vde {
-  position: absolute;
-  opacity: 0.5;
-  z-index: 0;
-  transform: rotate(90deg);
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: center; */
-  bottom: 0;
-  left: -200px;
-  top: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+
 }
 
 .template_img img {

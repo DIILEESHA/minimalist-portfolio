@@ -1,13 +1,21 @@
-import { useState } from "react";
+// Nav.js
+
+import React, { useState, useEffect } from "react";
 import "./nav.css";
-
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
-
 import { Link, NavLink, useNavigate } from "react-router-dom";
 
 export default function Nav() {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }, [open]);
 
   const scrollToTop = () => {
     const scrollDuration = 500; // adjust as needed
@@ -22,7 +30,6 @@ export default function Nav() {
     }, 15);
   };
 
-  // eslint-disable-next-line no-unused-vars
   const handleNavLinkClick = (path) => {
     navigate(path);
     scrollToTop();
@@ -38,9 +45,6 @@ export default function Nav() {
         </NavLink>
         <div className="nav_links">
           <ul className="nav_ul">
-            {/* <li className="nav_li">
-                home
-            </li> */}
             <li className="nav_li">
               <NavLink to="/about-me" className="linka">
                 about me
@@ -173,7 +177,5 @@ export default function Nav() {
         </div>
       </div>
     </div>
-
-    // </div>
   );
 }

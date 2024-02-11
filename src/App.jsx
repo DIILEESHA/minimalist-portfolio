@@ -11,7 +11,7 @@ import Resume from "./pages/resume/Resume.jsx";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <BrowserRouter>
         <Contactme />
         <Routes>
