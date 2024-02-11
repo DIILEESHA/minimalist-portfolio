@@ -157,9 +157,7 @@ export default function Nav() {
               </li>
             </div>
 
-            <div className="div">
-              <h1 className="divs">Design & Develop by Dileesha❤️</h1>
-            </div>
+            {/* */}
           </ul>
         </div>
         <div className="gaser">
