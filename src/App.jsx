@@ -9,10 +9,7 @@ import Project from "./pages/projects/Project.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import Resume from "./pages/resume/Resume.jsx";
 import Blog from "./pages/blog/Blog.jsx";
-<<<<<<< HEAD
 import Singleblog from "./pages/blogsingle/Singleblog.jsx";
-=======
->>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128
 
 function App() {
   return (
@@ -27,10 +24,7 @@ function App() {
           <Route path="/contact-me" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/blog" element={<Blog />} />
-<<<<<<< HEAD
           <Route path="/post/:slug" element={<Singleblog />} />
-=======
->>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128
         </Routes>
         <Footer />
       </BrowserRouter>
