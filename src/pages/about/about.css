@@ -1,0 +1,310 @@
+.about_container {
+  /* background-color: #000; */
+  background-color: #070708;
+
+  width: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+.minavam {
+  background-color: #070708;
+
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  background-image: url("https://i.imgur.com/ZTmyYsa.png");
+
+  /* height: 100vh; */
+  z-index: 1000;
+  position: relative;
+  overflow: hidden;
+  background-size: contain;
+  background-position: 50% 50%;
+}
+
+.about_second {
+  background-color: #070708;
+  /* margin-top: 50px; */
+  padding: 50px 0;
+}
+
+.fp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.abo {
+  margin: 30px 78px;
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 150%;
+  position: inherit;
+}
+
+.mos {
+  margin: 30px 78px;
+}
+
+.about_maina:hover {
+  text-decoration: underline;
+}
+
+.about_control {
+  position: relative;
+  margin: 0px 99px;
+}
+
+.about_maina {
+  color: #e4e4e6;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.about_maina:nth-child(2) {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.about_maina_para {
+  font-size: 16px;
+  color: #797c86;
+  font-weight: 500;
+  line-height: 150%;
+  text-align: justify;
+}
+
+.about_control::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #797c86; /* Initial background color */
+  left: -20px;
+  top: 0;
+  animation: moveBackground 5s linear infinite alternate; /* Animation */
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: top;
+    background-color: #797c86; /* Initial background color */
+  }
+  50% {
+    background-position: bottom;
+  }
+  100% {
+    background-position: top;
+    background-color: rgb(132, 132, 51);
+  }
+}
+
+@keyframes movebee {
+  0% {
+    background-position: top;
+    border: 1px solid 797c86;
+  }
+  50% {
+    background-position: bottom;
+    /* border: 1px solid blue; */
+  }
+  100% {
+    background-position: top;
+    border: 1px solid rgb(132, 132, 51);
+    /* opacity: .9; */
+  }
+}
+
+.about_card_detail {
+  /* border: 1px solid #fff; */
+  /* padding: 10px; */
+  margin-bottom: 40px;
+  /* border-bottom: 1px solid #797c86; */
+  position: relative;
+}
+
+.about_card_detail::before {
+  position: absolute;
+  border: 2px solid #797c86;
+  animation: movebee 5s linear infinite alternate; /* Animation */
+
+  background-color: #070708;
+  /* background-color: #e4e4e6; */
+  content: "";
+
+  left: -28px;
+  width: 15px;
+  height: 15px;
+
+  border-radius: 50px;
+}
+
+.mina::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.imgur.com/QRblH9k.png");
+}
+
+.soi {
+  margin: 80px auto 20px auto;
+}
+.about_container::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.imgur.com/QRblH9k.png");
+}
+
+.about_detail {
+  padding: 0 80px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suha {
+  margin: 0px 10px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+
+.about_para_top {
+  font-size: 38px;
+  /* font-weight: 500; */
+  margin-bottom: 10px;
+  line-height: 100%;
+  /* margin: 10px 0 25px 0; */
+  color: #e4e4e6;
+  font-weight: bold;
+  /* text-shadow: 2px 2px 8px #e4e4e6; */
+  /* width: 80%; */
+  text-align: center;
+}
+
+.video {
+  /* width: 10px; */
+}
+
+.keo {
+  transform: rotate(1deg);
+  border-radius: 1000px;
+  width: 70px;
+  margin: 0px 10px 0px 10px;
+  border: 2px solid #e4e4e6;
+}
+
+.keo:hover {
+  transform: rotate(0deg);
+}
+.aligno {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* justify-content: center; */
+}
+
+.mlpo {
+  height: 100%;
+  width: 100%;
+}
+
+.moi {
+  /* text-shadow: 1px 2px 1px #020263; */
+  margin-top: 15px;
+  /* transform: rotate(1deg); */
+}
+.header_titles {
+  /* display: flex; */
+  /* position: relative; */
+  color: #fff;
+  font-size: 40px;
+  /* text-shadow: 1px 2px 1px #020263; */
+  /* font-style:unset; */
+  /* transform: rotate(-3deg); */
+  /* width: fit-content; */
+}
+.moohas {
+  position: absolute;
+  bottom: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .about_control {
+    position: relative;
+    margin: 0px 39px 0px 59px;
+  }
+  .mos {
+    margin: 30px 38px;
+  }
+
+  .abo {
+    margin: 30px 39px;
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .skill_container {
+    padding: 80px 18px 40px 18px;
+  }
+
+  .about_control {
+    position: relative;
+    margin: 0px 29px 0px 39px;
+  }
+
+  .about_maina_para{
+    text-align: left;
+  }
+
+  .abo{
+
+    font-size: 20px;
+  }
+
+  .abo,
+  .mos {
+    margin: 20px 19px;
+    z-index: 100000;
+    position: relative;
+    /* text-align: center; */
+  }
+
+  .about_control::before{}
+}
+
+@media screen and (max-width: 500px) {
+  .fp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  
+}
+
+.app{
+  /* position: relative; */
+  /* z-index: -1; */
+}
+
+body {
+  /* background-color: #070708; */
+  font-family: "Manrope", sans-serif;
+  background-color: #070708;
+  font-family: "Urbanist", sans-serif;
+
+}
+
+.linka {
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  cursor: pointer;
+}

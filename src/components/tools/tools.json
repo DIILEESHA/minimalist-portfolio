@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "img": "https://i.imgur.com/Wn6cQED.png",
+    "title": "Programming Languages",
+    "para": "I'm proficient in key web languages - HTML, CSS, and JavaScript, enabling me to build web solutions from the ground up."
+  },
+  {
+    "id": 2,
+    "img": "https://i.imgur.com/nXgZOkg.png",
+    "title": "Advanced Frameworks",
+    "para": "I specialize in advanced frameworks such as React and Angular, which empower me to create interactive web applications."
+  },
+  {
+    "id": 3,
+    "img": "https://i.imgur.com/tTI3HYz.png",
+    "title": "Database Management",
+    "para": "With expertise in both MySQL and MongoDB, I ensure your data is managed effectively, tailored to your specific needs."
+  },
+  {
+    "id": 4,
+    "img": "https://i.imgur.com/Fww1FPl.png",
+    "title": "Version Control",
+    "para": "Using Git, I maintain code integrity, making it easier for collaboration and project management."
+  },
+  {
+    "id": 5,
+    "img": "https://i.imgur.com/k4DfWK3.png",
+    "title": "Responsive Design",
+    "para": "I design websites that adapt seamlessly to various devices, ensuring a consistent user experience."
+  },
+  {
+    "id": 6,
+    "img": "https://i.imgur.com/a0zCr6u.png",
+    "title": "SEO Optimization",
+    "para": "I implement SEO best practices to boost your website's visibility in search engine results."
+  }
+]

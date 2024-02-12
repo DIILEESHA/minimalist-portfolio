@@ -1,0 +1,246 @@
+.project_title {
+  text-transform: capitalize;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  line-height: 150%;
+}
+
+.template_container {
+  position: relative;
+  width: 100%;
+  /* z-index: 100; */
+  /* border: 1px solid red; */
+}
+
+.template_img {
+  position: fixed;
+  opacity: 0.3;
+  /* z-index: 0; */
+  transform: rotate(90deg);
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  bottom: 0;
+  left: -250px;
+  top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+  /* right: 0; */
+}
+
+.vde {
+
+}
+
+.template_img img {
+  /* display: none; */
+  width: 100%;
+  height: 20vh;
+  object-fit: contain;
+}
+
+.project_top_area {
+  position: relative;
+  /* z-index: 10; */
+}
+
+.fear {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 150%;
+  color: #797c86;
+}
+
+.projects_card {
+  margin-top: 30px;
+  border-bottom: 1px solid #333334;
+  /* opacity: .9; */
+  /* border-top: 1px solid #797c86; */
+}
+
+.project_card_details {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.project_left {
+  display: flex;
+  align-items: last baseline;
+  gap: 1rem;
+}
+
+.projector {
+  font-size: 30px;
+  /* line-height: 200%; */
+  color: #e4e4e6;
+  font-weight: 500;
+}
+
+.project_date {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.project_timestamp {
+  color: #e4e4e6;
+  font-size: 14px;
+  font-weight: 500;
+  /* line-height: 150%; */
+}
+
+.project_type {
+  color: #797c86;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.project_btn {
+  padding: 10px;
+  background-color: #1c1c21;
+  border-radius: 6px;
+  border: 1px solid rgba(47, 47, 55, 1);
+  font-size: 14px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #e4e4e6;
+  text-transform: capitalize;
+}
+
+.projectso_grid {
+  grid-template-columns: repeat(auto-fit, minmax(33.3%, 1fr));
+  gap: 1rem;
+  /* max-width: 700px; */
+  display: grid;
+  margin-top: 30px;
+}
+
+.projects_sub_grid {
+  /* z-index: 1; */
+  position: relative;
+  border: 1px solid #1c1c21;
+  cursor: pointer;
+  padding: 15px;
+  background-image: url("https://i.imgur.com/lE90YCX.png");
+  background-color: #0e0e10;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.maon {
+}
+
+.circler_imger {
+  position: relative;
+  display: flex;
+  /* align-items: center; */
+  justify-content: flex-start;
+  margin-bottom: 10px;
+  /* position: absolute; */
+}
+
+.nimas {
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  width: 50px;
+  /* position: absolute; */
+}
+
+.projects_sub_grid:nth-child(odd) {
+  /* transform: rotate(-2deg); */
+}
+
+.projects_sub_grid:nth-child(even) {
+  /* transform: rotate(2deg); */
+}
+
+.project_logo {
+  /* width: 100%; */
+  /* height: 100%; */
+}
+
+.projecter_logo .daster {
+  /* width: 40px; */
+  /* width: 90px; */
+  object-fit: cover;
+  /* height: 90px */
+  /* height: 40px; */
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.project_titleone {
+  color: #e4e4e6;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.resumes {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  /* border-bottom: 1px solid #797c86; */
+  width: fit-content;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.resume {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.project_description_para {
+  color: #797c86;
+  line-height: 150%;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.arrow_section {
+  display: flex;
+  justify-content: flex-end;
+  color: #797c86;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 896px) {
+  .projectso_grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guest_sub2 {
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .projectso_grid {
+    grid-template-columns: repeat(auto-fit, minmax(40%, 1fr));
+  }
+
+  .project_title {
+    font-size: 23px;
+  }
+}
+@media screen and (max-width: 548px) {
+  .projectso_grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}

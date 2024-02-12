@@ -1,0 +1,124 @@
+.testo_container {
+  padding: 50px 78px 100px 78px;
+  background-color: #070708;
+  height: auto;
+  width: 100%;
+}
+
+.testo_card_grid {
+  display: grid;
+  /* z-index: 2; */
+  position: relative;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 70px;
+}
+
+.addr {
+  font-size: 14px;
+  color: #afb0b6;
+  font-weight: 500;
+  /* line-height: 0; */
+}
+
+.testo_card {
+  /* margin-top: 30px; */
+  background-image: url("https://i.imgur.com/PkIyBWk.png");
+  background-image: url("https://i.imgur.com/vUHGzRV.png");
+
+  background-position: center;
+  background-size: cover;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #1c1c21;
+}
+
+.testo_img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.testas {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.client_para {
+  font-size: 14px;
+  /* text-align: justify; */
+  /* letter-spacing: 1.1px; */
+  line-height: 150%;
+  color: #e4e4e6;
+  font-weight: 500;
+}
+.name_client {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 150%;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.testo_img {
+  position: relative;
+  width: fit-content;
+}
+.testa {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: green;
+  bottom: 10px;
+  right: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .testo_container {
+    padding: 100px 38px 40px 38px;
+  }
+}
+
+@media screen and (max-width: 707px) {
+  .testo_container {
+    padding: 80px 18px 40px 18px;
+  }
+
+  .skill_grid {
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skill_title {
+    font-size: 25px;
+    width: 100%;
+  }
+
+  .skill_img img {
+    /* height: 40vh; */
+  }
+  .testo_card_grid {
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .testo_card_grid {
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .testo_card_grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1fr;
+
+    margin-top: 20px;
+  }
+}
