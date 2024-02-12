@@ -1,6 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 
-// Serializer for block content
 const serializers = {
   types: {
     block: (props) => {
