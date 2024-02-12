@@ -205,11 +205,11 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="contact_sub_form  mkl">
+              <div className="contact_sub_form  mkl required">
                 <label className="form_label" htmlFor="">
                   Services Required
                 </label>
-                <div className="servicers">
+                <div className="servicers required">
                   <div
                     className="service_sub"
                     onClick={() => handleServiceChange("Web Design")}
