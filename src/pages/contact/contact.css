@@ -106,7 +106,7 @@
 .service_sub {
   padding: 10px;
   display: flex;
-  background-color: #131316;
+  /* background-color: #131316; */
   border: 1px solid rgba(35, 35, 41, 1);
   border-radius: 8px;
   gap: 5px;

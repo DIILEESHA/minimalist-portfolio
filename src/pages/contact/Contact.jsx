@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import "./contact.css";
 import Faq from "../../components/faq/Faq";
@@ -213,7 +215,7 @@ export default function Contact() {
                     onClick={() => handleServiceChange("Web Design")}
                     style={{
                       backgroundColor: selectedServices.includes("Web Design")
-                        ? "red"
+                        ? "#131316"
                         : "initial",
                     }}
                   >
@@ -226,7 +228,7 @@ export default function Contact() {
                     onClick={() => handleServiceChange("UI UX Design")}
                     style={{
                       backgroundColor: selectedServices.includes("UI UX Design")
-                        ? "red"
+                        ? "#131316"
                         : "initial",
                     }}
                   >
@@ -241,8 +243,8 @@ export default function Contact() {
                       backgroundColor: selectedServices.includes(
                         "Web Development"
                       )
-                        ? "red"
-                        : "initial",
+                        ? "#131316"
+                        : "transparent",
                     }}
                   >
                     <img src="https://i.imgur.com/yThf8CL.png" alt="" />
@@ -256,7 +258,7 @@ export default function Contact() {
                       backgroundColor: selectedServices.includes(
                         "Web Optimizations"
                       )
-                        ? "red"
+                        ? "#131316"
                         : "initial",
                     }}
                   >
