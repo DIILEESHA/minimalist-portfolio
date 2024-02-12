@@ -18,6 +18,9 @@ body {
   font-family: "Urbanist", sans-serif;
 
 }
+body::-webkit-scrollbar {
+  /* width: 50px; */
+}
 
 .linka {
   text-decoration: none;

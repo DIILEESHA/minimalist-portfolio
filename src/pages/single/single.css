@@ -25,6 +25,7 @@
 
 .singo {
   padding: 35px;
+  height: 100%;
   position: relative;
 }
 
@@ -38,8 +39,10 @@
   height: calc(100vh - 190px);
 }
 
-::-webkit-scrollbar {
-  width: 10px;
+.single_content_selector::-webkit-scrollbar {
+  /* width: 100px; */
+width: 5px;
+background-color: #afb0b6;
   /* background-color:red; */
 }
 
@@ -157,18 +160,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  /* position: absolute; */
-  background-color: #070708;
-  background-color: #1c1c21;
-  right: 0;
-  /* position: fixed; */
-  position: relative;
-  left: 0;
+  position: absolute;
   bottom: 0;
-  /* width: fit-content; */
-  margin: 0 auto;
-  /* width: 100%; */
-  /* background-color: red; */
+  right: 0;
+  width: 100%; /* Adjust width */
+  background-color: #1c1c21;
+  z-index: 9999;
 }
 
 .project_navigate_card {
@@ -214,7 +211,7 @@
   .single_content_selector {
     overflow-y: scroll;
     /* overflow: hidden; */
-    height: calc(100vh - 170px);
+    /* height: calc(100vh - 170px); */
   }
   .single_position_img {
     height: 30vh;
@@ -237,7 +234,7 @@
   .single_content_selector {
     overflow-y: scroll;
     /* overflow: hidden; */
-    height: calc(100vh - 160px);
+    height: calc(100vh - 170px);
   }
 
   .singa {

@@ -1,14 +1,11 @@
 .guest_container {
   background-color: #000;
   background-color: #070708;
-
   width: 100%;
   overflow: auto;
   box-sizing: border-box;
   color: #fff;
   position: relative;
-  /* z-index: 1000; */
-  /* overflow: hidden; */
   background-size: contain;
   background-position: 50% 50%;
 }
@@ -16,13 +13,10 @@
 .minavam2 {
   background-color: #000;
   background-color: #070708;
-
   width: 100%;
   box-sizing: border-box;
   color: #fff;
   background-image: url("https://i.imgur.com/ZTmyYsa.png");
-
-  /* height: 100vh; */
   position: relative;
   overflow: hidden;
   background-size: contain;
@@ -48,13 +42,9 @@
   flex-direction: column;
 }
 
-.guest_sub {
-  /* border: 1px solid red; */
-}
 
 .guest_sub2 {
   display: flex;
-  /* align-items: center; */
   justify-content: flex-end;
   width: 90%;
   margin: 0 auto;
@@ -93,20 +83,13 @@
 }
 
 .fgme {
-  /* height: 100vh; */
 }
 
 .guest_grid_container {
   padding: 0px 78px;
-  /* background-color: red; */
-  /* background-color: #131316; */
-  /* z-index: 20; */
-  /* background-color: #070708; */
   position: relative;
-  /* height: 100vh; */
   margin-top: 70px;
   margin-bottom: 50px;
-  /* padding: 100px 78px 40px 78px; */
   display: grid;
   grid-template-columns: 4fr 2fr;
   gap: 2rem;
@@ -122,7 +105,6 @@
   color: #333;
   align-items: center;
   padding: 15px 5px;
-  /* padding-inline-end: 10px; */
   position: relative;
   cursor: pointer;
 }
@@ -165,16 +147,13 @@
   border-radius: 8px;
   padding-inline: 10px;
   background-color: transparent;
-  /* background-color: #d85040; */
   color: #fff;
   font-size: 20px;
   cursor: pointer;
   line-height: 150%;
   display: flex;
-
   align-items: center;
   justify-content: center;
-  /* width: 100px; */
   border: none;
 }
 .inputer_section {
@@ -182,7 +161,6 @@
   inset: 0;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
 }
 
 .sign_out_option {
@@ -200,7 +178,6 @@
   font-size: 14px;
   font-weight: 500;
   color: #797c86;
-  /* border-bottom: 1px solid #797c86; */
   cursor: pointer;
 }
 
@@ -225,20 +202,14 @@
 .fgl {
   display: flex;
   margin: 0px 0;
-  /* z-index: 10; */
-  /* position: relative; */
   align-items: center;
-  /* background-color: #0e0e10; */
-  /* border: 1px solid #1c1c21; */
   border-bottom: 1px solid #1c1c21;
   padding: 20px 0;
-  /* border-radius: 8px; */
   gap: 5px;
 }
 
 .messager {
   font-size: 15px;
-  /* line-height: 150%; */
 }
 
 .jkob {
@@ -248,7 +219,6 @@
 .guestbook_messages .kim {
   color: #8e919d;
   font-size: 15px;
-  /* z-index: 1; */
   font-weight: 500;
 }
 
@@ -258,7 +228,6 @@
   background-color: #0e0e10;
   background-image: url("https://i.imgur.com/lE90YCX.png");
 position: relative;
-/* z-index: 1; */
   border: 1px solid #1c1c21;
   border-radius: 8px;
   padding: 20px;
@@ -290,8 +259,6 @@ position: relative;
   padding: 20px;
   justify-content: center;
   transform: rotate(-0.5deg);
-
-  /* align-items: center; */
 }
 
 .recommendations {
@@ -307,20 +274,17 @@ position: relative;
 }
 
 .jkobr {
-  /* opacity: 0.9; */
   position: relative;
 }
 
 .newsletter_img_section {
   display: flex;
-  /* gap: -10px; */
   position: relative;
   margin-bottom: 20px;
 }
 
 .personas {
   width: 30px;
-  /* position: absolute; */
   object-fit: cover;
   margin: 0 -4px;
   height: 30px;
@@ -413,7 +377,6 @@ position: relative;
 
 .leave_option {
   display: flex;
-  /* margin-top: 20px; */
   justify-content: space-between;
   align-items: center;
   margin-bottom: 8px;
@@ -422,24 +385,13 @@ position: relative;
   display: flex;
   margin-top: 10px;
   gap: 30px;
-  /* justify-content: space-between; */
   align-items: center;
 }
 
-.text_leave {
-  /* display: flex; */
-  /* align-items: center; */
-}
-
-.mp {
-  /* width: 40px; */
-  /* height: 16px; */
-}
 
 .i {
   color: #d85040;
   font-size: 15px;
-  /* line-height: 150%; */
   width: 100%;
   font-weight: 500;
 }
@@ -447,7 +399,6 @@ position: relative;
 .mkov {
   color: #d85040;
   font-size: 15px;
-  /* line-height: 150%; */
   width: 70%;
   font-weight: 500;
 }

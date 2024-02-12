@@ -1,7 +1,5 @@
 .homer{
     position: relative;
-    /* overflow: hidden; */
-    /* z-index: 2; */
 }
 
 .template_imger{
@@ -17,9 +15,4 @@
     margin: 0 auto;
     overflow: hidden;
 transform: rotate(90deg);
-    /* z-index: 1; */
-}
-.template_imger img{
-    /* width: 100%; */
-    /* height: 30vh; */
 }
