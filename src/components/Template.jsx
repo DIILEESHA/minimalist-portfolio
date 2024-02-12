@@ -1,24 +1,72 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useState } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import Layout from "./Layout";
-import '../pages/guest/guest.css'
+import "../pages/guest/guest.css";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Template({
   children,
   scrollToGuestMessages,
   guestBookDetails,
 }) {
-  // Extract the first child and the rest of the children
   const [firstChild, ...restChildren] = React.Children.toArray(children);
+  const formref = useRef();
+  const [done, setdone] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_45r525n",
+        "template_xckj6nm",
+        formref.current,
+        "c0OCPezx-EbyzmYf3"
+      )
+      .then(
+        (result) => {
+          console.log("ok");
+          setdone(true);
+          toast.success("Thanks for submit my Newsletter!", {
+            position: "top-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+          setEmail("");
+        },
+        (error) => {
+          toast.error("No Internet Connection, Try Again!", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
+      );
+  };
 
   return (
     <div className="guest_container">
       <div className="minavam">
         <Layout />
+
         <div className="welcome_card">
           <div className="welcome_text">
             <div className="welcome_img">
@@ -28,13 +76,10 @@ export default function Template({
                 alt=""
               />
             </div>
-            <h2 className="welcome">
-                {guestBookDetails.message}
-               
-                </h2>
+            <h2 className="welcome">{guestBookDetails.message}</h2>
           </div>
         </div>
-       
+
         <div className="guest_book_details">
           <h1 className="guest_book_detail_title">
             {guestBookDetails?.title}
@@ -49,6 +94,9 @@ export default function Template({
       <div className="guest_grid_container" id="guestMessages">
         {firstChild}
         <div className="guest_sub guest_sub2">
+          <div style={{ position: "relative", zIndex: "1000" }}>
+            <ToastContainer />
+          </div>
           <div className="card_gap">
             <div className="newsletter_card">
               <div className="newsletter_img_section">
@@ -84,15 +132,23 @@ export default function Template({
                 Follow my journey, I write about tech, my experiences and more.
               </p>
 
-              <div className="email_section">
+              <form
+                ref={formref}
+                onSubmit={handleSubmit}
+                className="email_section"
+              >
                 <input
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)} 
                   placeholder="your email....."
                   type="email"
                   className="email_input"
                 />
-                <button className="email_btn">subscribe</button>
-              </div>
+                <button type="submit" className="email_btn">
+                  subscribe
+                </button>
+              </form>
             </div>
 
             <div className="thanks_card">

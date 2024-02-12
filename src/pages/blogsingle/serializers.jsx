@@ -26,13 +26,21 @@ const serializers = {
           return <h3 style={{ margin: "0px 0" }}>{props.children}</h3>;
         case "blockquote":
           return <blockquote>{props.children}</blockquote>;
+        case "code": // Handle code blocks
+          const { language, code } = props.node;
+          return (
+            <pre style={{ backgroundColor: "#f0f0f0", padding: "10px" }}>
+              <code className={`language-${language}`}>{code}</code>
+            </pre>
+          );
         default:
           return (
             <p
               style={{
                 margin: "10px 0",
-                lineHeight: "150%",
-                color: "#797c86",
+                lineHeight: "190%",
+                color: "#fff",
+                opacity:".7",
                 fontWeight: "500",
               }}
             >
@@ -51,8 +59,6 @@ const serializers = {
         <ul style={{ margin: "20px 0", color: "#333" }}>{props.children}</ul>
       );
     },
-    // Custom serializer for images
-
   },
   marks: {
     link: ({ mark, children }) => {

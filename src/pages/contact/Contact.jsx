@@ -170,7 +170,7 @@ export default function Contact() {
                     className="contact_input"
                     type="text"
                     name="companyName"
-                    placeholder="your name"
+                    placeholder="Company name"
                   />
                 </div>
               </div>

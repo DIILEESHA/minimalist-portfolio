@@ -172,6 +172,13 @@
   text-transform: capitalize;
 }
 
+.contact_input::placeholder {
+  font-family: "Urbanist", sans-serif;
+  text-transform: capitalize;
+}
+
+
+
 
 
 .sma_card {

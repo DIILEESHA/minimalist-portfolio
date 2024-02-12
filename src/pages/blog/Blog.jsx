@@ -169,9 +169,9 @@ export default function Blog() {
                     </div>
                   </div>
                 </article>
+                <div className="artcle__bottom__line"></div>
               </Link>
             ))}
-            <div className="artcle__bottom__line"></div>
           </div>
         )}
       </div>
