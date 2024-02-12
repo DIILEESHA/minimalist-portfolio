@@ -30,7 +30,12 @@ export default function Template({
             </div>
             <h2 className="welcome">
                 {guestBookDetails.message}
+<<<<<<< HEAD
                
+=======
+                {/* Dileesha Lakshan Welcome’s You! */}
+                {/* Step into My World of Creativity! */}
+>>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128
                 </h2>
           </div>
         </div>
@@ -44,6 +49,13 @@ export default function Template({
           </h1>
           <p className="guest_para">{guestBookDetails?.description}</p>
         </div>
+<<<<<<< HEAD
+=======
+        {/* <div className="down_arrow" onClick={scrollToGuestMessages}>
+          <img loading="lazy" src={guestBookDetails?.arrowSrc} alt="" />
+        </div> */}
+        {/* <Section/> */}
+>>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128
       </div>
 
       <div className="guest_grid_container" id="guestMessages">
