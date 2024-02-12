@@ -10,11 +10,13 @@ import Contact from "./pages/contact/Contact.jsx";
 import Resume from "./pages/resume/Resume.jsx";
 import Blog from "./pages/blog/Blog.jsx";
 import Singleblog from "./pages/blogsingle/Singleblog.jsx";
+import React, { Suspense } from 'react';
 
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
+      <Suspense fallback={<div>Loading...</div>}>
         <Contactme />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -27,6 +29,7 @@ function App() {
           <Route path="/post/:slug" element={<Singleblog />} />
         </Routes>
         <Footer />
+        </Suspense>
       </BrowserRouter>
     </div>
   );

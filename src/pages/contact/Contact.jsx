@@ -1,26 +1,91 @@
-/* eslint-disable react/no-unescaped-entities */
-/* eslint-disable no-unused-vars */
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./contact.css";
 import Faq from "../../components/faq/Faq";
 import Layout from "../../components/Layout";
-
 import Section from "../../components/velo/Section";
 import { Helmet } from "react-helmet";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Contact() {
+  const formRef = useRef();
+  const [selectedServices, setSelectedServices] = useState([]);
+
+  const handleServiceChange = (serviceName) => {
+    if (selectedServices.includes(serviceName)) {
+      setSelectedServices(
+        selectedServices.filter((service) => service !== serviceName)
+      );
+    } else {
+      setSelectedServices([...selectedServices, serviceName]);
+    }
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formData = new FormData(formRef.current);
+    formData.append("selectedServices", selectedServices.join(", "));
+
+    emailjs
+      .sendForm(
+        "service_45r525n",
+        "template_xckj6nm",
+        formRef.current,
+        "c0OCPezx-EbyzmYf3"
+      )
+      .then(
+        (result) => {
+          console.log("ok");
+          toast.success("Great! You're all set! Cheers!", {
+            position: "top-left",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
+        },
+        (error) => {
+          toast.error("No Internet Connection, Try Again!", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
+      );
+  };
+
   useEffect(() => {
     document.title = " Contact Me | Dileesha Nawarathna ";
   }, []);
+
   return (
     <div>
-        <Helmet>
+      <Helmet>
         <title>Contact Me | Dileesha Nawarathna</title>
-        <meta name="description" content="Ready to connect and collaborate? Drop me a line and let's turn ideas into reality!" />
+        <meta
+          name="description"
+          content="Ready to connect and collaborate? Drop me a line and let's turn ideas into reality!"
+        />
         <meta property="og:title" content="Contact Me | Dileesha Nawarathna" />
-        <meta property="og:description" content="Ready to connect and collaborate? Drop me a line and let's turn ideas into reality!" />
+        <meta
+          property="og:description"
+          content="Ready to connect and collaborate? Drop me a line and let's turn ideas into reality!"
+        />
         {/* <meta property="og:image" content="https://example.com/your-image.jpg" /> */}
-        <meta property="og:url" content="https://www.dileeshanawarathna.me/contact-me" /> 
+        <meta
+          property="og:url"
+          content="https://www.dileeshanawarathna.me/contact-me"
+        />
         <meta property="og:type" content="website" />
       </Helmet>
       <div className="template_img">
@@ -64,9 +129,14 @@ export default function Contact() {
       </div>
 
       <div className="contact_form_section two">
+        <ToastContainer />
         <div className="contact_grida">
           <div className="contact_sub_grida">
-            <form action="" className="contact_form">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="contact_form"
+            >
               <div className="contact_imger">
                 <img
                   className="boomba"
@@ -74,7 +144,6 @@ export default function Contact() {
                   alt=""
                 />
               </div>
-
               <div className="contact_sub_form">
                 <label className="form_label" htmlFor="">
                   name
@@ -84,6 +153,8 @@ export default function Contact() {
                     className="contact_input"
                     type="text"
                     placeholder="your name"
+                    name="name"
+                    required
                   />
                 </div>
               </div>
@@ -96,6 +167,7 @@ export default function Contact() {
                   <input
                     className="contact_input"
                     type="text"
+                    name="companyName"
                     placeholder="your name"
                   />
                 </div>
@@ -109,6 +181,8 @@ export default function Contact() {
                   <input
                     className="contact_input"
                     type="email"
+                    name="email"
+                    required
                     placeholder="Email Address"
                   />
                 </div>
@@ -122,6 +196,8 @@ export default function Contact() {
                   <input
                     className="contact_input"
                     type="text"
+                    name="phoneNumber"
+                    required
                     placeholder="Phone Number"
                   />
                 </div>
@@ -132,22 +208,58 @@ export default function Contact() {
                   Services Required
                 </label>
                 <div className="servicers">
-                  <div className="service_sub">
+                  <div
+                    className="service_sub"
+                    onClick={() => handleServiceChange("Web Design")}
+                    style={{
+                      backgroundColor: selectedServices.includes("Web Design")
+                        ? "red"
+                        : "initial",
+                    }}
+                  >
                     <img src="https://i.imgur.com/yThf8CL.png" alt="" />
                     <h2 className="servicer_type">Web Design</h2>
                   </div>
 
-                  <div className="service_sub">
+                  <div
+                    className="service_sub"
+                    onClick={() => handleServiceChange("UI UX Design")}
+                    style={{
+                      backgroundColor: selectedServices.includes("UI UX Design")
+                        ? "red"
+                        : "initial",
+                    }}
+                  >
                     <img src="https://i.imgur.com/yThf8CL.png" alt="" />
                     <h2 className="servicer_type">UI UX Design</h2>
                   </div>
 
-                  <div className="service_sub">
+                  <div
+                    className="service_sub"
+                    onClick={() => handleServiceChange("Web Development")}
+                    style={{
+                      backgroundColor: selectedServices.includes(
+                        "Web Development"
+                      )
+                        ? "red"
+                        : "initial",
+                    }}
+                  >
                     <img src="https://i.imgur.com/yThf8CL.png" alt="" />
                     <h2 className="servicer_type">Web Development</h2>
                   </div>
 
-                  <div className="service_sub">
+                  <div
+                    className="service_sub"
+                    onClick={() => handleServiceChange("Web Optimizations")}
+                    style={{
+                      backgroundColor: selectedServices.includes(
+                        "Web Optimizations"
+                      )
+                        ? "red"
+                        : "initial",
+                    }}
+                  >
                     <img src="https://i.imgur.com/yThf8CL.png" alt="" />
                     <h2 className="servicer_type">Web Optimizations</h2>
                   </div>
@@ -161,7 +273,8 @@ export default function Contact() {
                 <div className="contact_form_input">
                   <textarea
                     className="contact_text"
-                    name=""
+                    name="message"
+                    required
                     id=""
                     cols="30"
                     placeholder="your message..."
@@ -172,7 +285,7 @@ export default function Contact() {
 
               <div className="contact_sub_form mkl">
                 <div className="btn_opt">
-                  <button className="form_btn">send a message</button>
+                  <button className="form_btn">Send a Message</button>
                 </div>
               </div>
             </form>
@@ -182,7 +295,20 @@ export default function Contact() {
               <div className="sma_sub_card">
                 <div className="sma_details">
                   <h1 className="sma_title">You can Email Me Here</h1>
-                  <h2 className="sma_email">dileeshawork@gmal.com</h2>
+                  <h2 className="sma_email">
+                    {" "}
+                    <a
+                      className="linka"
+                      style={{
+                        color: "inherit",
+                        textDecoration: "underline",
+                      }}
+                      // color={#d85040}
+                      href="mailto:hello@dileeshanawarathna.me"
+                    >
+                      hello@dileeshanawarathna.me
+                    </a>
+                  </h2>
                 </div>
                 <div className="sma_details2">
                   <img src="https://i.imgur.com/Ddm9Oz8.png" alt="" />
@@ -193,7 +319,7 @@ export default function Contact() {
               <div className="sma_sub_card">
                 <div className="sma_details">
                   <h1 className="sma_title">Location</h1>
-                  <h2 className="sma_email">dileeshawork@gmal.com</h2>
+                  <h2 className="sma_email">Malabe,Sri Lanka</h2>
                 </div>
                 <div className="sma_details2">
                   <img src="https://i.imgur.com/Ddm9Oz8.png" alt="" />
@@ -204,7 +330,18 @@ export default function Contact() {
               <div className="sma_sub_card">
                 <div className="sma_details">
                   <h1 className="sma_title">Give Me a Call on</h1>
-                  <h2 className="sma_email">+94 72 130 4013</h2>
+                  <h2 className="sma_email">
+                    <a
+                      className="linka"
+                      style={{
+                        color: "inherit",
+                        textDecoration: "underline",
+                      }}
+                      href="tel:+94721304013"
+                    >
+                      +94 72 130 4013
+                    </a>
+                  </h2>
                 </div>
                 <div className="sma_details2">
                   <img src="https://i.imgur.com/Ddm9Oz8.png" alt="" />

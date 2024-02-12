@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import Header from "../../components/header/Header";
 import Skills from "../../components/skills/Skills";
 import Tools from "../../components/tools/Tools";
@@ -15,7 +16,7 @@ export default function Home() {
   return (
     <div className="homer">
       <div className="template_img">
-          <img src="https://i.imgur.com/Wg6uLJe.png" alt="" />
+          <img preload="true" src="https://i.imgur.com/Wg6uLJe.png" alt="" />
         </div>
       <Header />
       <Skills />
