@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import "./blog.css";
 import Template from "../../components/Template";
@@ -6,10 +5,7 @@ import Sanity from "../../sanity/Sanity";
 import { ThreeDots } from "react-loader-spinner";
 import { FaArrowRight } from "react-icons/fa6";
 import { PortableText } from "@portabletext/react";
-<<<<<<< HEAD
 import { Link } from "react-router-dom";
-=======
->>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("latest");
@@ -20,27 +16,16 @@ export default function Blog() {
     const fetchBlog = async () => {
       try {
         let fetchQuery =
-<<<<<<< HEAD
           '*[_type == "blog"]{blogImage{asset->{_id,url}}, title, date, category, body,slug,para}';
 
         if (selectedCategory !== "latest") {
           fetchQuery = `*[_type == "blog" && category == "${selectedCategory}"]{blogImage{asset->{_id,url}}, title, date, category, body,slug,para}`;
-=======
-          '*[_type == "blog"]{blogImage{asset->{_id,url}}, title, date, category, body}';
-
-        if (selectedCategory !== "latest") {
-          fetchQuery = `*[_type == "blog" && category == "${selectedCategory}"]{blogImage{asset->{_id,url}}, title, date, category, body}`;
->>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128
         }
 
         const res = await Sanity.fetch(fetchQuery);
 
         setBlog(res);
-<<<<<<< HEAD
         console.log(res);
-=======
-        console.log(res)
->>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128
         setLoad(false);
       } catch (error) {
         console.log("Error:", error);
@@ -50,7 +35,6 @@ export default function Blog() {
     fetchBlog();
   }, [selectedCategory]);
 
-<<<<<<< HEAD
   // Function to check if there are articles available for the selected category
   const articlesAvailable = () => {
     if (selectedCategory === "latest" || selectedCategory === "coding") {
@@ -63,8 +47,6 @@ export default function Blog() {
     }
   };
 
-=======
->>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128
   return (
     <Template
       guestBookDetails={{
@@ -140,27 +122,12 @@ export default function Blog() {
               justifyContent: "center",
             }}
           >
-<<<<<<< HEAD
-=======
-            {/* <ThreeDots
-              visible={true}
-              height="80"
-              width="80"
-              color="#fff"
-              radius="9"
-              ariaLabel="three-dots-loading"
-              wrapperStyle={{}}
-              wrapperClass=""
-            /> */}
-
->>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128
             <div style={{ height: "40vh", margin: "50px 0" }}>
               <h1 style={{ fontSize: "22px", fontWeight: "500" }}>
                 Stay tuned for insightful articles❤️
               </h1>
             </div>
           </div>
-<<<<<<< HEAD
         ) : !articlesAvailable() ? ( // Check if there are no articles available for the selected category
           <div style={{ textAlign: "center", marginTop: "50px" }}>
             <h2 style={{ fontSize: "14px" }}>
@@ -202,39 +169,6 @@ export default function Blog() {
                   </div>
                 </article>
               </Link>
-=======
-        ) : (
-          <div className="bloger_card_section">
-            {blog?.map((article, index) => (
-              <article key={index} className="single_blog_card">
-                <div className="blog_card_img_section">
-                  <img
-                    src={article?.blogImage?.asset?.url}
-                    alt={article?.title}
-                    className="blog__img"
-                  />
-                </div>
-
-                <section className="blog__card_article">
-                  <div className="one__line">
-                    <h2 className="blog__create__date">— {article?.date} </h2>
-                    <h3 className="blog__create__date">3 min read</h3>
-                  </div>
-
-                  <h1 className="blogger__title">{article?.title}</h1>
-
-                  <p className="blog_short__para">
-                    <PortableText value={article?.body} />
-                  </p>
-                </section>
-
-                <div className="article__go__arrow">
-                  <div className="arrowme">
-                    <FaArrowRight style={{ cursor: "pointer" }} />
-                  </div>
-                </div>
-              </article>
->>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128
             ))}
             <div className="artcle__bottom__line"></div>
           </div>
@@ -243,9 +177,6 @@ export default function Blog() {
     </Template>
   );
 }
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128

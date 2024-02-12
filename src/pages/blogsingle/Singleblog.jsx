@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import "./singleblog.css";
 import SingleTemplate from "./SingleTemplate";
@@ -83,12 +82,4 @@ export default function Singleblog() {
       </div>
     </SingleTemplate>
   );
-=======
-import React from "react";
-import "./singleblog.css";
-import Template from "../../components/Template";
-
-export default function Singleblog() {
-  return <Template>f</Template>;
->>>>>>> 40306eba221d8a30bb5a2d4055f6b6da90ac6128
 }
