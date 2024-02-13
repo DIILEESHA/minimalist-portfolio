@@ -73,7 +73,7 @@ export default function Blog() {
     >
       <div className="bloger">
         <div className="template_img">
-          <img src="https://i.imgur.com/6xeQSQS.png" alt="" />
+          <img src="https://i.imgur.com/C70V5iw.png" alt="" />
         </div>
 
         <h2 className="project_title">Illuminate Your Mind</h2>
