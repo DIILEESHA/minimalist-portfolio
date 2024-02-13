@@ -14,23 +14,38 @@ const serializers = {
                 style={{
                   width: "100%",
                   height: "1px",
-                  background: "#111",
+                  background: "#222",
                   margin: "5px 0",
                 }}
               ></div>
             </h1>
           );
         case "h2":
-          return <h2 style={{ margin: "0px 0" }}>{props.children}</h2>;
+          return (
+            <h2 style={{ margin: "0px 0", fontSize: "20px" }}>
+              {props.children}
+              <div
+                style={{
+                  width: "100%",
+                  height: "1px",
+                  background: "#222",
+                  margin: "5px 0",
+                }}
+              ></div>
+            </h2>
+          );
         case "h3":
-          return <h3 style={{ margin: "0px 0" }}>{props.children}</h3>;
+          return (
+            <h3 style={{ margin: "0px 0", fontSize: "16px" }}>
+              {props.children}
+            </h3>
+          );
         case "blockquote":
           return <blockquote>{props.children}</blockquote>;
-        case "code": // Handle code blocks
-          const { language, code } = props.node;
+        case "code":
           return (
-            <pre style={{ backgroundColor: "#f0f0f0", padding: "10px" }}>
-              <code className={`language-${language}`}>{code}</code>
+            <pre style={{ backgroundColor: "red", padding: "10px" }}>
+              <code>{props.children}</code>
             </pre>
           );
         default:
@@ -39,8 +54,8 @@ const serializers = {
               style={{
                 margin: "10px 0",
                 lineHeight: "190%",
-                color: "#fff",
-                opacity:".7",
+                // color: "#fff",
+                opacity: ".8",
                 fontWeight: "500",
               }}
             >
@@ -49,14 +64,27 @@ const serializers = {
           );
       }
     },
-    listItem: (props) => {
+    image: (props) => {
       return (
-        <li style={{ margin: "20px", color: "#333" }}>{props.children}</li>
+        <img
+          src={props.node.asset.url}
+          alt={props.node.alt}
+          style={{ maxWidth: "100%" }}
+        />
       );
     },
-    bulletList: (props) => {
+    codeWithBgColor: (props) => {
+      const { code, backgroundColor } = props.node;
       return (
-        <ul style={{ margin: "20px 0", color: "#333" }}>{props.children}</ul>
+        <pre
+          style={{
+            backgroundColor: backgroundColor,
+            padding: "10px",
+            position: "relative",
+          }}
+        >
+          <code>{code}</code>
+        </pre>
       );
     },
   },

@@ -117,7 +117,7 @@ export default function Template({
                 <input
                   required
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)} 
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="your email....."
                   type="email"
                   className="email_input"
@@ -156,8 +156,10 @@ export default function Template({
               </Link>
               <div className="leave_options">
                 <div className="text_leave">
-                  <a className="linka" href="mailto:hello@dileeshanawarathna.com">
-
+                  <a
+                    className="linka"
+                    href="mailto:hello@dileeshanawarathna.com"
+                  >
                     <p className="i">Send an email</p>
                   </a>
                 </div>
