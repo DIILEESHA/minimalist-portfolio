@@ -10,6 +10,7 @@ import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import BlockContent from "@sanity/block-content-to-react";
 import serializers from "./serializers";
+import { ThreeDots } from "react-loader-spinner";
 
 export default function Singleblog() {
   const [single, setSingle] = useState(null);
@@ -31,6 +32,7 @@ export default function Singleblog() {
 
         const res = await Sanity.fetch(singleQuery);
         setSingle(res);
+        setLoad(false);
         console.log("query resukt:", res);
       } catch (error) {
         console.log(error);
@@ -41,45 +43,67 @@ export default function Singleblog() {
 
   return (
     <SingleTemplate>
-      <div className="single__blog__template">
-        {single &&
-          single?.map((singa, index) => (
-            <div key={index}>
-              <div className="blog__era">
-                <Link to="/blog">
-                  <div className="close__btn__sec">
-                    <IoIosArrowBack />
+      {load ? (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            height:"80vh"
+          }}
+        >
+          <ThreeDots
+            visible={true}
+            height="80"
+            width="80"
+            color="#fff"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+        </div>
+      ) : (
+        <div className="single__blog__template">
+          {single &&
+            single?.map((singa, index) => (
+              <div key={index}>
+                <div className="blog__era">
+                  <Link to="/blog">
+                    <div className="close__btn__sec">
+                      <IoIosArrowBack />
+                    </div>
+                  </Link>
+                  <div className="single__top__imgers">
+                    <img
+                      src={singa?.blogImage?.asset?.url}
+                      alt=""
+                      className="sing__top__img"
+                    />
                   </div>
-                </Link>
-                <div className="single__top__imgers">
-                  <img
-                    src={singa?.blogImage?.asset?.url}
-                    alt=""
-                    className="sing__top__img"
-                  />
                 </div>
+
+                <div className="blog__timelaps__option">
+                  <h2 className="blog__create__date">—{singa?.date} </h2>
+                  <h3 className="blog__create__date">3 min read</h3>
+                </div>
+
+                {/* <p className="khan"> */}
+                {/* <PortableText value={singa?.body} /> */}
+                <BlockContent
+                  projectId="hl7l7rdy"
+                  imageOptions={{ w: 420, h: 340, fit: "max" }}
+                  dataset="production"
+                  blocks={singa?.body}
+                  serializers={serializers}
+                />
+                {/* {singa?.body} */}
+
+                {/* </p> */}
               </div>
-
-              <div className="blog__timelaps__option">
-                <h2 className="blog__create__date">—{singa?.date} </h2>
-                <h3 className="blog__create__date">3 min read</h3>
-              </div>
-
-              {/* <p className="khan"> */}
-              {/* <PortableText value={singa?.body} /> */}
-              <BlockContent
-                projectId="hl7l7rdy"
-                imageOptions={{ w: 420, h: 340, fit: "max" }}
-                dataset="production"
-                blocks={singa?.body}
-                serializers={serializers}
-              />
-              {/* {singa?.body} */}
-
-              {/* </p> */}
-            </div>
-          ))}
-      </div>
+            ))}
+        </div>
+      )}
     </SingleTemplate>
   );
 }
