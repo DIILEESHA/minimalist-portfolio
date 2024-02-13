@@ -11,11 +11,13 @@ import "react-quill/dist/quill.snow.css";
 import BlockContent from "@sanity/block-content-to-react";
 import serializers from "./serializers";
 import { ThreeDots } from "react-loader-spinner";
+import ShareButtons from "../../buttons/ShareButtons";
 
 export default function Singleblog() {
   const [single, setSingle] = useState(null);
   const { slug } = useParams();
   const [load, setLoad] = useState(true);
+  const [blogUrl, setBlogUrl] = useState("");
 
   useEffect(() => {
     const fetchSingle = async () => {
@@ -41,6 +43,11 @@ export default function Singleblog() {
     fetchSingle();
   }, [slug]);
 
+  useEffect(() => {
+    const currentUrl = `https://www.dileeshanawarathna.me/blog/${slug}`;
+    setBlogUrl(currentUrl);
+  }, [slug]);
+
   return (
     <SingleTemplate>
       {load ? (
@@ -49,7 +56,7 @@ export default function Singleblog() {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            height:"80vh"
+            height: "80vh",
           }}
         >
           <ThreeDots
@@ -100,6 +107,14 @@ export default function Singleblog() {
                 {/* {singa?.body} */}
 
                 {/* </p> */}
+
+                <div className="share-option">
+                  <h1 className="share">Share this post</h1>
+                  <ShareButtons
+                    url={`your-blog-url/${singa.slug.current}`}
+                    title={singa.title}
+                  />
+                </div>
               </div>
             ))}
         </div>
