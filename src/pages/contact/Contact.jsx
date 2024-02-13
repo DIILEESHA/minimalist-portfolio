@@ -50,6 +50,8 @@ export default function Contact() {
             progress: undefined,
             theme: "dark",
           });
+          formRef.current.reset();
+          setSelectedServices([]);
         },
         (error) => {
           toast.error("No Internet Connection, Try Again!", {

@@ -14,6 +14,9 @@ export default function Blog() {
   const [load, setLoad] = useState(false);
 
   useEffect(() => {
+
+
+
     const fetchBlog = async () => {
       try {
         let fetchQuery =
@@ -35,6 +38,14 @@ export default function Blog() {
 
     fetchBlog();
   }, [selectedCategory]);
+
+  const handleBlogCardClick = () => {
+    // Scroll to the top of the page smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
 
   // Function to check if there are articles available for the selected category
   const articlesAvailable = () => {
@@ -142,6 +153,7 @@ export default function Blog() {
                 key={article?.slug.current}
                 to={`/post/${article?.slug?.current}`}
                 className="linka"
+                onClick={handleBlogCardClick}
               >
                 <article className="single_blog_card">
                   <div className="blog_card_img_section">

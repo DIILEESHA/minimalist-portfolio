@@ -37,6 +37,14 @@ export default function Faq() {
     setFourth(!fourth);
   };
 
+  const handleBlogCardClick = () => {
+    // Scroll to the top of the page smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="faq_container">
       <div className="servicer12">
@@ -79,11 +87,13 @@ export default function Faq() {
                   work
                 </p>
                 <div className="faq_btn_section">
-                  <button className="faq_btn">
-                    <Link className="linka" to="/contact-me">
-                      Ask A Question
-                    </Link>
-                  </button>
+                  <Link
+                    onClick={handleBlogCardClick}
+                    className="linka"
+                    to="/contact-me"
+                  >
+                    <button className="faq_btn">Ask A Question</button>
+                  </Link>
                 </div>
               </div>
             </div>

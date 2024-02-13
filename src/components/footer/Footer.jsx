@@ -3,6 +3,13 @@ import Section from "../../components/velo/Section";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const handleBlogCardClick = () => {
+    // Scroll to the top of the page smoothly
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  };
   return (
     <div className="footer_maina">
       <div className="footer_container">
@@ -28,13 +35,26 @@ export default function Footer() {
               <h2 className="footer_title">explore</h2>
               <ul className="footer_ul">
                 <li className="footer_li">
-                  <Link className="linka" to="about-me">
+                  <Link onClick={handleBlogCardClick} className="linka" to="about-me">
                     About Me
                   </Link>
                 </li>
-                <li className="footer_li">Articles</li>
-                <li className="footer_li">Newsletter</li>
-                <li className="footer_li"></li>
+                <li className="footer_li">
+                  <Link onClick={handleBlogCardClick} className="linka" to="/blog">
+                    Articles
+                  </Link>
+                </li>
+                <li className="footer_li">
+                  
+                  <Link onClick={handleBlogCardClick} className="linka" to="/guest-book">
+                  Guest book
+                  </Link>
+                  </li>
+                <li className="footer_li">
+                  <Link onClick={handleBlogCardClick} className="linka" to="/resume">
+              Resume
+                  </Link>
+                </li>
               </ul>
             </div>
             <div className="footer_sub">

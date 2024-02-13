@@ -179,7 +179,7 @@ export default function Template({
               </Link>
               <div className="leave_options">
                 <div className="text_leave">
-                  <a className="linka" href="mailto:dileeshawork@gmail.com">
+                  <a className="linka" href="mailto:hello@dileeshanawarathna.com">
                     <p className="i">Send an email</p>
                   </a>
                 </div>
