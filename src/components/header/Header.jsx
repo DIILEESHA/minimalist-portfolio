@@ -9,6 +9,7 @@ import CountUp from "react-countup";
 import skill from "./skill.json";
 import Layout from "../Layout.jsx";
 import Marquee from "react-marquee-slider";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   useEffect(() => {
@@ -58,10 +59,15 @@ export default function Header() {
           </div>
 
           <div className="header_main_btn">
+            <Link className="linka" to="/portfolio">
+              
             <div className="smrona">let's work together</div>
+            </Link>
           </div>
           <div className="header_sm_btn">
+            <Link className="linka" to="/contact-me">
             <div className="lmrona">contact me</div>
+            </Link>
           </div>
         </div>
       </div>

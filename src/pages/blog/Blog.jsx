@@ -4,19 +4,16 @@ import "./blog.css";
 import Template from "../../components/Template";
 import Sanity from "../../sanity/Sanity";
 import { ThreeDots } from "react-loader-spinner";
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa";
 import { PortableText } from "@portabletext/react";
 import { Link } from "react-router-dom";
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("latest");
   const [blog, setBlog] = useState([]);
-  const [load, setLoad] = useState(false);
+  const [load, setLoad] = useState(true); // Initialize load state to true
 
   useEffect(() => {
-
-
-
     const fetchBlog = async () => {
       try {
         let fetchQuery =
@@ -30,9 +27,10 @@ export default function Blog() {
 
         setBlog(res);
         console.log(res);
-        setLoad(false);
+        setLoad(false); // Set load state to false after fetching data
       } catch (error) {
         console.log("Error:", error);
+        setLoad(false); // Set load state to false if an error occurs during fetching
       }
     };
 
@@ -136,7 +134,7 @@ export default function Blog() {
           >
             <div style={{ height: "40vh", margin: "50px 0" }}>
               <h1 style={{ fontSize: "22px", fontWeight: "500" }}>
-                Stay tuned for insightful articles❤️
+                <ThreeDots color="#000" height={50} width={50} />
               </h1>
             </div>
           </div>
@@ -174,7 +172,6 @@ export default function Blog() {
 
                     <p className="blog_short__para">{article?.para}</p>
                   </section>
-
                   <div className="article__go__arrow">
                     <div className="arrowme">
                       <FaArrowRight style={{ cursor: "pointer" }} />
@@ -190,6 +187,3 @@ export default function Blog() {
     </Template>
   );
 }
-
-
-
