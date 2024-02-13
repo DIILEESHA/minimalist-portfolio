@@ -5,13 +5,12 @@ import Template from "../../components/Template";
 import Sanity from "../../sanity/Sanity";
 import { ThreeDots } from "react-loader-spinner";
 import { FaArrowRight } from "react-icons/fa";
-import { PortableText } from "@portabletext/react";
 import { Link } from "react-router-dom";
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("latest");
   const [blog, setBlog] = useState([]);
-  const [load, setLoad] = useState(true); // Initialize load state to true
+  const [load, setLoad] = useState(true); 
 
   useEffect(() => {
     const fetchBlog = async () => {
@@ -44,14 +43,12 @@ export default function Blog() {
   }, [selectedCategory]);
 
   const handleBlogCardClick = () => {
-    // Scroll to the top of the page smoothly
     window.scrollTo({
       top: 0,
       behavior: "smooth"
     });
   };
 
-  // Function to check if there are articles available for the selected category
   const articlesAvailable = () => {
     if (selectedCategory === "latest" || selectedCategory === "coding") {
       return blog.length > 0;
@@ -136,15 +133,12 @@ export default function Blog() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              height:"20vh"
             }}
           >
-            <div style={{ height: "40vh", margin: "50px 0" }}>
-              <h1 style={{ fontSize: "22px", fontWeight: "500" }}>
-                <ThreeDots color="#000" height={50} width={50} />
-              </h1>
-            </div>
+                <ThreeDots color="#fff" />
           </div>
-        ) : !articlesAvailable() ? ( // Check if there are no articles available for the selected category
+        ) : !articlesAvailable() ? ( 
           <div style={{ textAlign: "center", marginTop: "50px" }}>
             <h2 style={{ fontSize: "14px" }}>
               No articles available for this category
