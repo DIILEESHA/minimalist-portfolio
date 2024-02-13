@@ -17,22 +17,28 @@ export default function Blog() {
     const fetchBlog = async () => {
       try {
         let fetchQuery =
-          '*[_type == "blog"]{blogImage{asset->{_id,url}}, title, date, category, body,slug,para}';
-
+          '*[_type == "blog"] | order(date desc){blogImage{asset->{_id,url}}, title, date, category, body, slug, para}';
+    
         if (selectedCategory !== "latest") {
-          fetchQuery = `*[_type == "blog" && category == "${selectedCategory}"]{blogImage{asset->{_id,url}}, title, date, category, body,slug,para}`;
+          fetchQuery = `*[_type == "blog" && category == "${selectedCategory}"] | order(date desc){blogImage{asset->{_id,url}}, title, date, category, body, slug, para}`;
         }
-
+    
         const res = await Sanity.fetch(fetchQuery);
-
-        setBlog(res);
+    
+        if (res.length === 0) {
+          setLoad(false);
+        } else {
+          setBlog(res);
+          setLoad(false);
+        }
+        
         console.log(res);
-        setLoad(false); // Set load state to false after fetching data
       } catch (error) {
         console.log("Error:", error);
-        setLoad(false); // Set load state to false if an error occurs during fetching
+        setLoad(false); 
       }
     };
+    
 
     fetchBlog();
   }, [selectedCategory]);
