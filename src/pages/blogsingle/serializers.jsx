@@ -30,7 +30,7 @@ const serializers = {
                 style={{
                   width: "100%",
                   height: "1px",
-                  // background: "#222",
+                  background: "#222",
                   margin: "5px 0",
                 }}
               />
