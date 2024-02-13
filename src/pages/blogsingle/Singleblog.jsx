@@ -99,11 +99,12 @@ export default function Singleblog() {
                 {/* <PortableText value={singa?.body} /> */}
                 <BlockContent
                   projectId="hl7l7rdy"
-                  imageOptions={{ w: 420, h: 340, fit: "max" }}
+                  imageOptions={{w: 720, h: 240, fit: 'max'}}
                   dataset="production"
                   blocks={singa?.body}
                   serializers={serializers}
                 />
+
                 {/* {singa?.body} */}
 
                 {/* </p> */}

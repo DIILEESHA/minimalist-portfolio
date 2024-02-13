@@ -1,15 +1,17 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+// Serializer for different block types
 const serializers = {
   types: {
-    block: (props) => {
-      const { style = "normal" } = props.node;
-      switch (style) {
+    block: ({ node, children }) => {
+      switch (node.style) {
         case "h1":
           return (
             <h1 style={{ margin: "10px 0", color: "#e4e4e6" }}>
-              {props.children}
+              {children}
               <div
                 style={{
                   width: "100%",
@@ -17,37 +19,32 @@ const serializers = {
                   background: "#222",
                   margin: "5px 0",
                 }}
-              ></div>
+              />
             </h1>
           );
         case "h2":
           return (
             <h2 style={{ margin: "0px 0", fontSize: "20px" }}>
-              {props.children}
+              {children}
               <div
                 style={{
                   width: "100%",
                   height: "1px",
-                  background: "#222",
+                  // background: "#222",
                   margin: "5px 0",
                 }}
-              ></div>
+              />
             </h2>
           );
+
         case "h3":
           return (
-            <h3 style={{ margin: "0px 0", fontSize: "16px" }}>
-              {props.children}
-            </h3>
+            <h3 style={{ margin: "0px 0", fontSize: "16px" }}>{children}</h3>
           );
+        case "h4":
+          return <h4>{children}</h4>;
         case "blockquote":
-          return <blockquote>{props.children}</blockquote>;
-        case "code":
-          return (
-            <pre style={{ backgroundColor: "red", padding: "10px" }}>
-              <code>{props.children}</code>
-            </pre>
-          );
+          return <blockquote>{children}</blockquote>;
         default:
           return (
             <p
@@ -59,34 +56,22 @@ const serializers = {
                 fontWeight: "500",
               }}
             >
-              {props.children}
+              {children}
             </p>
           );
       }
     },
-    image: (props) => {
-      return (
-        <img
-          src={props.node.asset.url}
-          alt={props.node.alt}
-          style={{ maxWidth: "100%" }}
-        />
-      );
-    },
-    codeWithBgColor: (props) => {
-      const { code, backgroundColor } = props.node;
-      return (
-        <pre
-          style={{
-            backgroundColor: backgroundColor,
-            padding: "10px",
-            position: "relative",
-          }}
-        >
-          <code>{code}</code>
-        </pre>
-      );
-    },
+    image: ({ node }) => (
+      <img src={node.asset.url} alt={node.alt} style={{ maxWidth: "100%" }} />
+    ),
+    code: ({ node }) => (
+      <SyntaxHighlighter
+        language={node.language || ""}
+        style={{ ...prism, backgroundColor: "#0000" }}
+      >
+        {node.code}
+      </SyntaxHighlighter>
+    ),
   },
   marks: {
     link: ({ mark, children }) => {
