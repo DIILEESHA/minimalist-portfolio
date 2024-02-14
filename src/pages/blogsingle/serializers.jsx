@@ -36,7 +36,6 @@ const serializers = {
               />
             </h2>
           );
-
         case "h3":
           return (
             <h3 style={{ margin: "0px 0", fontSize: "16px" }}>{children}</h3>
@@ -45,6 +44,12 @@ const serializers = {
           return <h4>{children}</h4>;
         case "blockquote":
           return <blockquote>{children}</blockquote>;
+        case "ul":
+          return <ul style={{ marginLeft: "20px" }}>{children}</ul>;
+        case "li":
+          return (
+            <li style={{ marginBottom: "10px", opacity: ".8" }}>{children}</li>
+          );
         default:
           return (
             <p
