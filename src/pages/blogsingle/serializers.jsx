@@ -92,3 +92,4 @@ const serializers = {
 };
 
 export default serializers;
+
