@@ -12,6 +12,7 @@ import { useEffect } from "react";
 import { ThreeDots } from "react-loader-spinner";
 
 export default function Single({ project, onclose }) {
+  // eslint-disable-next-line no-unused-vars
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [lo, setLo] = useState(true);
 

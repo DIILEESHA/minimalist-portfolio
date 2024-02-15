@@ -29,7 +29,7 @@ export default function Singleblog() {
         date,
         category,
         body,
-        slug
+        slug,timer
         }`;
 
         const res = await Sanity.fetch(singleQuery);
@@ -92,14 +92,14 @@ export default function Singleblog() {
 
                 <div className="blog__timelaps__option">
                   <h2 className="blog__create__date">—{singa?.date} </h2>
-                  <h3 className="blog__create__date">3 min read</h3>
+                  <h3 className="blog__create__date">{singa.timer}</h3>
                 </div>
 
                 {/* <p className="khan"> */}
                 {/* <PortableText value={singa?.body} /> */}
                 <BlockContent
                   projectId="hl7l7rdy"
-                  imageOptions={{w: 720, h: 240, fit: 'max'}}
+                  imageOptions={{ w: 720, h: 240, fit: "max" }}
                   dataset="production"
                   blocks={singa?.body}
                   serializers={serializers}

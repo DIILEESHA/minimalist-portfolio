@@ -6,38 +6,38 @@ import Sanity from "../../sanity/Sanity";
 import { ThreeDots } from "react-loader-spinner";
 import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { format, formatDistance, formatRelative, subDays } from "date-fns";
 
 export default function Blog() {
   const [selectedCategory, setSelectedCategory] = useState("latest");
   const [blog, setBlog] = useState([]);
-  const [load, setLoad] = useState(true); 
+  const [load, setLoad] = useState(true);
 
   useEffect(() => {
     const fetchBlog = async () => {
       try {
         let fetchQuery =
-          '*[_type == "blog"] | order(date desc){blogImage{asset->{_id,url}}, title, date, category, body, slug, para}';
-    
+          '*[_type == "blog"] | order(date desc){blogImage{asset->{_id,url}}, title, date, category, body, slug, para,timer}';
+
         if (selectedCategory !== "latest") {
-          fetchQuery = `*[_type == "blog" && category == "${selectedCategory}"] | order(date desc){blogImage{asset->{_id,url}}, title, date, category, body, slug, para}`;
+          fetchQuery = `*[_type == "blog" && category == "${selectedCategory}"] | order(date desc){blogImage{asset->{_id,url}}, title, date, category, body, slug, para,timer}`;
         }
-    
+
         const res = await Sanity.fetch(fetchQuery);
-    
+
         if (res.length === 0) {
           setLoad(false);
         } else {
           setBlog(res);
           setLoad(false);
         }
-        
+
         console.log(res);
       } catch (error) {
         console.log("Error:", error);
-        setLoad(false); 
+        setLoad(false);
       }
     };
-    
 
     fetchBlog();
   }, [selectedCategory]);
@@ -45,7 +45,7 @@ export default function Blog() {
   const handleBlogCardClick = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: "smooth",
     });
   };
 
@@ -133,12 +133,12 @@ export default function Blog() {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              height:"20vh"
+              height: "20vh",
             }}
           >
-                <ThreeDots color="#fff" />
+            <ThreeDots color="#fff" />
           </div>
-        ) : !articlesAvailable() ? ( 
+        ) : !articlesAvailable() ? (
           <div style={{ textAlign: "center", marginTop: "50px" }}>
             <h2 style={{ fontSize: "14px" }}>
               No articles available for this category
@@ -164,8 +164,13 @@ export default function Blog() {
 
                   <section className="blog__card_article">
                     <div className="one__line">
-                      <h2 className="blog__create__date">— {article?.date} </h2>
-                      <h3 className="blog__create__date">3 min read</h3>
+                      <h2 className="blog__create__date">
+                        <section className="ira1">—</section>
+                        {formatDistance(new Date(article.date), new Date(), {
+                          addSuffix: true,
+                        })}
+                      </h2>
+                      <h3 className="blog__create__date">{article.timer}</h3>
                     </div>
 
                     <h1 className="blogger__title">{article?.title}</h1>
