@@ -1,7 +1,7 @@
-/* eslint-disable no-unused-vars */
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
+import ReactPlayer from "react-player";
 
 // Serializer for different block types
 const serializers = {
@@ -77,6 +77,15 @@ const serializers = {
         {node.code}
       </SyntaxHighlighter>
     ),
+
+    youtube: ({ node }) => {
+      const { url } = node;
+      return (
+        <div>
+          <ReactPlayer url={url} width="100%" />
+        </div>
+      );
+    },
   },
   marks: {
     link: ({ mark, children }) => {
@@ -92,4 +101,3 @@ const serializers = {
 };
 
 export default serializers;
-
