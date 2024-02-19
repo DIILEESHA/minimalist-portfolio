@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { prism } from "react-syntax-highlighter/dist/esm/styles/prism";
 import ReactPlayer from "react-player";
+import { ThreeDots } from "react-loader-spinner";
 
 // Serializer for different block types
 const serializers = {
+  // const[load,setLoad] =useState()
   types: {
     block: ({ node, children }) => {
       switch (node.style) {
@@ -80,9 +82,39 @@ const serializers = {
 
     youtube: ({ node }) => {
       const { url } = node;
+      const [load, setLoad] = useState(true);
+
+      const handleLoad = () => {
+        setLoad(false);
+      };
+
       return (
-        <div>
-          <ReactPlayer url={url} width="100%" />
+        <div
+          style={{
+            margin: "20px auto",
+          }}
+        >
+          {load && (
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                // position:"absolute",
+                // inset:"0"
+              }}
+            >
+              <ThreeDots color="#fff" />
+            </div>
+          )}
+          <ReactPlayer
+            url={url}
+            width="100%"
+            // height="100%"
+            controls
+            onReady={handleLoad}
+            // onError={handleError}
+          />
         </div>
       );
     },
