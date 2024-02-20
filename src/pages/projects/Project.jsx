@@ -23,6 +23,7 @@ export default function Project() {
     const fetchProjects = async () => {
       try {
         const fetchQuery = `*[_type == "portfolio"]
+        | order(dates desc)
         {
           title,
           type,
@@ -30,11 +31,11 @@ export default function Project() {
           description,
           logoweb{asset->{_id,url}},
           mainimage[]{asset->{_id,url}},
-          publishDate,
           images[]{asset->{_id,url}},
           websiteUrl,
           gitUrl,
-          technologies
+          technologies,
+          dates
         }`;
 
         const res = await Sanity.fetch(fetchQuery);
