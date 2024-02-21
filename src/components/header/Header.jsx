@@ -19,7 +19,11 @@ export default function Header() {
     }
   }, []);
   return (
-    <div className="header_container ">
+    <div className="header_container minvam ">
+
+      <div className="minvam">
+
+
       <Layout />
 
       <div className="welcome_card animate__animated animate__fadeInDown">
@@ -36,7 +40,6 @@ export default function Header() {
       <div className="ok2">
         <img className="ok_img" src="https://i.imgur.com/xam90UC.png" alt="" />
       </div>
-      <div className="ok2"></div>
 
       <div className="header_description ">
         <div className="header_top_img">
@@ -116,6 +119,7 @@ export default function Header() {
             <p className="done_para">Recognition Received</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   );
