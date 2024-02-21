@@ -10,25 +10,27 @@ import Contact from "./pages/contact/Contact.jsx";
 import Resume from "./pages/resume/Resume.jsx";
 import Blog from "./pages/blog/Blog.jsx";
 import Singleblog from "./pages/blogsingle/Singleblog.jsx";
-import React, { Suspense } from 'react';
+import React, { Suspense } from "react";
+import Progressbar from "./components/nav/Progressbar.jsx";
 
 function App() {
   return (
     <div className="app">
       <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Contactme />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/guest-book" element={<Guestbook />} />
-          <Route path="/about-me" element={<About />} />
-          <Route path="/portfolio" element={<Project />} />
-          <Route path="/contact-me" element={<Contact />} />
-          <Route path="/resume" element={<Resume />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/post/:slug" element={<Singleblog />} />
-        </Routes>
-        <Footer />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Contactme />
+          {/* <Progressbar /> */}
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/guest-book" element={<Guestbook />} />
+            <Route path="/about-me" element={<About />} />
+            <Route path="/portfolio" element={<Project />} />
+            <Route path="/contact-me" element={<Contact />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/post/:slug" element={<Singleblog />} />
+          </Routes>
+          <Footer />
         </Suspense>
       </BrowserRouter>
     </div>

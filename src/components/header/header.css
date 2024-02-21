@@ -5,12 +5,18 @@
   width: 100%;
   box-sizing: border-box;
   color: #fff;
-  background-image: url("https://i.imgur.com/ZTmyYsa.png");
-
   position: relative;
   overflow: hidden;
   background-size: cover;
-  background-position: 50% 50%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(7, 7, 8, 0),
+      rgba(7, 7, 8, 1)
+    ),
+    url("https://i.imgur.com/ZTmyYsa.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: #070708;
 }
 
 /* .header_container::after {
@@ -55,7 +61,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  pointer-events: none; 
+  pointer-events: none;
   z-index: 1;
   /* height: 200vh;  */
 }
@@ -421,9 +427,8 @@
   .header_para {
     width: 88%;
   }
-  .header_container{
-  background-size: contain;
-
+  .header_container {
+    background-size: contain;
   }
 }
 

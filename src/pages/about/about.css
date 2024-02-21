@@ -1,5 +1,5 @@
 .about_container {
-  background-color: #070708;
+  /* background-color: #070708; */
   width: 100%;
   overflow: auto;
   box-sizing: border-box;
@@ -16,13 +16,21 @@
   width: 100%;
   box-sizing: border-box;
   color: #fff;
-  background-image: url("https://i.imgur.com/ZTmyYsa.png");
+  background-image: linear-gradient(to bottom, rgba(7, 7, 8, 0), rgba(7, 7, 8, 1)), url("https://i.imgur.com/ZTmyYsa.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: #070708;
+  /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/ZTmyYsa.png"); */
+
+
   z-index: 1000;
   position: relative;
   overflow: hidden;
-  background-size: contain;
-  background-position: 50% 50%;
+  background-size: cover;
 }
+
+
+
 
 .about_second {
   background-color: #070708;
@@ -191,7 +199,6 @@
   text-align: center;
 }
 
-
 .keo {
   transform: rotate(1deg);
   border-radius: 1000px;
@@ -250,12 +257,11 @@
     margin: 0px 29px 0px 39px;
   }
 
-  .about_maina_para{
+  .about_maina_para {
     text-align: left;
   }
 
-  .abo{
-
+  .abo {
     font-size: 20px;
   }
 
@@ -266,7 +272,8 @@
     position: relative;
   }
 
-  .about_control::before{}
+  .about_control::before {
+  }
 }
 
 @media screen and (max-width: 500px) {
