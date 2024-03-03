@@ -66,7 +66,7 @@ export default function Resume() {
                 alt=""
               />
             </div>
-            <h2 className="education_time">AUGUST 2023 · PRESENT</h2>
+            <h2 className="education_time">2007 - 2017</h2>
             <h2 className="degree">Schooling</h2>
             <h2 className="campus">
               President College - Ambagasdowa, Sri Lanka
