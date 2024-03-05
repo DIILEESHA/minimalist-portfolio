@@ -97,13 +97,16 @@ export default function Singleblog() {
 
                 {/* <p className="khan"> */}
                 {/* <PortableText value={singa?.body} /> */}
-                <BlockContent
-                  projectId="hl7l7rdy"
-                  imageOptions={{ w: 720, h: 240, fit: "max" }}
-                  dataset="production"
-                  blocks={singa?.body}
-                  serializers={serializers}
-                />
+
+                <div style={{ width: "100%" }}>
+                  <BlockContent
+                    projectId="hl7l7rdy"
+                    imageOptions={{ w: 720, h: 240, fit: "max" }}
+                    dataset="production"
+                    blocks={singa?.body}
+                    serializers={serializers}
+                  />
+                </div>
 
                 {/* {singa?.body} */}
 

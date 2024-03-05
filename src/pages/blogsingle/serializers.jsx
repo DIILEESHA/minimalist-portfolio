@@ -72,13 +72,17 @@ const serializers = {
       <img src={node.asset.url} alt={node.alt} style={{ maxWidth: "100%" }} />
     ),
     code: ({ node }) => (
-      <SyntaxHighlighter
-        language={node.language || ""}
-        style={{ ...prism, backgroundColor: "#0000" }}
-      >
-        {node.code}
-      </SyntaxHighlighter>
+      <div style={{ overflowX: "auto" }}>
+        <SyntaxHighlighter
+          language={node.language || ""}
+          style={{ ...prism, backgroundColor: "#0000", maxWidth: "100%" }}
+        >
+          {node.code}
+        </SyntaxHighlighter>
+      </div>
     ),
+    
+    
 
     youtube: ({ node }) => {
       const { url } = node;

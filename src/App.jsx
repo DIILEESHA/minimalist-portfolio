@@ -11,7 +11,6 @@ import Resume from "./pages/resume/Resume.jsx";
 import Blog from "./pages/blog/Blog.jsx";
 import Singleblog from "./pages/blogsingle/Singleblog.jsx";
 import React, { Suspense } from "react";
-import Progressbar from "./components/nav/Progressbar.jsx";
 
 function App() {
   return (
