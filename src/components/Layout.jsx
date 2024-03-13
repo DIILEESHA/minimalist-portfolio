@@ -8,7 +8,9 @@ export default function Layout() {
   return (
     <div>
       <Card />
+      <div style={{ position: "relative", zIndex: "1" }} className="">
         <Nav />
+      </div>
 
       <div className="rounder_img">
         <img loading="lazy" src={back} alt="" />
