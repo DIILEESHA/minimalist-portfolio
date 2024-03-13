@@ -1,7 +1,8 @@
 .nav_container {
   /* width: 88.8%; */
   padding: 0px 78px;
-  position: relative;
+  position: sticky;
+  top: 0;
 }
 .nav_grid {
   height: auto;
@@ -188,10 +189,10 @@
     z-index: 1000;
   }
 
-  .hello{
-z-index: 1000;
-top: 0;
-position: absolute;
+  .hello {
+    z-index: 1000;
+    top: 0;
+    position: absolute;
     color: #ddd;
   }
   .koob {
@@ -234,8 +235,8 @@ position: absolute;
   }
   .no-scroll {
     overflow: hidden;
+    
   }
-  
 
   .gaser {
     position: absolute;

@@ -1,6 +1,6 @@
 // Nav.js
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "./nav.css";
 import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import { Link, NavLink, useNavigate } from "react-router-dom";
