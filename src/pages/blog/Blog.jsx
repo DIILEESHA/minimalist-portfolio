@@ -14,6 +14,8 @@ export default function Blog() {
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
+
+    
     const fetchBlog = async () => {
       try {
         let fetchQuery =
@@ -48,6 +50,10 @@ export default function Blog() {
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    document.title = " Blog | Dileesha Nawarathna ";
+  }, []);
 
   const articlesAvailable = () => {
     if (selectedCategory === "latest" || selectedCategory === "coding") {
