@@ -82,7 +82,7 @@ export default function Resume() {
         <h2 className="project_title koha">work exprience</h2>
 
         <div className="education_container">
-          <div className="linoman">
+          {/* <div className="linoman">
             <div className="linoone">
               <img
                 className="linoimg"
@@ -100,7 +100,7 @@ export default function Resume() {
               contribute significantly to our team's development efforts. Eager
               to collaborate within a dynamic environment,
             </p>
-          </div>
+          </div> */}
           <div className="linoman">
             <div className="linoone">
               <img
