@@ -90,7 +90,7 @@ export default function Resume() {
                 alt=""
               />
             </div>
-            <h2 className="education_time">MAR. 2023 PRESENT</h2>
+            <h2 className="education_time">MAR. 2024 PRESENT</h2>
             <h2 className="degree">Trainee Software Developer</h2>
             <h2 className="campus">CWS</h2>
             <p className="short_des">
