@@ -86,6 +86,25 @@ export default function Resume() {
             <div className="linoone">
               <img
                 className="linoimg"
+                src="https://i.imgur.com/u0aa5KQ.jpeg"
+                alt=""
+              />
+            </div>
+            <h2 className="education_time">MAR. 2023 PRESENT</h2>
+            <h2 className="degree">Trainee Software Developer</h2>
+            <h2 className="campus">CWS</h2>
+            <p className="short_des">
+              In my new role, I'm excited to apply my expertise in PHP Laravel
+              and JavaScript to drive innovation in web projects. With a focus
+              on intuitive user interfaces and front-end aesthetics, I aim to
+              contribute significantly to our team's development efforts. Eager
+              to collaborate within a dynamic environment,
+            </p>
+          </div>
+          <div className="linoman">
+            <div className="linoone">
+              <img
+                className="linoimg"
                 src="https://i.imgur.com/xhFvZA6.jpeg"
                 alt=""
               />
