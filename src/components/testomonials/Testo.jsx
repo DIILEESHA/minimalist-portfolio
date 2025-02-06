@@ -84,7 +84,7 @@ export default function Testo({ id }) {
 
       <Swiper
   modules={[Navigation]}
-  spaceBetween={30}
+  spaceBetween={18}
   slidesPerView={1} // Default to 1
   navigation={{
     prevEl: ".prev-arrow",
@@ -99,7 +99,7 @@ export default function Testo({ id }) {
       slidesPerView: 2,
     },
     1024: {
-      slidesPerView: 3,
+      slidesPerView: 2,
     },
   }}
 >
