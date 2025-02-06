@@ -126,6 +126,7 @@ const Portfolio = () => {
       <div className="servicer11">
         <img loading="lazy" src="https://i.imgur.com/wOJE8Zi.png" alt="" />
       </div>
+      
       <h2 className="skill_title">My Work Showcase</h2>
       <p className="skills_para mm">
         Explore a selection of my

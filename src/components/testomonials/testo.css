@@ -6,12 +6,13 @@
 }
 
 .testo_card_grid {
+
   display: grid;
   /* z-index: 2; */
   position: relative;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
-  margin-top: 70px;
+  margin-top: 100px!important;
 }
 
 .addr {
@@ -21,14 +22,19 @@
   /* line-height: 0; */
 }
 
+.mala{
+  position: relative;
+  z-index: 100;
+}
+
 .testo_card {
   /* margin-top: 30px; */
   background-image: url("https://i.imgur.com/PkIyBWk.png");
   background-image: url("https://i.imgur.com/vUHGzRV.png");
-
   background-position: center;
   background-size: cover;
   padding: 15px;
+  width: 100%;
   border-radius: 8px;
   border: 1px solid #1c1c21;
 }
@@ -54,7 +60,8 @@
   font-weight: 500;
 }
 .name_client {
-  font-size: 20px;
+  margin-top: 4px;
+  font-size: 15px;
   font-weight: 500;
   line-height: 150%;
   color: #fff;
