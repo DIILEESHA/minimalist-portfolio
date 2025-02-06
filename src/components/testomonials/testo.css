@@ -7,11 +7,7 @@
 
 .testo_card_grid {
 
-  display: grid;
-  /* z-index: 2; */
-  position: relative;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+
   margin-top: 100px!important;
 }
 
@@ -72,6 +68,10 @@
   position: relative;
   width: fit-content;
 }
+
+.testo_img img{
+  object-fit: cover;
+}
 .testa {
   position: absolute;
   width: 12px;
@@ -107,8 +107,9 @@
     /* height: 40vh; */
   }
   .testo_card_grid {
+  display: flex;
     /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     margin-top: 30px;
   }
 }
@@ -116,15 +117,13 @@
 @media screen and (max-width: 400px) {
   .testo_card_grid {
     /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-    grid-template-columns: 1fr;
+    /* grid-template-columns: 1fr; */
     margin-top: 30px;
   }
 }
 
 @media screen and (max-width: 300px) {
   .testo_card_grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-template-columns: 1fr;
 
     margin-top: 20px;
   }

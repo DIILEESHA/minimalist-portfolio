@@ -83,25 +83,28 @@ export default function Testo({ id }) {
       </p>
 
       <Swiper
-        modules={[Navigation]}
-        spaceBetween={30}
-        slidesPerView={3}
-        navigation={{
-          prevEl: ".prev-arrow",
-          nextEl: ".next-arrow",
-        }}
-        breakpoints={{
-          1024: {
-            slidesPerView: 2,
-          },
-          720: {
-            slidesPerView: 1,
-          },
-          480: {
-            slidesPerView: 1,
-          },
-        }}
-      >
+  modules={[Navigation]}
+  spaceBetween={30}
+  slidesPerView={1} // Default to 1
+  navigation={{
+    prevEl: ".prev-arrow",
+    nextEl: ".next-arrow",
+  }}
+  breakpoints={{
+
+    488: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  }}
+>
+
+
         {clients.map((client, index) => (
           <SwiperSlide key={index}>
             <div className="testo_card">
