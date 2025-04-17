@@ -102,7 +102,7 @@ export default function Header() {
           </div>{" "}
           <div className="project_sub_grid">
             <h2 className="done">
-              0<CountUp enableScrollSpy duration={8} delay={3} end={16} />+
+              <CountUp enableScrollSpy duration={8} delay={3} end={16} />+
             </h2>
             <p className="done_para">Happy Customers</p>
           </div>{" "}
