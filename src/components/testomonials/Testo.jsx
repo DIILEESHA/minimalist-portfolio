@@ -23,15 +23,37 @@ export default function Testo({ id }) {
       country: "United States",
       image: "https://i.imgur.com/bKvA7IB.jpeg",
       feedback:
-        "Quick reply, professional and flexible with our requests. What a wonderful job in such a short time. Thank you Dileesha!",
+        "Quick reply, professional, and flexible with our requests. What a wonderful job in such a short time. Thank you, Dileesha!",
     },
 
+     {
+      name: "Natalia",
+      country: "UK",
+      image: "https://i.imgur.com/Pzu9WK5.jpeg",
+      feedback:
+        "Thank you very much for the great work. I am very pleased with the results. It was a pleasure to work with you. My website looks good and professional.I highly recommend to work with this frrelancer.Create ob, well done!!!",
+    },
+  {
+      name: "Shanequejhonson",
+     country: "United States",
+      image: "https://i.imgur.com/TADwLn8.jpeg",
+      feedback:
+        "Dileesha was very professional and creative. Attention to detail was very good as well.I love my website",
+    },
+
+     {
+      name: "eliteService",
+     country: "France",
+      image: "https://i.imgur.com/ZNcqhQm.jpeg",
+      feedback:
+        "bon travail",
+    },
     {
       name: "Shanthala",
       country: "Germany",
       image: "https://i.imgur.com/Y1YvYVT.jpeg",
       feedback:
-        "We are incredibly happy with the work Dileesha did on our wedding website. The communication was outstanding, and he fulfilled all our wishes with great attention to detail. We highly recommend him to anyone looking for professional and reliable service.",
+        "We are delighted with the work Dileesha did on our wedding website. The communication was outstanding, and he fulfilled all our wishes with great attention to detail. We highly recommend him to anyone looking for professional and reliable service.",
     },
     
     {
