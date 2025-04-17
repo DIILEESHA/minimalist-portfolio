@@ -102,19 +102,19 @@ export default function Header() {
           </div>{" "}
           <div className="project_sub_grid">
             <h2 className="done">
-              0<CountUp enableScrollSpy duration={8} delay={3} end={5} />+
+              0<CountUp enableScrollSpy duration={8} delay={3} end={16} />+
             </h2>
             <p className="done_para">Happy Customers</p>
           </div>{" "}
           <div className="project_sub_grid">
             <h2 className="done">
-              0<CountUp enableScrollSpy duration={8} delay={3} end={1} />+
+              0<CountUp enableScrollSpy duration={8} delay={3} end={2} />+
             </h2>
             <p className="done_para">Years of Experience</p>
           </div>{" "}
           <div className="project_sub_grid">
             <h2 className="done">
-              <CountUp enableScrollSpy duration={8} delay={3} end={12} />+
+              <CountUp enableScrollSpy duration={8} delay={3} end={15} />+
             </h2>
             <p className="done_para">Recognition Received</p>
           </div>
