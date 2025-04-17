@@ -38,7 +38,15 @@ export default function Testo({ id }) {
      country: "United States",
       image: "https://i.imgur.com/TADwLn8.jpeg",
       feedback:
-        "Dileesha was very professional and creative. Attention to detail was very good as well.I love my website",
+        "Dileesha was very professional and creative. Attention to detail was very good as well. I love my website.",
+    },
+
+       {
+      name: "Tiffany&Lamel",
+     country: "United States",
+      image: "https://i.imgur.com/ZhhR8KV.jpeg",
+      feedback:
+        "Definitely exceeded my expectations!! very professional, pays attention to details, and was very patient and responsive. Will definitely use again!",
     },
 
      {
