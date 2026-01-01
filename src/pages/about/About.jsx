@@ -304,10 +304,10 @@ export default function About() {
             }}
             // color={#d85040}
             href="
-          mailto:hello@dileeshanawarathna.me
+          mailto:dileeshawork@gmail.com
           "
           >
-            email (hello@dileeshanawarathna.me)
+            email (dileeshawork@gmail.com)
           </a>
           or Twitter, I'm eager to chat about projects and ideas. Right now, I'm
           diving into freelance work, so I'm totally open to hearing about any

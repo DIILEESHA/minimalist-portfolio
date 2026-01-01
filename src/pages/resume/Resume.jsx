@@ -82,7 +82,6 @@ export default function Resume() {
         <h2 className="project_title koha">work exprience</h2>
 
         <div className="education_container">
-      
           <div className="linoman">
             <div className="linoone">
               <img
@@ -125,13 +124,13 @@ export default function Resume() {
         </div>
 
         <div className="resumes">
-          <a className="linka" href={pdf} download>
-            <h2 style={{ position: "relative" }} className="resume">
-              Download My
-              <span className="mooha">Resume</span>
-              <FaArrowRight />
-            </h2>
-          </a>
+          {/* <a className="linka" href={pdf} download> */}
+          {/* <h2 style={{ position: "relative" }} className="resume"> */}
+          {/* Download My */}
+          {/* <span className="mooha">Resume</span> */}
+          {/* <FaArrowRight /> */}
+          {/* </h2> */}
+          {/* </a> */}
         </div>
       </div>
     </ResumeLayout>

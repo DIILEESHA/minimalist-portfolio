@@ -308,7 +308,7 @@ export default function Contact() {
                         textDecoration: "underline",
                       }}
                       // color={#d85040}
-                      href="mailto:hello@dileeshanawarathna.me"
+                      href="mailto:dileeshawork@gmail.com"
                     >
                       hello@dileeshanawarathna.me
                     </a>
@@ -341,9 +341,9 @@ export default function Contact() {
                         color: "inherit",
                         textDecoration: "underline",
                       }}
-                      href="tel:+94721304013"
+                      href="tel:+94702167825"
                     >
-                      +94 72 130 4013
+                      +94 70 216 7825
                     </a>
                   </h2>
                 </div>

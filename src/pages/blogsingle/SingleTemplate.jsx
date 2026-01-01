@@ -158,7 +158,7 @@ export default function Template({
                 <div className="text_leave">
                   <a
                     className="linka"
-                    href="mailto:hello@dileeshanawarathna.com"
+                    href="mailto:dileeshawork@gmail.com"
                   >
                     <p className="i">Send an email</p>
                   </a>
